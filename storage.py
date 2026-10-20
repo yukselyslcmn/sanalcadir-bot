@@ -4,6 +4,8 @@ Sanal Çadır (sanalcadir.com) Durum Takip ve Fiyat Karşılaştırma Modülü (
 Görevleri:
 - `data/products_state.json` dosyasını okumak ve atomik/güvenli şekilde güncellemek.
 - İlk çalıştırma spam korumasını (`NOTIFY_ON_FIRST_RUN`) yönetmek.
+- Her ürünün bugüne kadar gördüğü en düşük fiyatı (`lowest_price`) takip ederek
+  "🏆 Şimdiye Kadarki En Düşük Fiyat!" durumunu tespit etmek.
 - Gerçek fiyat düşüşlerini (Durum 1: En az %5 ekstra indirim) ve
   yeni stok girişlerini (Durum 2: İlk kez stoğa giren ve kriterleri sağlayan ürünler) tespit etmek.
 """
@@ -77,6 +79,18 @@ class ProductStorage:
         first_seen = (
             previous_record.get("first_seen", now_str) if previous_record else now_str
         )
+        current_effective = float(product["effective_price"])
+
+        # En düşük fiyat (lowest_price) takibi
+        if previous_record and previous_record.get("lowest_price") is not None:
+            prev_lowest = float(previous_record["lowest_price"])
+            lowest_price = round(min(prev_lowest, current_effective), 2)
+        elif previous_record and previous_record.get("last_price") is not None:
+            prev_last = float(previous_record["last_price"])
+            lowest_price = round(min(prev_last, current_effective), 2)
+        else:
+            lowest_price = round(current_effective, 2)
+
         return {
             "id": str(product["id"]),
             "pk": product.get("pk"),
@@ -87,11 +101,13 @@ class ProductStorage:
             "category": product["category"],
             "category_badge": product.get("category_badge", product["category"]),
             "available_sizes": product.get("available_sizes", []),
+            "stock_count": int(product.get("stock_count", 1) or 1),
             "retail_price": product["retail_price"],
             "sale_price": product["sale_price"],
             "basket_price": product.get("basket_price"),
             "basket_offer_label": product.get("basket_offer_label"),
-            "last_price": product["effective_price"],
+            "last_price": current_effective,
+            "lowest_price": lowest_price,
             "discount_rate": product["discount_rate"],
             "image_url": product.get("image_url", ""),
             "product_url": product["product_url"],
@@ -108,7 +124,7 @@ class ProductStorage:
         Dönüş:
             (notifications, stats)
             - notifications: Bildirim gönderilecek olay listesi
-            - stats: İstatistik özeti (new_stock, price_drop, updated, skipped_first_run, total_tracked)
+            - stats: İstatistik özeti
         """
         is_first_run = len(self.state) == 0
         notifications: List[Dict[str, Any]] = []
@@ -121,7 +137,6 @@ class ProductStorage:
         }
 
         # Model anahtarı (kategori + base_code + listing_code) üzerinden ikincil indeks:
-        # Akinon aynı ayakkabı/renk kartında temsilci beden pk'sını değiştirirse sahte "yeni stok" önlenir.
         model_key_index: Dict[str, str] = {}
         for rec_id, rec in self.state.items():
             m_key = rec.get("model_key")
@@ -149,7 +164,6 @@ class ProductStorage:
             uid = str(prod["id"])
             m_key = prod.get("model_key", "")
 
-            # Ürün ID'si veya model_key ile geçmiş kaydı bul
             existing_id = uid if uid in self.state else model_key_index.get(m_key)
             existing_rec = self.state.get(existing_id) if existing_id else None
 
@@ -162,6 +176,7 @@ class ProductStorage:
                 # DURUM 1: ÜRÜN ZATEN KAYITLI -> EKSTRA FİYAT DÜŞÜŞÜ KONTROLÜ
                 # ==============================================================
                 old_price = float(existing_rec.get("last_price", new_effective_price))
+                prev_lowest = float(existing_rec.get("lowest_price", old_price))
 
                 if old_price > 0 and new_effective_price < old_price:
                     drop_ratio = ((old_price - new_effective_price) / old_price) * 100.0
@@ -173,25 +188,28 @@ class ProductStorage:
                     drop_ratio >= config.PRICE_DROP_THRESHOLD
                     and new_effective_price <= max_price_limit
                 ):
+                    is_all_time_low = new_effective_price <= prev_lowest
                     alert_item = {
                         "event_type": EVENT_PRICE_DROP,
                         "product": prod,
                         "old_price": round(old_price, 2),
                         "new_price": round(new_effective_price, 2),
                         "extra_drop_rate": round(drop_ratio, 1),
+                        "is_all_time_low": is_all_time_low,
+                        "previous_lowest_price": round(prev_lowest, 2),
                     }
                     notifications.append(alert_item)
                     stats["price_drop_alerts"] += 1
                     logger.info(
-                        "🔥 EKSTRA FİYAT DÜŞÜŞÜ: [%s] %s | %.2f TL -> %.2f TL (%%%.1f düşüş)",
+                        "🔥 EKSTRA FİYAT DÜŞÜŞÜ: [%s] %s | %.2f TL -> %.2f TL (%%%.1f düşüş)%s",
                         prod["category"],
                         prod["name"],
                         old_price,
                         new_effective_price,
                         drop_ratio,
+                        " [🏆 EN DÜŞÜK FİYAT!]" if is_all_time_low else "",
                     )
 
-                # Kaydı güncelle (eski ID farklıysa temizle, güncel ID ile yaz)
                 if existing_id and existing_id != uid and existing_id in self.state:
                     del self.state[existing_id]
                 self.state[uid] = self._build_record(prod, previous_record=existing_rec)
@@ -212,6 +230,7 @@ class ProductStorage:
                         "old_price": round(float(prod["retail_price"]), 2),
                         "new_price": round(new_effective_price, 2),
                         "extra_drop_rate": round(discount_rate, 1),
+                        "is_all_time_low": False,
                     }
                     notifications.append(alert_item)
                     stats["new_stock_alerts"] += 1
@@ -224,7 +243,6 @@ class ProductStorage:
                         discount_rate,
                     )
 
-                # Ürünü veritabanına kaydet (sonraki saatlerde fiyat düşüşü takibi için)
                 self.state[uid] = self._build_record(prod)
                 if m_key:
                     model_key_index[m_key] = uid
