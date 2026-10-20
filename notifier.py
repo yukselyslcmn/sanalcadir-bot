@@ -4,10 +4,11 @@ Sanal Çadır (sanalcadir.com) Görselli Telegram Bildirim Modülü (notifier.py
 Özellikler:
 - Telegram Bot API `sendPhoto` uç noktasını kullanarak ürün görseliyle birlikte
   zengin HTML formatında bildirim gönderir.
-- Görsel URL'si geçersizse veya Telegram sunucuları tarafından indirilemezse
-  otomatik olarak `sendMessage` (metin + link önizleme) fallback moduna geçer.
-- Rate-limit (flood) koruması için mesajlar arasında `time.sleep(1.5)` uygular
-  ve HTTP 429 (Too Many Requests) durumunda `retry_after` süresini bekler.
+- 🏆 "Şimdiye Kadarki En Düşük Fiyat!" rozeti ve ⚠️ "Son X Adet Kaldı!" kritik stok uyarısı içerir.
+- 🔘 Mesaj altına tıklanabilir `[🛒 Ürünü Sanal Çadır'da Aç]` inline butonu ekler.
+- Çoklu `TELEGRAM_CHAT_ID` (virgülle ayrılmış birden fazla alıcı) destekler.
+- Görsel URL'si geçersizse otomatik olarak `sendMessage` fallback moduna geçer.
+- Rate-limit (flood) koruması için mesajlar arasında `time.sleep(1.5)` uygular.
 """
 
 import html
@@ -24,7 +25,7 @@ logger = logging.getLogger(__name__)
 
 
 class TelegramNotifier:
-    """Telegram üzerinden fotoğraflı indirim ve stok bildirimi gönderen sınıf."""
+    """Telegram üzerinden fotoğraflı ve butonlu indirim/stok bildirimi gönderen sınıf."""
 
     def __init__(
         self,
@@ -34,13 +35,16 @@ class TelegramNotifier:
     ) -> None:
         self.bot_token: str = bot_token.strip()
         self.chat_id: str = chat_id.strip()
+        self.chat_ids: List[str] = [
+            cid.strip() for cid in self.chat_id.split(",") if cid.strip()
+        ]
         self.rate_limit_delay: float = max(rate_limit_delay, 1.5)
         self.api_base: str = f"https://api.telegram.org/bot{self.bot_token}"
         self.session = requests.Session()
 
     def is_configured(self) -> bool:
         """Telegram token ve chat_id ayarlarının yapılıp yapılmadığını kontrol eder."""
-        if not self.bot_token or not self.chat_id:
+        if not self.bot_token or not self.chat_ids:
             return False
         if "ornek_token" in self.bot_token or self.bot_token.startswith("1234567890:"):
             return False
@@ -57,30 +61,41 @@ class TelegramNotifier:
         formatted = f"{amount:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
         return f"{formatted} TL"
 
+    @staticmethod
+    def _build_inline_keyboard(product_url: str) -> Dict[str, Any]:
+        """Mesaj altına tıklanabilir '🛒 Ürünü Sanal Çadır'da Aç' butonu oluşturur."""
+        return {
+            "inline_keyboard": [
+                [
+                    {
+                        "text": "🛒 Ürünü Sanal Çadır'da Aç",
+                        "url": product_url,
+                    }
+                ]
+            ]
+        }
+
     def format_caption(self, alert: Dict[str, Any]) -> str:
         """
         Bildirim verisini Telegram HTML formatında şık bir mesaja dönüştürür.
-
-        Format:
-        🚨 Başlık: 🔥 EKSTRA FİYAT DÜŞÜŞÜ! veya 🆕 YENİ STOK GELDİ!
-        🏷️ Kategori & Numara: 🚹 Erkek (45 - 45.5) veya 🚺 Kadın (39 - 40)
-        👟 Marka & Ürün Adı
-        💰 Fiyat Bilgisi: ~Eski Fiyat TL~ ➡️ Yeni Fiyat TL (Varsa: 🛒 Sepette: X TL) — (%XX İndirim!)
-        🔗 Ürünü İncelemek ve Satın Almak İçin Tıklayın
         """
         event_type = alert.get("event_type", "")
+        is_all_time_low = bool(alert.get("is_all_time_low", False))
         prod = alert["product"]
 
-        # 1. Başlık
+        # 1. Başlık ve En Düşük Fiyat Rozeti
         if event_type == EVENT_PRICE_DROP:
             header = "🚨 <b>🔥 EKSTRA FİYAT DÜŞÜŞÜ!</b>"
+            if is_all_time_low:
+                header += "\n🏆 <b>Şimdiye Kadarki En Düşük Fiyat!</b>"
         else:
             header = "🚨 <b>🆕 YENİ STOK GELDİ!</b>"
 
-        # 2. Kategori & Numara Bilgisi
+        # 2. Kategori, Numara ve Kritik Stok Bilgisi
         category_badge = html.escape(str(prod.get("category_badge") or prod.get("category", "")))
         available_sizes = prod.get("available_sizes") or []
         sizes_str = ", ".join(str(s) for s in available_sizes) if available_sizes else "-"
+        stock_count = int(prod.get("stock_count") or 0)
 
         # 3. Marka & Ürün Adı
         brand = html.escape(str(prod.get("brand") or "").strip())
@@ -102,9 +117,11 @@ class TelegramNotifier:
         extra_drop = float(alert.get("extra_drop_rate") or 0.0)
 
         if event_type == EVENT_PRICE_DROP:
-            # Ekstra fiyat düşüşünde: Önceki takip edilen fiyat -> Yeni net fiyat
             if basket_price and float(basket_price) < sale_price:
-                basket_note = f" <i>(Etiket: {self._format_tl(sale_price)} | 🛒 Sepette: <b>{self._format_tl(float(basket_price))}</b>)</i>"
+                basket_note = (
+                    f" <i>(Etiket: {self._format_tl(sale_price)} | "
+                    f"🛒 Sepette: <b>{self._format_tl(float(basket_price))}</b>)</i>"
+                )
             else:
                 basket_note = ""
 
@@ -113,11 +130,15 @@ class TelegramNotifier:
                 f"{basket_note} — <b>(%{extra_drop:.0f} Ekstra İndirim!)</b>"
             )
             if retail_price > old_price:
-                price_line += f"\n🏷️ Liste Fiyatı: <s>{self._format_tl(retail_price)}</s> (Toplam %{discount_rate:.0f} İndirim)"
+                price_line += (
+                    f"\n🏷️ Liste Fiyatı: <s>{self._format_tl(retail_price)}</s> "
+                    f"(Toplam %{discount_rate:.0f} İndirim)"
+                )
         else:
-            # Yeni stok girişinde: Liste fiyatı -> Satış fiyatı (ve varsa Sepet fiyatı)
             if basket_price and float(basket_price) < sale_price:
-                label_prefix = f"🛒 {html.escape(str(basket_label))}: " if basket_label else "🛒 Sepette: "
+                label_prefix = (
+                    f"🛒 {html.escape(str(basket_label))}: " if basket_label else "🛒 Sepette: "
+                )
                 if retail_price > sale_price:
                     price_line = (
                         f"💰 <s>{self._format_tl(retail_price)}</s> ➡️ {self._format_tl(sale_price)} "
@@ -148,11 +169,20 @@ class TelegramNotifier:
             "",
             f"🏷️ <b>Kategori:</b> {category_badge}",
             f"📐 <b>Stoktaki Numara:</b> <code>{html.escape(sizes_str)}</code>",
-            f"👟 {full_title}",
-            price_line,
-            "",
-            link_line,
         ]
+
+        # Kritik Stok Uyarısı ("Son X Adet Kaldı!")
+        if 0 < stock_count <= config.CRITICAL_STOCK_LIMIT:
+            lines.append(f"⚠️ <b>Kritik Stok:</b> Bu numarada <b>Son {stock_count} Adet</b> kaldı!")
+
+        lines.extend(
+            [
+                f"👟 {full_title}",
+                price_line,
+                "",
+                link_line,
+            ]
+        )
         return "\n".join(lines)
 
     def _post_telegram(self, endpoint: str, payload: Dict[str, Any]) -> bool:
@@ -189,7 +219,7 @@ class TelegramNotifier:
 
     def send_alert(self, alert: Dict[str, Any]) -> bool:
         """
-        Tek bir ürün bildirimini önce `sendPhoto` ile göndermeyi dener.
+        Tek bir ürün bildirimini önce `sendPhoto` (+ Inline Keyboard butonu) ile göndermeyi dener.
         Fotoğraf gönderilemezse `sendMessage` fallback olarak devreye girer.
         """
         if not self.is_configured():
@@ -203,30 +233,44 @@ class TelegramNotifier:
         caption = self.format_caption(alert)
         prod = alert["product"]
         image_url = str(prod.get("image_url") or "").strip()
+        raw_product_url = str(prod.get("product_url") or config.BASE_URL).strip()
+        reply_markup = self._build_inline_keyboard(raw_product_url)
 
-        # 1. Öncelik: sendPhoto ile ürün fotoğrafıyla birlikte gönder
-        if image_url:
-            photo_payload = {
-                "chat_id": self.chat_id,
-                "photo": image_url,
-                "caption": caption,
-                "parse_mode": "HTML",
-            }
-            if self._post_telegram("sendPhoto", photo_payload):
-                return True
-            logger.info(
-                "sendPhoto başarısız oldu (%s), sendMessage fallback devreye giriyor...",
-                prod.get("name"),
-            )
+        any_sent = False
+        for target_chat_id in self.chat_ids:
+            sent_for_chat = False
+            # 1. Öncelik: sendPhoto ile ürün fotoğrafı ve tıklanabilir butonla gönder
+            if image_url:
+                photo_payload = {
+                    "chat_id": target_chat_id,
+                    "photo": image_url,
+                    "caption": caption,
+                    "parse_mode": "HTML",
+                    "reply_markup": reply_markup,
+                }
+                if self._post_telegram("sendPhoto", photo_payload):
+                    sent_for_chat = True
 
-        # 2. Fallback: sendMessage ile gönder
-        message_payload = {
-            "chat_id": self.chat_id,
-            "text": caption,
-            "parse_mode": "HTML",
-            "disable_web_page_preview": False,
-        }
-        return self._post_telegram("sendMessage", message_payload)
+            # 2. Fallback: sendMessage ile gönder
+            if not sent_for_chat:
+                if image_url:
+                    logger.info(
+                        "sendPhoto başarısız oldu (%s), sendMessage fallback devreye giriyor...",
+                        prod.get("name"),
+                    )
+                message_payload = {
+                    "chat_id": target_chat_id,
+                    "text": caption,
+                    "parse_mode": "HTML",
+                    "disable_web_page_preview": False,
+                    "reply_markup": reply_markup,
+                }
+                sent_for_chat = self._post_telegram("sendMessage", message_payload)
+
+            if sent_for_chat:
+                any_sent = True
+
+        return any_sent
 
     def send_batch_alerts(self, alerts: List[Dict[str, Any]]) -> int:
         """
