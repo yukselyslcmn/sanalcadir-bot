@@ -169,14 +169,14 @@ CRITICAL_STOCK_LIMIT: int = _parse_int(os.getenv("CRITICAL_STOCK_LIMIT"), 3)
 NOTIFY_ON_FIRST_RUN: bool = _parse_bool(os.getenv("NOTIFY_ON_FIRST_RUN"), default=False)
 
 # --loop modunda kontrol aralığı (dakika)
-CHECK_INTERVAL_MINUTES: int = _parse_int(os.getenv("CHECK_INTERVAL_MINUTES"), 30)
+CHECK_INTERVAL_MINUTES: int = _parse_int(os.getenv("CHECK_INTERVAL_MINUTES"), 20)
 
 # Kategori başına maksimum sayfa sınırı (0 = tüm sayfaları tara)
 MAX_PAGES_PER_CATEGORY: int = _parse_int(os.getenv("MAX_PAGES_PER_CATEGORY"), 0)
 
-# HTTP İstek Ayarları
+# HTTP İstek Ayarları (GitHub Actions'ta 60 saniyenin altında bitip 1 dk yazması için 0.2 sn)
 REQUEST_TIMEOUT: int = _parse_int(os.getenv("REQUEST_TIMEOUT"), 25)
-PAGE_DELAY_SECONDS: float = _parse_float(os.getenv("PAGE_DELAY_SECONDS"), 0.6)
+PAGE_DELAY_SECONDS: float = _parse_float(os.getenv("PAGE_DELAY_SECONDS"), 0.2)
 
 
 # ==============================================================================
