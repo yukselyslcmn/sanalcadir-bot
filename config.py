@@ -158,6 +158,9 @@ MIN_DISCOUNT_RATE: float = _parse_float(os.getenv("MIN_DISCOUNT_RATE"), 20.0)
 # Kayıtlı ürünlerde "EKSTRA FİYAT DÜŞÜŞÜ" bildirimi için gereken minimum düşüş yüzdesi (%)
 PRICE_DROP_THRESHOLD: float = _parse_float(os.getenv("PRICE_DROP_THRESHOLD"), 5.0)
 
+# Kritik stok uyarı eşiği (Stok bu sayı ve altındaysa "Son X Adet Kaldı!" uyarısı eklenir)
+CRITICAL_STOCK_LIMIT: int = _parse_int(os.getenv("CRITICAL_STOCK_LIMIT"), 3)
+
 
 # ==============================================================================
 # 4. ÇALIŞMA VE DURUM TAKİP AYARLARI
@@ -166,7 +169,7 @@ PRICE_DROP_THRESHOLD: float = _parse_float(os.getenv("PRICE_DROP_THRESHOLD"), 5.
 NOTIFY_ON_FIRST_RUN: bool = _parse_bool(os.getenv("NOTIFY_ON_FIRST_RUN"), default=False)
 
 # --loop modunda kontrol aralığı (dakika)
-CHECK_INTERVAL_MINUTES: int = _parse_int(os.getenv("CHECK_INTERVAL_MINUTES"), 60)
+CHECK_INTERVAL_MINUTES: int = _parse_int(os.getenv("CHECK_INTERVAL_MINUTES"), 30)
 
 # Kategori başına maksimum sayfa sınırı (0 = tüm sayfaları tara)
 MAX_PAGES_PER_CATEGORY: int = _parse_int(os.getenv("MAX_PAGES_PER_CATEGORY"), 0)
