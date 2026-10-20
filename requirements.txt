@@ -1,0 +1,6 @@
+requests>=2.31.0
+python-dotenv>=1.0.1
+schedule>=1.2.1
+beautifulsoup4>=4.12.3
+curl_cffi>=0.7.0
+cloudscraper>=1.2.71
