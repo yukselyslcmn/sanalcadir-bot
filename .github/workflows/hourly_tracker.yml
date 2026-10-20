@@ -2,8 +2,8 @@ name: Sanal Çadır 7/24 Saatlik Ayakkabı İndirim & Stok Takip Botu
 
 on:
   schedule:
-    # Her saat başı otomatik çalışır (UTC)
-    - cron: '0 * * * *'
+    # Her 30 dakikada bir otomatik çalışır (UTC)
+    - cron: '*/30 * * * *'
   workflow_dispatch:
     # GitHub Actions sekmesinden "Run workflow" butonuyla elle tetikleme desteği
     inputs:
