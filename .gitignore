@@ -1,0 +1,19 @@
+# Ortam değişkenleri ve gizli anahtarlar (Telegram Token vb.)
+.env
+
+# Python önbellek ve sanal ortam dosyaları
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Geçici dosyalar
+*.tmp
+*.log
+
+# ÖNEMLİ: data/products_state.json GitHub Actions durum takibi için depoda tutulmalıdır!
+!data/
+!data/products_state.json
