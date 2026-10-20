@@ -1,0 +1,69 @@
+name: Sanal Çadır 7/24 Saatlik Ayakkabı İndirim & Stok Takip Botu
+
+on:
+  schedule:
+    # Her saat başı otomatik çalışır (UTC)
+    - cron: '0 * * * *'
+  workflow_dispatch:
+    # GitHub Actions sekmesinden "Run workflow" butonuyla elle tetikleme desteği
+    inputs:
+      notify_on_first_run:
+        description: 'İlk çalıştırmada bildirim gönderilsin mi? (Varsayılan: False)'
+        required: false
+        default: 'False'
+
+# data/products_state.json dosyasını depoya geri commit/push edebilmek için yazma izni
+permissions:
+  contents: write
+
+concurrency:
+  group: sanalcadir-hourly-tracker
+  cancel-in-progress: false
+
+jobs:
+  track-discounts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 📥 Depoyu İndir (Checkout)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Python Kurulumu (3.11)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 📦 Bağımlılıkları Yükle
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🔍 Sanal Çadır İndirim ve Stok Taramasını Çalıştır
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MAX_PRICE_LIMIT: ${{ vars.MAX_PRICE_LIMIT || '10000' }}
+          MIN_DISCOUNT_RATE: ${{ vars.MIN_DISCOUNT_RATE || '20' }}
+          PRICE_DROP_THRESHOLD: ${{ vars.PRICE_DROP_THRESHOLD || '5' }}
+          ALLOWED_BRANDS: ${{ vars.ALLOWED_BRANDS || '' }}
+          NOTIFY_ON_FIRST_RUN: ${{ github.event.inputs.notify_on_first_run || 'False' }}
+        run: |
+          python main.py --once
+
+      - name: 💾 Güncel Durum Dosyasını (data/products_state.json) Depoya Kaydet
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/products_state.json
+          if git diff --staged --quiet; then
+            echo "data/products_state.json dosyasında değişiklik yok, commit atlanıyor."
+          else
+            git commit -m "chore(state): saatlik ürün fiyat ve stok durumu güncellendi [skip ci]"
+            git pull --rebase origin "${{ github.ref_name }}" || true
+            git push origin HEAD:"${{ github.ref_name }}"
+            echo "data/products_state.json başarıyla GitHub deposuna kaydedildi."
+          fi
