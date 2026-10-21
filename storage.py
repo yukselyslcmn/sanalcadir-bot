@@ -4,17 +4,19 @@ Sanal Çadır (sanalcadir.com) Durum Takip ve Fiyat Karşılaştırma Modülü (
 Görevleri:
 - `data/products_state.json` dosyasını okumak ve atomik/güvenli şekilde güncellemek.
 - İlk çalıştırma spam korumasını (`NOTIFY_ON_FIRST_RUN`) yönetmek.
+- Unisex ürünlerin Erkek ve Kadın kategorilerinde birbirini ezmesini önleyen `state_key`
+  (`erkek_<pk>`, `kadin_<pk>`) mimarisini ve eski kayıtlardan kesintisiz geçişi yönetmek.
 - Her ürünün bugüne kadar gördüğü en düşük fiyatı (`lowest_price`) takip ederek
   "🏆 Şimdiye Kadarki En Düşük Fiyat!" durumunu tespit etmek.
-- Gerçek fiyat düşüşlerini (Durum 1: En az %5 ekstra indirim) ve
-  yeni stok girişlerini (Durum 2: İlk kez stoğa giren ve kriterleri sağlayan ürünler) tespit etmek.
+- Gerçek fiyat düşüşlerini (Durum 1: En az %5 ekstra indirim), yeni stok girişlerini (Durum 2)
+  ve tükenip tekrar stoğa giren ürünleri (Durum 3: 🔄 TEKRAR STOKTA!) tespit etmek.
 """
 
 import json
 import logging
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 import config
 
@@ -23,6 +25,7 @@ logger = logging.getLogger(__name__)
 # Bildirim Türü Sabitleri
 EVENT_PRICE_DROP = "PRICE_DROP"
 EVENT_NEW_STOCK = "NEW_STOCK"
+EVENT_BACK_IN_STOCK = "BACK_IN_STOCK"
 
 
 class ProductStorage:
@@ -91,17 +94,23 @@ class ProductStorage:
         else:
             lowest_price = round(current_effective, 2)
 
+        state_key = str(product.get("state_key") or f"{product.get('category_key', 'genel')}_{product['id']}")
+
         return {
             "id": str(product["id"]),
+            "state_key": state_key,
             "pk": product.get("pk"),
             "sku": product.get("sku", ""),
             "model_key": product.get("model_key", ""),
             "name": product["name"],
             "brand": product.get("brand", ""),
             "category": product["category"],
+            "category_key": product.get("category_key", ""),
             "category_badge": product.get("category_badge", product["category"]),
             "available_sizes": product.get("available_sizes", []),
             "stock_count": int(product.get("stock_count", 1) or 1),
+            "in_stock": True,
+            "missing_scans": 0,
             "retail_price": product["retail_price"],
             "sale_price": product["sale_price"],
             "basket_price": product.get("basket_price"),
@@ -116,15 +125,15 @@ class ProductStorage:
         }
 
     def process_scraped_products(
-        self, scraped_products: List[Dict[str, Any]]
+        self,
+        scraped_products: List[Dict[str, Any]],
+        completed_categories: Optional[Set[str]] = None,
     ) -> Tuple[List[Dict[str, Any]], Dict[str, int]]:
         """
         Taranan ürünleri mevcut `products_state.json` ile karşılaştırır.
 
         Dönüş:
             (notifications, stats)
-            - notifications: Bildirim gönderilecek olay listesi
-            - stats: İstatistik özeti
         """
         is_first_run = len(self.state) == 0
         notifications: List[Dict[str, Any]] = []
@@ -136,12 +145,19 @@ class ProductStorage:
             "total_tracked": 0,
         }
 
-        # Model anahtarı (kategori + base_code + listing_code) üzerinden ikincil indeks:
+        # İkincil indeksler (model_key ve eski şema id uyumluluğu için)
         model_key_index: Dict[str, str] = {}
-        for rec_id, rec in self.state.items():
+        legacy_id_records: Dict[str, Dict[str, Any]] = {}
+        legacy_keys_to_clean: Set[str] = set()
+
+        for rec_key, rec in self.state.items():
             m_key = rec.get("model_key")
             if m_key:
-                model_key_index[m_key] = rec_id
+                model_key_index[m_key] = rec_key
+            raw_id = str(rec.get("id") or rec_key)
+            if "_" not in rec_key:
+                legacy_id_records[raw_id] = rec
+                legacy_keys_to_clean.add(rec_key)
 
         # İlk Çalıştırma Koruması (Spam Önleme)
         if is_first_run and not config.NOTIFY_ON_FIRST_RUN:
@@ -151,39 +167,55 @@ class ProductStorage:
                 len(scraped_products),
             )
             for prod in scraped_products:
-                uid = str(prod["id"])
-                self.state[uid] = self._build_record(prod)
+                s_key = str(prod.get("state_key") or f"{prod.get('category_key', 'genel')}_{prod['id']}")
+                self.state[s_key] = self._build_record(prod)
                 stats["silent_first_run_saved"] += 1
 
             self.save_state()
             stats["total_tracked"] = len(self.state)
             return [], stats
 
+        seen_state_keys: Set[str] = set()
+
         # Normal Karşılaştırma Akışı
         for prod in scraped_products:
             uid = str(prod["id"])
+            s_key = str(prod.get("state_key") or f"{prod.get('category_key', 'genel')}_{uid}")
             m_key = prod.get("model_key", "")
+            seen_state_keys.add(s_key)
 
-            existing_id = uid if uid in self.state else model_key_index.get(m_key)
-            existing_rec = self.state.get(existing_id) if existing_id else None
+            # 1. Doğrudan state_key ile ara
+            # 2. Bulunamazsa model_key ile ara
+            # 3. Bulunamazsa eski şema (kategori öneksiz pk) kaydından miras al
+            existing_key: Optional[str] = None
+            existing_rec: Optional[Dict[str, Any]] = None
+
+            if s_key in self.state:
+                existing_key = s_key
+                existing_rec = self.state[s_key]
+            elif m_key and m_key in model_key_index:
+                existing_key = model_key_index[m_key]
+                existing_rec = self.state.get(existing_key)
+            elif uid in legacy_id_records:
+                existing_rec = legacy_id_records[uid]
 
             new_effective_price = float(prod["effective_price"])
             max_price_limit = float(prod.get("max_price_limit", config.MAX_PRICE_LIMIT))
             discount_rate = float(prod.get("discount_rate", 0.0))
 
             if existing_rec is not None:
-                # ==============================================================
-                # DURUM 1: ÜRÜN ZATEN KAYITLI -> EKSTRA FİYAT DÜŞÜŞÜ KONTROLÜ
-                # ==============================================================
                 old_price = float(existing_rec.get("last_price", new_effective_price))
                 prev_lowest = float(existing_rec.get("lowest_price", old_price))
+                was_in_stock = bool(existing_rec.get("in_stock", True))
 
                 if old_price > 0 and new_effective_price < old_price:
                     drop_ratio = ((old_price - new_effective_price) / old_price) * 100.0
                 else:
                     drop_ratio = 0.0
 
-                # Kayıtlı fiyattan en az %5 (PRICE_DROP_THRESHOLD) düştüyse VE tavan fiyat altındaysa
+                # ==============================================================
+                # DURUM 1: KAYITLI ÜRÜNDE EKSTRA FİYAT DÜŞÜŞÜ (%5 ve üzeri)
+                # ==============================================================
                 if (
                     drop_ratio >= config.PRICE_DROP_THRESHOLD
                     and new_effective_price <= max_price_limit
@@ -210,11 +242,39 @@ class ProductStorage:
                         " [🏆 EN DÜŞÜK FİYAT!]" if is_all_time_low else "",
                     )
 
-                if existing_id and existing_id != uid and existing_id in self.state:
-                    del self.state[existing_id]
-                self.state[uid] = self._build_record(prod, previous_record=existing_rec)
+                # ==============================================================
+                # DURUM 3: DAHA ÖNCE STOĞU TÜKENMİŞ ÜRÜN TEKRAR STOĞA GİRDİYSE
+                # ==============================================================
+                elif (
+                    not was_in_stock
+                    and new_effective_price <= max_price_limit
+                    and discount_rate >= config.MIN_DISCOUNT_RATE
+                ):
+                    is_all_time_low = new_effective_price <= prev_lowest
+                    alert_item = {
+                        "event_type": EVENT_BACK_IN_STOCK,
+                        "product": prod,
+                        "old_price": round(float(prod["retail_price"]), 2),
+                        "new_price": round(new_effective_price, 2),
+                        "extra_drop_rate": round(discount_rate, 1),
+                        "is_all_time_low": is_all_time_low,
+                    }
+                    notifications.append(alert_item)
+                    stats["new_stock_alerts"] += 1
+                    logger.info(
+                        "🔄 TEKRAR STOKTA: [%s] %s | Numara: %s | Net Fiyat: %.2f TL (%%%.1f İndirim)",
+                        prod["category"],
+                        prod["name"],
+                        ", ".join(prod.get("available_sizes", [])),
+                        new_effective_price,
+                        discount_rate,
+                    )
+
+                if existing_key and existing_key != s_key and existing_key in self.state:
+                    del self.state[existing_key]
+                self.state[s_key] = self._build_record(prod, previous_record=existing_rec)
                 if m_key:
-                    model_key_index[m_key] = uid
+                    model_key_index[m_key] = s_key
 
             else:
                 # ==============================================================
@@ -243,9 +303,28 @@ class ProductStorage:
                         discount_rate,
                     )
 
-                self.state[uid] = self._build_record(prod)
+                self.state[s_key] = self._build_record(prod)
                 if m_key:
-                    model_key_index[m_key] = uid
+                    model_key_index[m_key] = s_key
+
+        # Eski şema (kategori öneksiz) anahtarları temizle
+        for old_k in legacy_keys_to_clean:
+            if old_k in self.state:
+                del self.state[old_k]
+
+        # Eksiksiz taranan kategorilerde stoktan düşen ürünleri takip et
+        if completed_categories:
+            for rec_key, rec in list(self.state.items()):
+                if rec_key in seen_state_keys:
+                    continue
+                cat_key = rec.get("category_key") or (
+                    "erkek" if rec.get("category") == "Erkek" else "kadin"
+                )
+                if cat_key in completed_categories:
+                    missing = int(rec.get("missing_scans", 0) or 0) + 1
+                    rec["missing_scans"] = missing
+                    if missing >= config.OUT_OF_STOCK_CONFIRM_SCANS:
+                        rec["in_stock"] = False
 
         self.save_state()
         stats["total_tracked"] = len(self.state)
