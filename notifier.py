@@ -4,10 +4,11 @@ Sanal Çadır (sanalcadir.com) Görselli Telegram Bildirim Modülü (notifier.py
 Özellikler:
 - Telegram Bot API `sendPhoto` uç noktasını kullanarak ürün görseliyle birlikte
   zengin HTML formatında bildirim gönderir.
-- 🏆 "Şimdiye Kadarki En Düşük Fiyat!" rozeti ve ⚠️ "Son X Adet Kaldı!" kritik stok uyarısı içerir.
+- 🏆 "Şimdiye Kadarki En Düşük Fiyat!" rozeti, 🔄 "Tekrar Stoğa Girdi!" başlığı ve
+  ⚠️ "Son X Adet Kaldı!" kritik stok uyarısı içerir.
 - 🔘 Mesaj altına tıklanabilir `[🛒 Ürünü Sanal Çadır'da Aç]` inline butonu ekler.
 - Çoklu `TELEGRAM_CHAT_ID` (virgülle ayrılmış birden fazla alıcı) destekler.
-- Görsel URL'si geçersizse otomatik olarak `sendMessage` fallback moduna geçer.
+- Görsel URL'si geçersizse veya açıklama sınırı aşarsa otomatik olarak `sendMessage` fallback moduna geçer.
 - Rate-limit (flood) koruması için mesajlar arasında `time.sleep(1.5)` uygular.
 """
 
@@ -17,9 +18,11 @@ import time
 from typing import Any, Dict, List
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 import config
-from storage import EVENT_PRICE_DROP
+from storage import EVENT_BACK_IN_STOCK, EVENT_PRICE_DROP
 
 logger = logging.getLogger(__name__)
 
@@ -41,6 +44,14 @@ class TelegramNotifier:
         self.rate_limit_delay: float = max(rate_limit_delay, 1.5)
         self.api_base: str = f"https://api.telegram.org/bot{self.bot_token}"
         self.session = requests.Session()
+        retry_strategy = Retry(
+            total=2,
+            backoff_factor=0.5,
+            status_forcelist=[500, 502, 503, 504],
+            allowed_methods=["POST"],
+        )
+        adapter = HTTPAdapter(max_retries=retry_strategy)
+        self.session.mount("https://", adapter)
 
     def is_configured(self) -> bool:
         """Telegram token ve chat_id ayarlarının yapılıp yapılmadığını kontrol eder."""
@@ -88,6 +99,10 @@ class TelegramNotifier:
             header = "🚨 <b>🔥 EKSTRA FİYAT DÜŞÜŞÜ!</b>"
             if is_all_time_low:
                 header += "\n🏆 <b>Şimdiye Kadarki En Düşük Fiyat!</b>"
+        elif event_type == EVENT_BACK_IN_STOCK:
+            header = "🚨 <b>🔄 TEKRAR STOĞA GİRDİ!</b>"
+            if is_all_time_low:
+                header += "\n🏆 <b>Şimdiye Kadarki En Düşük Fiyat!</b>"
         else:
             header = "🚨 <b>🆕 YENİ STOK GELDİ!</b>"
 
@@ -97,9 +112,10 @@ class TelegramNotifier:
         sizes_str = ", ".join(str(s) for s in available_sizes) if available_sizes else "-"
         stock_count = int(prod.get("stock_count") or 0)
 
-        # 3. Marka & Ürün Adı
+        # 3. Marka & Ürün Adı (Telegram 1024 karakter sınırı için güvenli uzunluk)
         brand = html.escape(str(prod.get("brand") or "").strip())
-        name = html.escape(str(prod.get("name") or "").strip())
+        raw_name = str(prod.get("name") or "").strip()[:180]
+        name = html.escape(raw_name)
         if brand and brand.lower() not in name.lower():
             full_title = f"<b>{brand}</b> - {name}"
         else:
@@ -171,7 +187,6 @@ class TelegramNotifier:
             f"📐 <b>Stoktaki Numara:</b> <code>{html.escape(sizes_str)}</code>",
         ]
 
-        # Kritik Stok Uyarısı ("Son X Adet Kaldı!")
         if 0 < stock_count <= config.CRITICAL_STOCK_LIMIT:
             lines.append(f"⚠️ <b>Kritik Stok:</b> Bu numarada <b>Son {stock_count} Adet</b> kaldı!")
 
@@ -239,8 +254,8 @@ class TelegramNotifier:
         any_sent = False
         for target_chat_id in self.chat_ids:
             sent_for_chat = False
-            # 1. Öncelik: sendPhoto ile ürün fotoğrafı ve tıklanabilir butonla gönder
-            if image_url:
+            # 1. Öncelik: sendPhoto (caption <= 1024 karakter sınırı dahilindeyse)
+            if image_url and len(caption) <= 1024:
                 photo_payload = {
                     "chat_id": target_chat_id,
                     "photo": image_url,
