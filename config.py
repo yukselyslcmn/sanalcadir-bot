@@ -5,13 +5,12 @@ Yapılandırma ve Filtre Ayarları Modülü (config.py)
 
 import os
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Any, Dict, List
 
 try:
     from dotenv import load_dotenv
     load_dotenv()
 except ImportError:
-    # python-dotenv yüklü değilse ortam değişkenlerinden devam et
     pass
 
 
@@ -92,8 +91,6 @@ TELEGRAM_RATE_LIMIT_DELAY: float = _parse_float(
 # ==============================================================================
 BASE_URL: str = "https://www.sanalcadir.com"
 
-# Akinon altyapısında beden filtresi `attributes_filterable_size` parametresiyle çalışır.
-# Buçuklu numaralar sitede "45,5" (virgüllü) olarak yer aldığı için URL'de 45 ve 45,5 kullanılır.
 ERKEK_CATEGORY_URL: str = os.getenv(
     "ERKEK_CATEGORY_URL",
     "https://www.sanalcadir.com/erkek-ayakkabi/?attributes_filterable_size=45&attributes_filterable_size=45,5",
@@ -124,6 +121,8 @@ DEFAULT_EXCLUDE_KEYWORDS: List[str] = [
     "çorap",
     "bakım",
     "bağcık",
+    "çocuk",
+    "bebek",
 ]
 EXCLUDE_KEYWORDS: List[str] = (
     _parse_list(os.getenv("EXCLUDE_KEYWORDS"), DEFAULT_EXCLUDE_KEYWORDS)
@@ -131,11 +130,7 @@ EXCLUDE_KEYWORDS: List[str] = (
     else DEFAULT_EXCLUDE_KEYWORDS
 )
 
-# Marka Filtresi:
-# Boş liste [] bırakılırsa tüm markalar kabul edilir.
-# Sadece belirli markaları takip etmek isterseniz .env içinde ALLOWED_BRANDS tanımlayabilir
-# veya aşağıdaki listeye ekleyebilirsiniz:
-# Örn: ["Nike", "Adidas", "New Balance", "Puma", "Lacoste", "Skechers", "Vans", "Timberland", "Converse"]
+# Marka Filtresi (Boş liste [] bırakılırsa tüm markalar kabul edilir)
 DEFAULT_ALLOWED_BRANDS: List[str] = []
 ALLOWED_BRANDS: List[str] = (
     _parse_list(os.getenv("ALLOWED_BRANDS"), DEFAULT_ALLOWED_BRANDS)
@@ -161,20 +156,18 @@ PRICE_DROP_THRESHOLD: float = _parse_float(os.getenv("PRICE_DROP_THRESHOLD"), 5.
 # Kritik stok uyarı eşiği (Stok bu sayı ve altındaysa "Son X Adet Kaldı!" uyarısı eklenir)
 CRITICAL_STOCK_LIMIT: int = _parse_int(os.getenv("CRITICAL_STOCK_LIMIT"), 3)
 
+# Bir ürün kaç ardışık tam taramada stokta görünmezse "Stok Tükendi" olarak işaretlensin?
+OUT_OF_STOCK_CONFIRM_SCANS: int = _parse_int(os.getenv("OUT_OF_STOCK_CONFIRM_SCANS"), 3)
+
 
 # ==============================================================================
 # 4. ÇALIŞMA VE DURUM TAKİP AYARLARI
 # ==============================================================================
-# İlk çalıştırmada (products_state.json boşken) bildirim atılsın mı? (Spam koruması için False)
 NOTIFY_ON_FIRST_RUN: bool = _parse_bool(os.getenv("NOTIFY_ON_FIRST_RUN"), default=False)
-
-# --loop modunda kontrol aralığı (dakika)
 CHECK_INTERVAL_MINUTES: int = _parse_int(os.getenv("CHECK_INTERVAL_MINUTES"), 20)
-
-# Kategori başına maksimum sayfa sınırı (0 = tüm sayfaları tara)
 MAX_PAGES_PER_CATEGORY: int = _parse_int(os.getenv("MAX_PAGES_PER_CATEGORY"), 0)
 
-# HTTP İstek Ayarları (GitHub Actions'ta 60 saniyenin altında bitip 1 dk yazması için 0.2 sn)
+# HTTP İstek Ayarları
 REQUEST_TIMEOUT: int = _parse_int(os.getenv("REQUEST_TIMEOUT"), 25)
 PAGE_DELAY_SECONDS: float = _parse_float(os.getenv("PAGE_DELAY_SECONDS"), 0.2)
 
