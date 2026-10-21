@@ -26,7 +26,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ACTIVE_COUNT=$(gh run list --workflow="hourly_tracker.yml" --status="in_progress" --json databaseId --jq 'length')
+          ACTIVE_COUNT=$(gh run list --repo "${{ github.repository }}" --workflow="hourly_tracker.yml" --status="in_progress" --json databaseId --jq 'length' || echo "1")
           echo "Şu anda çalışan iş akışı sayısı: $ACTIVE_COUNT"
           if [ "$ACTIVE_COUNT" -gt "1" ]; then
             echo "Zaten aktif bir 20 dakikalık tarama döngüsü çalışıyor. Çakışmayı önlemek için bu kopya sonlandırılıyor."
@@ -110,4 +110,4 @@ jobs:
           echo "⏳ Sonraki vardiyadan önce 19 dakika bekleniyor..."
           sleep 1140
           echo "🚀 Yeni tarama vardiyası otomatik olarak tetikleniyor..."
-          gh workflow run hourly_tracker.yml --ref "${{ github.ref_name }}" || true
+          gh workflow run hourly_tracker.yml --repo "${{ github.repository }}" --ref "${{ github.ref_name }}" || true
