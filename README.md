@@ -1,6 +1,6 @@
 # 👟 Sanal Çadır (sanalcadir.com) 7/24 Otomatik Ayakkabı İndirim & Stok Takip Botu
 
-`https://www.sanalcadir.com/` (Akinon altyapısı) üzerinde yer alan **Erkek (45 ve 45.5 numara)** ve **Kadın (39 ve 40 numara)** ayakkabıları her saat başı otomatik tarayan, **gerçek bir fiyat düşüşü** olduğunda veya **yeni indirimli stok** girdiğinde Telegram üzerinden **ürün fotoğrafı, fiyatı, sepette ekstra indirimi ve satın alma linkiyle** bildirim gönderen modüler Python projesi.
+`https://www.sanalcadir.com/` (Akinon altyapısı) üzerinde yer alan **Erkek (45, 45.5, 45-46 ve 46 numara)** ve **Kadın (39, 39.5, 39-40 ve 40 numara)** ayakkabıları her 20 dakikada bir otomatik tarayan, **gerçek bir fiyat düşüşü** olduğunda veya **yeni indirimli stok** girdiğinde Telegram üzerinden **ürün fotoğrafı, fiyatı, sepette ekstra indirimi ve satın alma linkiyle** bildirim gönderen modüler Python projesi.
 
 Bilgisayarınız kapalıyken bile **GitHub Actions** üzerinde 7/24 ücretsiz çalışır.
 
