@@ -7,6 +7,8 @@ Sanal Çadır (sanalcadir.com - Akinon) Veri Çekme (Scraper) Modülü (scraper.
   katmanlı (fallback) esnek mimari sunar.
 - Hayalet Stok Koruması: `extra_data.variants` içindeki beden bazlı gerçek stokları (`in_stock` ve `stock > 0`)
   kontrol ederek sadece hedef numaraları (Erkek: 45, 45.5 | Kadın: 39, 40) gerçekten stokta olan ürünleri alır.
+- Çocuk / Yanlış Cinsiyet Filtresi: Kadın kategorisine sızan Çocuk (`integration_cocuk == "1"`) veya Erkek
+  ürünlerini otomatik ayıklar (Unisex ürünleri her iki kategoride de destekler).
 - Sepette Ekstra İndirim Algılama: `retail_price`, `price` ve `basket_offers` (`discounted_total_price`)
   verilerini ayrıştırarak gerçek net fiyatı hesaplar.
 """
@@ -15,10 +17,12 @@ import json
 import logging
 import re
 import time
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
 from urllib.parse import parse_qsl, urlencode, urljoin, urlsplit, urlunsplit
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 import config
 from config import normalize_tr
@@ -47,13 +51,25 @@ class SanalCadirScraper:
         self.timeout: int = config.REQUEST_TIMEOUT
         self.page_delay: float = config.PAGE_DELAY_SECONDS
 
-        # Standart requests oturumu
+        # Otomatik yeniden deneme (Retry) destekli standart requests oturumu
         self.session = requests.Session()
         self.session.headers.update(self.DEFAULT_HEADERS)
+        retry_strategy = Retry(
+            total=2,
+            backoff_factor=0.5,
+            status_forcelist=[500, 502, 504],
+            allowed_methods=["GET"],
+        )
+        adapter = HTTPAdapter(max_retries=retry_strategy, pool_connections=10, pool_maxsize=10)
+        self.session.mount("https://", adapter)
+        self.session.mount("http://", adapter)
 
         # WAF / Cloudflare aşımı için opsiyonel istemciler (lazy-init)
         self._curl_session: Any = None
         self._cloudscraper_session: Any = None
+
+        # Son taramada tüm sayfaları eksiksiz çekilen kategorilerin anahtarları
+        self.completed_categories: Set[str] = set()
 
     # ==========================================================================
     # HTTP İSTEK VE WAF / CLOUDFLARE BYPASS KATMANI
@@ -204,7 +220,6 @@ class SanalCadirScraper:
         parts = urlsplit(category_url)
         query_pairs = parse_qsl(parts.query, keep_blank_values=True)
 
-        # Mevcut format ve page parametrelerini temizle (yeniden eklenecek)
         filtered_pairs: List[Tuple[str, str]] = []
         seen_sizes = set()
 
@@ -215,7 +230,6 @@ class SanalCadirScraper:
             if k == "attributes_filterable_size":
                 seen_sizes.add(v)
 
-        # Eğer kullanıcı URL'de "45.5" yazdıysa Akinon "45,5" beklediği için virgüllü karşılığını da ekle
         extra_size_pairs: List[Tuple[str, str]] = []
         for k, v in filtered_pairs:
             if k == "attributes_filterable_size" and "." in v:
@@ -244,7 +258,6 @@ class SanalCadirScraper:
         text = str(val).strip()
         if not text:
             return default
-        # "1.949,35 TL" vs "1949.35" ayrımı
         text = re.sub(r"[^\d.,]", "", text)
         if "," in text and "." in text:
             if text.rfind(",") > text.rfind("."):
@@ -265,7 +278,9 @@ class SanalCadirScraper:
             return ""
         return str(size_val).strip().replace(",", ".")
 
-    def _extract_basket_offer(self, raw_product: Dict[str, Any], sale_price: float) -> Tuple[Optional[float], Optional[str]]:
+    def _extract_basket_offer(
+        self, raw_product: Dict[str, Any], sale_price: float
+    ) -> Tuple[Optional[float], Optional[str]]:
         """
         Akinon ürün JSON'unda yer alan 'Sepette Ekstra İndirim' (`basket_offers`,
         `promotions`, `basket_price`) alanlarını ayrıştırır.
@@ -288,7 +303,6 @@ class SanalCadirScraper:
                         basket_price = round(candidate, 2)
                         offer_label = str(label).strip() if label else "Sepette Ekstra İndirim"
                 elif label:
-                    # Etikette "%XX" varsa ve listing_kwargs boşsa yüzdeden hesapla
                     match = re.search(r"%\s*(\d+(?:[.,]\d+)?)", str(label))
                     if match:
                         pct = self._to_float(match.group(1))
@@ -324,16 +338,18 @@ class SanalCadirScraper:
 
     def _extract_in_stock_target_sizes(
         self, raw_product: Dict[str, Any], target_sizes: List[str]
-    ) -> Tuple[List[str], int]:
+    ) -> Tuple[List[str], int, Optional[float], Optional[float]]:
         """
-        HAYALET STOK KORUMASI:
+        HAYALET STOK KORUMASI & VARYANT FİYAT DOĞRULAMASI:
         Ürünün `extra_data.variants` (integration_beden) altındaki beden seçeneklerini
         kontrol ederek, hedef numaralardan (`target_sizes`) hangilerinin GERÇEKTEN stokta
-        (`in_stock: True` ve `stock > 0`) olduğunu tespit eder.
+        (`in_stock: True` ve `stock > 0`) olduğunu ve bu numaralara ait varyant fiyatlarını tespit eder.
         """
         normalized_targets = {self._normalize_size(s) for s in target_sizes if s}
         available_sizes: List[str] = []
         total_target_stock: int = 0
+        variant_sale_price: Optional[float] = None
+        variant_retail_price: Optional[float] = None
 
         extra_data = raw_product.get("extra_data") or {}
         variants = extra_data.get("variants") if isinstance(extra_data, dict) else None
@@ -374,28 +390,31 @@ class SanalCadirScraper:
                                 available_sizes.append(norm_size)
                             total_target_stock += sub_stock_qty
 
-        # Eğer ürün JSON'unda `extra_data.variants` yer alıyorsa sadece hedef numarası
-        # aktif stokta olanları kabul et (Hayalet stokları kesin olarak ele)
-        if has_beden_variants:
-            return sorted(available_sizes), total_target_stock
+                            v_price = self._to_float(sub_prod.get("price"))
+                            v_retail = self._to_float(sub_prod.get("retail_price"))
+                            if v_price > 0 and (variant_sale_price is None or v_price < variant_sale_price):
+                                variant_sale_price = v_price
+                                if v_retail >= v_price:
+                                    variant_retail_price = v_retail
 
-        # Eğer `extra_data.variants` yoksa üst düzey ürünün stok ve beden bilgisine bak
+        if has_beden_variants:
+            return sorted(available_sizes), total_target_stock, variant_sale_price, variant_retail_price
+
         top_in_stock = bool(raw_product.get("in_stock", False))
         top_stock = int(raw_product.get("stock", 1 if top_in_stock else 0) or 0)
         if not (top_in_stock and top_stock > 0):
-            return [], 0
+            return [], 0, None, None
 
         attrs = raw_product.get("attributes") or {}
         top_size = self._normalize_size(
             attrs.get("filterable_size") or attrs.get("integration_trBeden") or ""
         )
         if top_size and top_size in normalized_targets:
-            return [top_size], top_stock
+            return [top_size], top_stock, None, None
         elif not top_size:
-            # Kategori zaten beden filtreli çekildiği için ve üst stok aktifse
-            return sorted(list(normalized_targets)), top_stock
+            return sorted(list(normalized_targets)), top_stock, None, None
 
-        return [], 0
+        return [], 0, None, None
 
     @staticmethod
     def _extract_image_url(raw_product: Dict[str, Any]) -> str:
@@ -424,7 +443,7 @@ class SanalCadirScraper:
         return ""
 
     # ==========================================================================
-    # FİLTRELEME KONTROLLERİ (Kelime, Marka, Fiyat)
+    # FİLTRELEME KONTROLLERİ (Kelime, Çocuk/Cinsiyet, Marka)
     # ==========================================================================
     @staticmethod
     def is_excluded_by_keyword(name: str, sub_category: str = "") -> bool:
@@ -435,6 +454,41 @@ class SanalCadirScraper:
             if norm_kw and norm_kw in combined:
                 return True
         return False
+
+    @staticmethod
+    def is_compatible_gender_and_age(
+        attrs: Dict[str, Any], name: str, target_key: str
+    ) -> bool:
+        """
+        Çocuk ayakkabılarını (`integration_cocuk == '1'`) ve yanlış cinsiyet
+        etiketli ürünleri eler (Unisex ürünler her iki kategoride de kabul edilir).
+        """
+        if str(attrs.get("integration_cocuk") or "0").strip() == "1":
+            return False
+
+        prod_gender = normalize_tr(
+            str(attrs.get("integration_cinsiyet") or attrs.get("emarsys_cinsiyet") or "")
+        )
+        norm_name = normalize_tr(name)
+
+        if "çocuk" in prod_gender or "bebek" in prod_gender or "cocuk" in prod_gender:
+            return False
+
+        # Erkek kategorisinde (45-45.5) sadece Kadın olarak işaretlenmiş ürünleri ele
+        if target_key == "erkek":
+            if prod_gender == "kadın" or prod_gender == "kadin":
+                return False
+            if " kadın " in f" {norm_name} " and "unisex" not in norm_name:
+                return False
+
+        # Kadın kategorisinde (39-40) sadece Erkek olarak işaretlenmiş ürünleri ele
+        elif target_key == "kadin":
+            if prod_gender == "erkek":
+                return False
+            if " erkek " in f" {norm_name} " and "unisex" not in norm_name:
+                return False
+
+        return True
 
     @staticmethod
     def is_allowed_brand(brand: str, name: str) -> bool:
@@ -461,8 +515,8 @@ class SanalCadirScraper:
         self, raw_product: Dict[str, Any], target_cfg: Dict[str, Any]
     ) -> Optional[Dict[str, Any]]:
         """
-        Ham Akinon ürün JSON nesnesini doğrular, hayalet stok ve kelime/marka filtrelerinden
-        geçirir ve standart ürün sözlüğüne dönüştürür.
+        Ham Akinon ürün JSON nesnesini doğrular, hayalet stok, çocuk/cinsiyet ve kelime/marka
+        filtrelerinden geçirir ve standart ürün sözlüğüne dönüştürür.
         """
         if not isinstance(raw_product, dict):
             return None
@@ -484,25 +538,39 @@ class SanalCadirScraper:
             or name.split()[0]
         ).strip()
 
-        # 1. Hariç Tutulan Kelime Filtresi (terlik, sandalet, panduf, deniz, çorap, bakım, bağcık)
+        target_key = str(target_cfg.get("key") or "genel")
+
+        # 1. Hariç Tutulan Kelime Filtresi (terlik, sandalet, panduf, deniz, çorap, bakım, bağcık, çocuk, bebek)
         if self.is_excluded_by_keyword(name, sub_category):
             return None
 
-        # 2. Marka Filtresi (ALLOWED_BRANDS)
+        # 2. Çocuk ve Cinsiyet Uyumsuzluğu Filtresi
+        if not self.is_compatible_gender_and_age(attrs, name, target_key):
+            return None
+
+        # 3. Marka Filtresi (ALLOWED_BRANDS)
         if not self.is_allowed_brand(brand, name):
             return None
 
-        # 3. Hayalet Stok Koruması (Hedef numaralar gerçekten stokta mı?)
+        # 4. Hayalet Stok Koruması (Hedef numaralar gerçekten stokta mı?)
         target_sizes = target_cfg.get("sizes", [])
-        available_sizes, target_stock_count = self._extract_in_stock_target_sizes(
-            raw_product, target_sizes
-        )
+        (
+            available_sizes,
+            target_stock_count,
+            variant_sale_price,
+            variant_retail_price,
+        ) = self._extract_in_stock_target_sizes(raw_product, target_sizes)
         if not available_sizes or target_stock_count <= 0:
             return None
 
-        # 4. Fiyat ve Sepette Ekstra İndirim Hesaplaması
-        sale_price = self._to_float(raw_product.get("price"))
-        retail_price = self._to_float(raw_product.get("retail_price"), default=sale_price)
+        # 5. Fiyat ve Sepette Ekstra İndirim Hesaplaması
+        top_sale_price = self._to_float(raw_product.get("price"))
+        sale_price = variant_sale_price if (variant_sale_price and variant_sale_price > 0) else top_sale_price
+        retail_price = (
+            variant_retail_price
+            if (variant_retail_price and variant_retail_price >= sale_price)
+            else self._to_float(raw_product.get("retail_price"), default=sale_price)
+        )
         if sale_price <= 0:
             return None
         if retail_price < sale_price:
@@ -525,14 +593,19 @@ class SanalCadirScraper:
         base_code = str(raw_product.get("base_code") or "").strip()
         listing_code = str(raw_product.get("listing_code") or "").strip()
         product_id = str(pk) if pk is not None else sku
+
+        # Kategori bazlı benzersiz anahtar: Unisex bir ayakkabı hem Erkek (45) hem Kadın (39-40)
+        # kategorisinde aynı pk ile yer aldığında birbirinin kaydını ezmesini önler.
+        state_key = f"{target_key}_{product_id}"
         model_key = (
-            f"{target_cfg['key']}_{base_code}_{listing_code}"
+            f"{target_key}_{base_code}_{listing_code}"
             if (base_code and listing_code)
-            else f"{target_cfg['key']}_{product_id}"
+            else state_key
         )
 
         return {
             "id": product_id,
+            "state_key": state_key,
             "pk": pk,
             "sku": sku,
             "model_key": model_key,
@@ -541,7 +614,7 @@ class SanalCadirScraper:
             "name": name,
             "brand": brand,
             "category": target_cfg["name"],
-            "category_key": target_cfg["key"],
+            "category_key": target_key,
             "category_badge": target_cfg["badge"],
             "available_sizes": available_sizes,
             "stock_count": target_stock_count,
@@ -563,8 +636,11 @@ class SanalCadirScraper:
         """Sayfa kaynağındaki gömülü JSON veya HTML kartlarından ürünleri çıkarır."""
         products: List[Dict[str, Any]] = []
         try:
-            # 1. Gömülü JSON değişkeni kontrolü
-            match = re.search(r'"products"\s*:\s*(\[\s*\{.*?\}\s*\])\s*,\s*"(?:facets|pagination|category)"', html_text, re.DOTALL)
+            match = re.search(
+                r'"products"\s*:\s*(\[\s*\{.*?\}\s*\])\s*,\s*"(?:facets|pagination|category)"',
+                html_text,
+                re.DOTALL,
+            )
             if match:
                 return json.loads(match.group(1))
         except Exception as exc:
@@ -596,6 +672,7 @@ class SanalCadirScraper:
         aktif stoklu ve filtrelere uygun ürünleri liste olarak döndürür.
         """
         category_name = target_cfg["name"]
+        category_key = target_cfg["key"]
         category_url = target_cfg["url"]
         effective_max_pages = (
             max_pages if max_pages is not None else config.MAX_PAGES_PER_CATEGORY
@@ -611,12 +688,14 @@ class SanalCadirScraper:
         current_page = 1
         num_pages = 1
         raw_total_seen = 0
+        had_page_error = False
 
         while current_page <= num_pages:
             page_url = self.build_json_page_url(category_url, page=current_page)
             raw_body = self.fetch_raw(page_url)
             if not raw_body:
                 logger.warning("[%s] Sayfa %d alınamadı, tarama sonlandırılıyor.", category_name, current_page)
+                had_page_error = True
                 break
 
             raw_products: List[Dict[str, Any]] = []
@@ -642,11 +721,10 @@ class SanalCadirScraper:
             for raw_prod in raw_products:
                 parsed = self.parse_product(raw_prod, target_cfg)
                 if parsed:
-                    # Aynı model_key tekrar gelirse en düşük fiyatlı olanı tut
-                    uid = parsed["id"]
-                    existing = collected.get(uid)
+                    s_key = parsed["state_key"]
+                    existing = collected.get(s_key)
                     if not existing or parsed["effective_price"] < existing["effective_price"]:
-                        collected[uid] = parsed
+                        collected[s_key] = parsed
                     page_valid_count += 1
 
             logger.info(
@@ -662,6 +740,9 @@ class SanalCadirScraper:
             if current_page <= num_pages and self.page_delay > 0:
                 time.sleep(self.page_delay)
 
+        if not had_page_error and raw_total_seen > 0 and (not effective_max_pages or effective_max_pages == 0):
+            self.completed_categories.add(category_key)
+
         results = list(collected.values())
         logger.info(
             "[%s] Tarama tamamlandı. Toplam incelenen: %d | Geçerli & Stokta ürün: %d",
@@ -673,6 +754,7 @@ class SanalCadirScraper:
 
     def scrape_all_targets(self, max_pages: Optional[int] = None) -> List[Dict[str, Any]]:
         """`config.TARGETS` içindeki tüm hedef grupları sırasıyla tarar."""
+        self.completed_categories.clear()
         all_products: List[Dict[str, Any]] = []
         for target in config.TARGETS:
             target_products = self.scrape_target(target, max_pages=max_pages)
