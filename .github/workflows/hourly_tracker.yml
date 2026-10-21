@@ -2,50 +2,60 @@ name: Sanal Çadır 7/24 Saatlik Ayakkabı İndirim & Stok Takip Botu
 
 on:
   schedule:
-    # Aylık 2.000 dakika kotasını maksimum verimle (~1.860 dk/ay) kullanmak için Akıllı Zamanlama:
-    # 1) Türkiye saatiyle 07:00 - 02:00 arası (UTC 04:00 - 22:59): Her 20 dakikada bir çalışır
-    - cron: '*/20 4-22 * * *'
-    # 2) Türkiye saatiyle gece 02:00 - 07:00 arası (UTC 23:00 - 03:59): Saatte 1 kez çalışır
-    - cron: '0 23,0-3 * * *'
+    # GitHub'ın :00/:20/:40 yoğunluk engeline (throttling) takılmamak için 7, 27, 47. dakikalarda yedek tetikleyici
+    - cron: '7,27,47 * * * *'
   workflow_dispatch:
-    # GitHub Actions sekmesinden "Run workflow" butonuyla elle tetikleme desteği
     inputs:
       notify_on_first_run:
         description: 'İlk çalıştırmada bildirim gönderilsin mi? (Varsayılan: False)'
         required: false
         default: 'False'
 
-# data/products_state.json dosyasını depoya geri commit/push edebilmek için yazma izni
+# data/products_state.json dosyasını depoya geri commit/push edebilmek ve sonraki döngüyü tetiklemek için izinler
 permissions:
   contents: write
-
-concurrency:
-  group: sanalcadir-hourly-tracker
-  cancel-in-progress: false
+  actions: write
 
 jobs:
   track-discounts:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 75
 
     steps:
+      - name: 🛡️ Çift Çalışma Kontrolü (Aktif Döngü Varsa Çık)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ACTIVE_COUNT=$(gh run list --workflow="hourly_tracker.yml" --status="in_progress" --json databaseId --jq 'length')
+          echo "Şu anda çalışan iş akışı sayısı: $ACTIVE_COUNT"
+          if [ "$ACTIVE_COUNT" -gt "1" ]; then
+            echo "Zaten aktif bir 20 dakikalık tarama döngüsü çalışıyor. Çakışmayı önlemek için bu kopya sonlandırılıyor."
+            echo "SKIP_RUN=true" >> $GITHUB_ENV
+          else
+            echo "SKIP_RUN=false" >> $GITHUB_ENV
+          fi
+
       - name: 📥 Depoyu İndir (Checkout)
+        if: env.SKIP_RUN != 'true'
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: 🐍 Python Kurulumu (3.11)
+        if: env.SKIP_RUN != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
 
       - name: 📦 Bağımlılıkları Yükle
+        if: env.SKIP_RUN != 'true'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 🔍 Sanal Çadır İndirim ve Stok Taramasını Çalıştır
+      - name: 🔄 20 Dakikada Bir Kesintisiz Tarama Döngüsü (3 Periyot = 60 Dakika)
+        if: env.SKIP_RUN != 'true'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -55,18 +65,49 @@ jobs:
           ALLOWED_BRANDS: ${{ vars.ALLOWED_BRANDS || '' }}
           NOTIFY_ON_FIRST_RUN: ${{ github.event.inputs.notify_on_first_run || 'False' }}
         run: |
-          python main.py --once
-
-      - name: 💾 Güncel Durum Dosyasını (data/products_state.json) Depoya Kaydet
-        run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/products_state.json
-          if git diff --staged --quiet; then
-            echo "data/products_state.json dosyasında değişiklik yok, commit atlanıyor."
-          else
-            git commit -m "chore(state): saatlik ürün fiyat ve stok durumu güncellendi [skip ci]"
-            git pull --rebase origin "${{ github.ref_name }}" || true
-            git push origin HEAD:"${{ github.ref_name }}"
-            echo "data/products_state.json başarıyla GitHub deposuna kaydedildi."
-          fi
+
+          for CYCLE in 1 2 3; do
+            echo "=================================================================="
+            echo "🚀 TARAMA PERİYODU $CYCLE / 3 BAŞLIYOR (Saat: $(date -u +'%H:%M:%S UTC'))"
+            echo "=================================================================="
+
+            # 1. Her tarama öncesi depodaki en güncel products_state.json dosyasını çek
+            git fetch origin "${{ github.ref_name }}"
+            git reset --hard "origin/${{ github.ref_name }}"
+
+            # 2. Sanal Çadır taramasını çalıştır ve fırsat varsa Telegram'a gönder
+            python main.py --once
+
+            # 3. Güncellenen products_state.json dosyasını çakışmasız (conflict-free) olarak depoya kaydet
+            cp data/products_state.json /tmp/products_state_latest.json
+            git fetch origin "${{ github.ref_name }}"
+            git reset --hard "origin/${{ github.ref_name }}"
+            cp /tmp/products_state_latest.json data/products_state.json
+            git add data/products_state.json
+
+            if git diff --staged --quiet; then
+              echo "ℹ️ Periyot $CYCLE: data/products_state.json dosyasında değişiklik yok."
+            else
+              git commit -m "chore(state): 20dk periyodik fiyat ve stok durumu güncellendi"
+              git push origin HEAD:"${{ github.ref_name }}"
+              echo "✅ Periyot $CYCLE: data/products_state.json başarıyla GitHub deposuna kaydedildi."
+            fi
+
+            # Son periyot değilse bir sonraki tarama için tam 20 dakika (1160 sn + ~40 sn tarama = 20 dk) bekle
+            if [ "$CYCLE" -lt "3" ]; then
+              echo "⏳ Bir sonraki tarama için 19 dakika 20 saniye bekleniyor..."
+              sleep 1160
+            fi
+          done
+
+      - name: 🔁 Sonraki 20 Dakikalık Vardiya Döngüsünü Otomatik Başlat
+        if: env.SKIP_RUN != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "⏳ Sonraki vardiyadan önce 19 dakika bekleniyor..."
+          sleep 1140
+          echo "🚀 Yeni tarama vardiyası otomatik olarak tetikleniyor..."
+          gh workflow run hourly_tracker.yml --ref "${{ github.ref_name }}" || true
