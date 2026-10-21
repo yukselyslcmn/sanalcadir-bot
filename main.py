@@ -71,7 +71,9 @@ def run_check_cycle(dry_run: bool = False) -> None:
         return
 
     # 2. Durum Karşılaştırması ve Kayıt
-    alerts, stats = storage.process_scraped_products(scraped_products)
+    alerts, stats = storage.process_scraped_products(
+        scraped_products, completed_categories=scraper.completed_categories
+    )
 
     logger.info("-" * 72)
     logger.info(
