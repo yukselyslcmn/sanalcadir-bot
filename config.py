@@ -4,6 +4,7 @@ Yapılandırma ve Filtre Ayarları Modülü (config.py)
 """
 
 import os
+import re
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -58,6 +59,20 @@ def _parse_list(value: str, default: List[str]) -> List[str]:
     return [item.strip() for item in stripped.split(",") if item.strip()]
 
 
+def _parse_sizes_list(value: str, default: List[str]) -> List[str]:
+    """
+    Numara listesini ayrıştırır. Hem '45, 45.5, 45-46, 46' hem de
+    '45; 45,5; 45-46; 46' yazımlarını ('45,5' buçuklu ifadeyi bölmeden) destekler.
+    """
+    if value is None or value.strip() == "":
+        return default
+    text = value.strip()
+    # Buçuklu sayıların arasındaki virgülü (örn: 39,5 veya 45,5) noktaya çevir
+    text = re.sub(r"(\d),5\b", r"\1.5", text)
+    parts = re.split(r"[,;]+", text)
+    return [p.strip() for p in parts if p.strip()]
+
+
 def _parse_float(value: str, default: float) -> float:
     if value is None or value.strip() == "":
         return default
@@ -91,21 +106,23 @@ TELEGRAM_RATE_LIMIT_DELAY: float = _parse_float(
 # ==============================================================================
 BASE_URL: str = "https://www.sanalcadir.com"
 
+# Erkek Ayakkabı: 45, 45,5, 45-46, 46
 ERKEK_CATEGORY_URL: str = os.getenv(
     "ERKEK_CATEGORY_URL",
-    "https://www.sanalcadir.com/erkek-ayakkabi/?attributes_filterable_size=45&attributes_filterable_size=45,5",
+    "https://www.sanalcadir.com/erkek-ayakkabi/?attributes_filterable_size=45&attributes_filterable_size=45,5&attributes_filterable_size=45-46&attributes_filterable_size=46",
 ).strip()
 
+# Kadın Ayakkabı: 39, 39,5, 39-40, 40
 KADIN_CATEGORY_URL: str = os.getenv(
     "KADIN_CATEGORY_URL",
-    "https://www.sanalcadir.com/kadin-ayakkabi/?attributes_filterable_size=39&attributes_filterable_size=40",
+    "https://www.sanalcadir.com/kadin-ayakkabi/?attributes_filterable_size=39&attributes_filterable_size=39,5&attributes_filterable_size=39-40&attributes_filterable_size=40",
 ).strip()
 
-ERKEK_TARGET_SIZES: List[str] = _parse_list(
-    os.getenv("ERKEK_TARGET_SIZES"), ["45", "45.5"]
+ERKEK_TARGET_SIZES: List[str] = _parse_sizes_list(
+    os.getenv("ERKEK_TARGET_SIZES"), ["45", "45.5", "45-46", "46"]
 )
-KADIN_TARGET_SIZES: List[str] = _parse_list(
-    os.getenv("KADIN_TARGET_SIZES"), ["39", "40"]
+KADIN_TARGET_SIZES: List[str] = _parse_sizes_list(
+    os.getenv("KADIN_TARGET_SIZES"), ["39", "39.5", "39-40", "40"]
 )
 
 
@@ -179,7 +196,7 @@ TARGETS: List[Dict[str, Any]] = [
     {
         "key": "erkek",
         "name": "Erkek",
-        "badge": "🚹 Erkek (45 - 45.5)",
+        "badge": "🚹 Erkek (45 / 45,5 / 45-46 / 46)",
         "url": ERKEK_CATEGORY_URL,
         "sizes": ERKEK_TARGET_SIZES,
         "max_price": ERKEK_MAX_PRICE_LIMIT,
@@ -187,7 +204,7 @@ TARGETS: List[Dict[str, Any]] = [
     {
         "key": "kadin",
         "name": "Kadın",
-        "badge": "🚺 Kadın (39 - 40)",
+        "badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
         "url": KADIN_CATEGORY_URL,
         "sizes": KADIN_TARGET_SIZES,
         "max_price": KADIN_MAX_PRICE_LIMIT,
