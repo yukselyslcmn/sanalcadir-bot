@@ -2,8 +2,10 @@ name: Sanal Çadır 7/24 Saatlik Ayakkabı İndirim & Stok Takip Botu
 
 on:
   schedule:
-    # GitHub'ın cron gecikmelerine karşı emniyet tetikleyicisi (concurrency kilidi sayesinde çakışma yapmaz)
-    - cron: '7,27,47 * * * *'
+    # Emniyet bekçisi (Safety Watchdog): Ana döngü self-dispatch ile 7/24 kesintisiz akar.
+    # Eğer GitHub altyapısında geçici bir kesinti olursa, her 4 saatte bir kontrol edip sistemi yeniden uyandırır.
+    # 20 dakikalık gereksiz kuyruk çakışmalarını ve iptal (grey/cancelled) kayıtlarını engeller.
+    - cron: '0 */4 * * *'
   workflow_dispatch:
     inputs:
       notify_on_first_run:
