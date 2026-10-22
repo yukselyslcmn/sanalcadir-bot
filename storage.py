@@ -96,7 +96,7 @@ class ProductStorage:
 
         state_key = str(product.get("state_key") or f"{product.get('category_key', 'genel')}_{product['id']}")
 
-        return {
+        record: Dict[str, Any] = {
             "id": str(product["id"]),
             "state_key": state_key,
             "pk": product.get("pk"),
@@ -123,6 +123,18 @@ class ProductStorage:
             "first_seen": first_seen,
             "last_updated": now_str,
         }
+
+        # Ürün verisinde gerçek bir değişim yoksa gereksiz git commit oluşmaması için last_updated koru
+        if previous_record:
+            unchanged = all(
+                record.get(k) == previous_record.get(k)
+                for k in record
+                if k != "last_updated"
+            )
+            if unchanged and previous_record.get("last_updated"):
+                record["last_updated"] = previous_record["last_updated"]
+
+        return record
 
     def process_scraped_products(
         self,
@@ -321,10 +333,13 @@ class ProductStorage:
                     "erkek" if rec.get("category") == "Erkek" else "kadin"
                 )
                 if cat_key in completed_categories:
-                    missing = int(rec.get("missing_scans", 0) or 0) + 1
-                    rec["missing_scans"] = missing
-                    if missing >= config.OUT_OF_STOCK_CONFIRM_SCANS:
-                        rec["in_stock"] = False
+                    current_missing = int(rec.get("missing_scans", 0) or 0)
+                    if rec.get("in_stock", True) or current_missing < config.OUT_OF_STOCK_CONFIRM_SCANS:
+                        missing = current_missing + 1
+                        rec["missing_scans"] = missing
+                        if missing >= config.OUT_OF_STOCK_CONFIRM_SCANS:
+                            rec["in_stock"] = False
+                            rec["last_updated"] = self._now_iso()
 
         self.save_state()
         stats["total_tracked"] = len(self.state)
