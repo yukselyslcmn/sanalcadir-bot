@@ -2498,7 +2498,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/07/10/12508668/4bff8704-6eeb-4bb5-aecf-94d63063392f.jpg",
     "in_stock": true,
     "last_price": 1949.35,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 1949.35,
     "missing_scans": 0,
     "model_key": "erkek_749CMA0017T_J18",
@@ -2509,7 +2509,7 @@
     "sale_price": 2999.0,
     "sku": "6018571",
     "state_key": "erkek_1143979",
-    "stock_count": 44
+    "stock_count": 42
   },
   "erkek_1146229": {
     "available_sizes": [
@@ -2525,11 +2525,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1146229",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/04/09/11966523/28e533f5-1d5a-4003-a6f0-6ff7cd9253d8.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 4079.2,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 4079.2,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "erkek_HQ4987_010",
     "name": "Nike Air Force 1 '07 Erkek Renkli Sneaker",
     "pk": 1146229,
@@ -2554,11 +2554,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1146347",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/27/11967721/cd2cd456-f484-4536-800c-b478c6b29c59.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 5199.0,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 5199.0,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "erkek_DM0029_108",
     "name": "Nike Air Max 90 Erkek Renkli Sneaker",
     "pk": 1146347,
@@ -2583,11 +2583,11 @@
     "first_seen": "2026-10-21T18:11:40Z",
     "id": "1146757",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/10/17/11379386/ee461aec-71ce-42ee-a832-0cc1784b0842.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 3119.2,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 3119.2,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "erkek_DM4044_104",
     "name": "Nike Cortez Erkek Beyaz Sneaker",
     "pk": 1146757,
@@ -3195,11 +3195,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1159495",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/10/21/11846796/f09e0d86-e6d1-4c8b-b6d9-dd8b901cf674.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 4591.2,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 4591.2,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "erkek_ID3489_-",
     "name": "Adidas Erkek Gri Koşu Ayakkabısı",
     "pk": 1159495,
@@ -4392,11 +4392,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1168768",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/10/17/2028555/4644f7e4-b692-4c8a-bb19-42a8a782fe75.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 4760.55,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 4760.55,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "erkek_VT0102980B_-",
     "name": "Veja Venturi Alveomesh Erkek Krem/Siyah Sneaker",
     "pk": 1168768,
@@ -7880,7 +7880,7 @@
     "last_price": 3772.3,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 3772.3,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_133-IF4534_-",
     "name": "adidas Niteball III Unisex Kahverengi Spor Ayakkabı",
     "pk": 1207261,
@@ -13266,11 +13266,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1308846",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/09/12413525/ee97d60a-4856-4455-9a64-bcfd483a45b0.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 3150.0,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 3150.0,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "erkek_401560_10",
     "name": "Puma inhale Unisex Mor Spor Ayakkabı",
     "pk": 1308846,
@@ -19231,7 +19231,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/09/29/21525734/4d369d5e-3084-45db-baad-383ac9ffa9e7.jpg",
     "in_stock": true,
     "last_price": 4213.5,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 4213.5,
     "missing_scans": 0,
     "model_key": "erkek_751SMA0181_25Y",
@@ -19242,7 +19242,7 @@
     "sale_price": 5618.0,
     "sku": "6526245",
     "state_key": "erkek_1409031",
-    "stock_count": 27
+    "stock_count": 26
   },
   "erkek_1409982": {
     "available_sizes": [
@@ -28626,7 +28626,7 @@
     "last_price": 5279.2,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 5279.2,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_67-IR5599_002",
     "name": "Nike Air Force 1 '07 Tech Essentials Erkek Mavi Spor Ayakkabı",
     "pk": 1481505,
@@ -30128,11 +30128,11 @@
     "first_seen": "2026-10-21T20:16:10Z",
     "id": "410958",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2023/02/23/618517/673dc526-3b8b-467e-88fa-eae6f4cd880b.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 4043.7,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 4043.7,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "erkek_742SMA0048T_454",
     "name": "Lacoste Partner Retro Erkek Siyah Sneaker",
     "pk": 410958,
@@ -31948,7 +31948,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/10/10/11528774/2e8112bc-bb69-4454-8354-ae124a0a2ea3.jpg",
     "in_stock": true,
     "last_price": 3164.2,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 3164.2,
     "missing_scans": 0,
     "model_key": "erkek_748SMA0097T_02H",
@@ -31959,7 +31959,7 @@
     "sale_price": 4868.0,
     "sku": "5710986",
     "state_key": "erkek_671544",
-    "stock_count": 10
+    "stock_count": 9
   },
   "erkek_671553": {
     "available_sizes": [
@@ -34901,7 +34901,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/07/21/13201822/17442f70-f8b7-4ee0-941e-9430998664f2.jpg",
     "in_stock": true,
     "last_price": 4889.4,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 4889.4,
     "missing_scans": 0,
     "model_key": "erkek_133-IH8659_-",
@@ -34912,7 +34912,7 @@
     "sale_price": 8149.0,
     "sku": "133-6185391",
     "state_key": "erkek_891571",
-    "stock_count": 143
+    "stock_count": 142
   },
   "erkek_891601": {
     "available_sizes": [
@@ -37046,7 +37046,7 @@
     "last_price": 3586.1,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 3586.1,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_265-IF8822_-",
     "name": "adidas Supernova Prima Erkek Beyaz Koşu Ayakkabısı",
     "pk": 932093,
@@ -37367,7 +37367,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/24/15285689/69ca8bba-4e6e-414d-96fe-2db34f2219b9.jpg",
     "in_stock": true,
     "last_price": 3499.5,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 3499.5,
     "missing_scans": 0,
     "model_key": "erkek_265-IH8708_-",
@@ -37378,7 +37378,7 @@
     "sale_price": 6999.0,
     "sku": "265-6207176",
     "state_key": "erkek_963192",
-    "stock_count": 3
+    "stock_count": 2
   },
   "erkek_963299": {
     "available_sizes": [
@@ -37544,11 +37544,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "973459",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/19/12999206/d7db213e-9bf5-4ce3-a849-7b17bc5dd21c.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 2799.0,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2799.0,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "erkek_EM0EM01527_BDS",
     "name": "Tommy Hilfiger Erkek Siyah Spor Ayakkabı & Sneaker",
     "pk": 973459,
@@ -38041,7 +38041,7 @@
     "last_price": 7350.0,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 7350.0,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_265-TB1A44RW2311_-",
     "name": "Timberland Lincoln Peak Mid Lace Up Waterproof Hiki Erkek Kahveregi Outdoor Botu",
     "pk": 984898,
@@ -38066,11 +38066,11 @@
     "first_seen": "2026-10-21T16:51:23Z",
     "id": "987857",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/07/12885953/1aeb01b9-1865-4db0-80af-22b4fb65a29f.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 2624.25,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2624.25,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "erkek_748SMA0104T_40F",
     "name": "Lacoste L001 Set Erkek Bej Sneaker",
     "pk": 987857,
@@ -41380,7 +41380,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/04/29/12829933/9e741c6b-4139-4ac6-9275-4079e79a2a60.jpg",
     "in_stock": true,
     "last_price": 5399.25,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 5399.25,
     "missing_scans": 0,
     "model_key": "kadin_133-JI2644_-",
@@ -41391,7 +41391,7 @@
     "sale_price": 7199.0,
     "sku": "133-6186412",
     "state_key": "kadin_1037612",
-    "stock_count": 1870
+    "stock_count": 1868
   },
   "kadin_1039491": {
     "available_sizes": [
@@ -45195,7 +45195,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/08/22/14843770/1844ad45-351e-43fe-b1de-85be40b35c4b.jpg",
     "in_stock": true,
     "last_price": 2249.25,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2249.25,
     "missing_scans": 0,
     "model_key": "kadin_750SFA0153T_1T6",
@@ -45206,7 +45206,7 @@
     "sale_price": 2999.0,
     "sku": "6139483",
     "state_key": "kadin_1149141",
-    "stock_count": 52
+    "stock_count": 51
   },
   "kadin_1150270": {
     "available_sizes": [
@@ -46104,11 +46104,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1161221",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/04/30/13046278/c9c9c9d2-98e2-4967-b744-4f39fd093959.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 2309.45,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2309.45,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "kadin_VN000D1JPCA1_-",
     "name": "Vans Hylane Unisex Mor Sneaker",
     "pk": 1161221,
@@ -46787,7 +46787,7 @@
     "last_price": 4749.0,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 4749.0,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_TB0A5NMQ1431_-",
     "name": "Timberland Ray City Puffer Kadın Gri Bot",
     "pk": 1164839,
@@ -47426,11 +47426,11 @@
     "first_seen": "2026-10-21T16:51:23Z",
     "id": "1174381",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/03/10/15867638/d929796b-e4a1-4091-9c67-f3b4e3ea4d72.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 1799.4,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 1799.4,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "kadin_746CFA0036T_02H",
     "name": "Lacoste L002 Winter Mid Kadın Siyah Bot",
     "pk": 1174381,
@@ -48440,7 +48440,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/11/20/16668668/f855934d-e4c9-4c78-8997-27fe73404d7d.jpg",
     "in_stock": true,
     "last_price": 1949.35,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 1949.35,
     "missing_scans": 0,
     "model_key": "kadin_750CFA0035T_AI6",
@@ -48451,7 +48451,7 @@
     "sale_price": 2999.0,
     "sku": "6137136",
     "state_key": "kadin_1181714",
-    "stock_count": 74
+    "stock_count": 73
   },
   "kadin_1181739": {
     "available_sizes": [
@@ -48948,7 +48948,7 @@
     "last_price": 1119.72,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 1119.72,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_BNT606T_5WC",
     "name": "Nautica Kadın Mor Sneaker",
     "pk": 1188196,
@@ -50651,7 +50651,6 @@
   },
   "kadin_1199812": {
     "available_sizes": [
-      "39",
       "40"
     ],
     "basket_offer_label": "Sepette %50 İndirim",
@@ -50666,7 +50665,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/11/05/16371825/59ee991f-7823-441e-a18e-940999fbd102.jpg",
     "in_stock": true,
     "last_price": 2099.5,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2099.5,
     "missing_scans": 0,
     "model_key": "kadin_265-JS4401_-",
@@ -50677,7 +50676,7 @@
     "sale_price": 4199.0,
     "sku": "265-6421488",
     "state_key": "kadin_1199812",
-    "stock_count": 10
+    "stock_count": 8
   },
   "kadin_1200027": {
     "available_sizes": [
@@ -50693,11 +50692,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1200027",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/29/15207179/a4cdb965-e441-4e33-b07f-8c4235a2acf7.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 3899.5,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 3899.5,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "kadin_265-1204461B_117",
     "name": "Brooks Cascadia 19 Kadın Bej Koşu Ayakkabısı",
     "pk": 1200027,
@@ -57434,11 +57433,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1256747",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/12/10/16801240/c1207cec-e66d-41de-bcea-cd2be322259a.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 3932.25,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 3932.25,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "kadin_750SFA0120_108",
     "name": "Lacoste L003 Neo Shot Kadın Beyaz Spor Ayakkabı",
     "pk": 1256747,
@@ -57978,7 +57977,6 @@
   },
   "kadin_1264023": {
     "available_sizes": [
-      "39",
       "39.5"
     ],
     "basket_offer_label": null,
@@ -57993,7 +57991,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/08/22/14295173/3cdf665e-2091-4955-b16f-6fe6211afb3b.jpg",
     "in_stock": true,
     "last_price": 1999.0,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 1999.0,
     "missing_scans": 0,
     "model_key": "kadin_A15532C_533",
@@ -58004,7 +58002,7 @@
     "sale_price": 1999.0,
     "sku": "6438836",
     "state_key": "kadin_1264023",
-    "stock_count": 2
+    "stock_count": 1
   },
   "kadin_1264355": {
     "available_sizes": [
@@ -58140,7 +58138,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/21/12802848/43f1fd11-e401-42b5-805e-1a5fd2063fa7.jpg",
     "in_stock": true,
     "last_price": 2676.85,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2676.85,
     "missing_scans": 0,
     "model_key": "kadin_748SFA0024T_21G",
@@ -58151,7 +58149,7 @@
     "sale_price": 4867.0,
     "sku": "6016152",
     "state_key": "kadin_1264598",
-    "stock_count": 72
+    "stock_count": 70
   },
   "kadin_1264877": {
     "available_sizes": [
@@ -58348,11 +58346,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1266270",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/07/11530084/fa81dc33-e677-4f47-8334-524ead9db568.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 4493.0,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 4493.0,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "kadin_748SFA0032T_1E7",
     "name": "Lacoste L002 Evo Kadın Gri/Beyaz Sneaker",
     "pk": 1266270,
@@ -58435,11 +58433,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1266334",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/04/08/12955846/ad494a91-dc67-477a-a948-17e1f91a8e51.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 3599.0,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 3599.0,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "kadin_BBW550BK_100",
     "name": "New Balance 550 Kadın Beyaz Spor Ayakkabı",
     "pk": 1266334,
@@ -58671,7 +58669,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/04/09/12509139/83be18a6-6c0e-4184-8f48-aacd816f2785.jpg",
     "in_stock": true,
     "last_price": 2471.15,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2471.15,
     "missing_scans": 0,
     "model_key": "kadin_748SFA0118T_21G",
@@ -58682,7 +58680,7 @@
     "sale_price": 4493.0,
     "sku": "6135019",
     "state_key": "kadin_1267330",
-    "stock_count": 10
+    "stock_count": 9
   },
   "kadin_1269299": {
     "available_sizes": [
@@ -61692,7 +61690,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/03/30/17710142/4d9b094d-4f09-4fc7-8fa7-c5fd7b906412.jpg",
     "in_stock": true,
     "last_price": 4193.6,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 4193.6,
     "missing_scans": 0,
     "model_key": "kadin_751SFA0051_AQ5",
@@ -61703,7 +61701,7 @@
     "sale_price": 5242.0,
     "sku": "6468971",
     "state_key": "kadin_1296137",
-    "stock_count": 4
+    "stock_count": 3
   },
   "kadin_1296149": {
     "available_sizes": [
@@ -66283,7 +66281,6 @@
   },
   "kadin_1318769": {
     "available_sizes": [
-      "39",
       "40"
     ],
     "basket_offer_label": "Sepette %50 İndirim",
@@ -66298,7 +66295,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/03/23/19123603/58725b6c-85ca-4d93-8c5d-44b5b8931c7f.jpg",
     "in_stock": true,
     "last_price": 2849.5,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2849.5,
     "missing_scans": 0,
     "model_key": "kadin_265-128606TK_WSL",
@@ -66309,7 +66306,7 @@
     "sale_price": 5699.0,
     "sku": "265-6632130",
     "state_key": "kadin_1318769",
-    "stock_count": 8
+    "stock_count": 7
   },
   "kadin_1318788": {
     "available_sizes": [
@@ -75165,11 +75162,11 @@
     "first_seen": "2026-10-21T20:16:10Z",
     "id": "1365450",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/03/25/19367014/3d574677-cb55-4a84-b405-800857edc5fe.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 5439.2,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 5439.2,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "kadin_YW0YW02073_BEH",
     "name": "Calvin Klein Concave Welt Kadın Siyah Bot",
     "pk": 1365450,
@@ -80955,6 +80952,35 @@
     "state_key": "kadin_1440097",
     "stock_count": 1
   },
+  "kadin_1440102": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %20 İndirim",
+    "basket_price": 2639.2,
+    "brand": "CONVERSE",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 52.0,
+    "first_seen": "2026-10-22T12:36:52Z",
+    "id": "1440102",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/03/23/19123783/7f5b87e8-0ebe-4d16-bcb9-39cfef5f5967.jpg",
+    "in_stock": true,
+    "last_price": 2639.2,
+    "last_updated": "2026-10-22T12:36:52Z",
+    "lowest_price": 2639.2,
+    "missing_scans": 0,
+    "model_key": "kadin_A17748C_001",
+    "name": "Converse Omega Trainer Unisex Siyah Sneaker",
+    "pk": 1440102,
+    "product_url": "https://www.sanalcadir.com/converse-omega-trainer-unisex-siyah-sneaker-a17748c-2/",
+    "retail_price": 5499.0,
+    "sale_price": 3299.0,
+    "sku": "6564005",
+    "state_key": "kadin_1440102",
+    "stock_count": 1
+  },
   "kadin_1440158": {
     "available_sizes": [
       "39.5",
@@ -81001,7 +81027,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/09/15127103/1008e153-41b4-4018-8a6c-34a4e9da7a3e.jpg",
     "in_stock": true,
     "last_price": 2639.2,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2639.2,
     "missing_scans": 0,
     "model_key": "kadin_A16534C_001",
@@ -81012,7 +81038,7 @@
     "sale_price": 3299.0,
     "sku": "6440441",
     "state_key": "kadin_1440181",
-    "stock_count": 37
+    "stock_count": 36
   },
   "kadin_1440187": {
     "available_sizes": [
@@ -82366,7 +82392,7 @@
     "last_price": 6999.3,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 6999.3,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_133-HM6804_005",
     "name": "Nike Vomero 18 Kadın Siyah Koşu Ayakkabısı",
     "pk": 1440878,
@@ -86768,11 +86794,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1448302",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/23/15289520/8a8189f2-9b86-49bb-a969-da714357633e.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 3429.3,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 3429.3,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "kadin_133-1204201B_174",
     "name": "Brooks Ghost Max 2 Kadın Beyaz Koşu Ayakkabısı",
     "pk": 1448302,
@@ -89761,11 +89787,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1462146",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/02/24/17650415/33530712-8fee-4e37-ba62-5c64a8faec59.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 3599.5,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 3599.5,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "kadin_133-HQ7540_500",
     "name": "Nike Shox Unisex Mor Spor Ayakkabı",
     "pk": 1462146,
@@ -89954,7 +89980,6 @@
   },
   "kadin_1463725": {
     "available_sizes": [
-      "39",
       "40"
     ],
     "basket_offer_label": "Sepette %30 İndirim",
@@ -89969,7 +89994,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/09/24/23851798/233f3cd0-3cd7-44c4-aba1-abd89ddeadce.jpg",
     "in_stock": true,
     "last_price": 7699.3,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 7699.3,
     "missing_scans": 0,
     "model_key": "kadin_67-IM0568_500",
@@ -89980,7 +90005,7 @@
     "sale_price": 10999.0,
     "sku": "67-6580986",
     "state_key": "kadin_1463725",
-    "stock_count": 3
+    "stock_count": 2
   },
   "kadin_1463765": {
     "available_sizes": [
@@ -91916,7 +91941,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/10/19/16281382/7c9f13f1-7d33-4247-89aa-011e1ecb27bc.jpg",
     "in_stock": true,
     "last_price": 7499.0,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 7499.0,
     "missing_scans": 0,
     "model_key": "kadin_133-IF7087_-",
@@ -91927,7 +91952,7 @@
     "sale_price": 7499.0,
     "sku": "133-5794096",
     "state_key": "kadin_1477306",
-    "stock_count": 619
+    "stock_count": 618
   },
   "kadin_1477308": {
     "available_sizes": [
@@ -94074,7 +94099,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/10/14/24390391/76c9b6fd-4acf-4900-a254-eeb8331da036.jpg",
     "in_stock": true,
     "last_price": 5159.4,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 5159.4,
     "missing_scans": 0,
     "model_key": "kadin_133-13455TK_BKW",
@@ -94085,7 +94110,7 @@
     "sale_price": 8599.0,
     "sku": "133-6467154",
     "state_key": "kadin_1490810",
-    "stock_count": 104
+    "stock_count": 99
   },
   "kadin_1490883": {
     "available_sizes": [
@@ -94671,7 +94696,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2022/07/07/532145/b5d4024d-f1eb-409e-baa9-821f87fcf5f1.jpg",
     "in_stock": true,
     "last_price": 3899.4,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 3899.4,
     "missing_scans": 0,
     "model_key": "kadin_168816C_001",
@@ -94682,7 +94707,7 @@
     "sale_price": 6499.0,
     "sku": "3654130",
     "state_key": "kadin_276876",
-    "stock_count": 1155
+    "stock_count": 1153
   },
   "kadin_278507": {
     "available_sizes": [
@@ -94942,7 +94967,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2022/08/03/525342/7789c1b7-2d13-4076-9a4d-1f216e8ec7e6.jpg",
     "in_stock": true,
     "last_price": 2695.8,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2695.8,
     "missing_scans": 0,
     "model_key": "kadin_741SFA0071T_1Y5",
@@ -94953,7 +94978,7 @@
     "sale_price": 4493.0,
     "sku": "4570065",
     "state_key": "kadin_282915",
-    "stock_count": 135
+    "stock_count": 134
   },
   "kadin_285531": {
     "available_sizes": [
@@ -95570,7 +95595,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/03/06/8271348/076b14c5-b58f-46e3-89dd-349245241290.jpg",
     "in_stock": true,
     "last_price": 1949.35,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 1949.35,
     "missing_scans": 0,
     "model_key": "kadin_746SFA0070T_02H",
@@ -95581,7 +95606,7 @@
     "sale_price": 2999.0,
     "sku": "5300611",
     "state_key": "kadin_483493",
-    "stock_count": 234
+    "stock_count": 231
   },
   "kadin_485568": {
     "available_sizes": [
@@ -96221,7 +96246,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/05/23/4420757/aee5d576-ec25-47a0-9fc3-59dfdedadb15.jpg",
     "in_stock": true,
     "last_price": 1799.7,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 1799.7,
     "missing_scans": 0,
     "model_key": "kadin_A05347C_001",
@@ -96232,7 +96257,7 @@
     "sale_price": 5999.0,
     "sku": "4761861",
     "state_key": "kadin_576278",
-    "stock_count": 12
+    "stock_count": 11
   },
   "kadin_576463": {
     "available_sizes": [
@@ -96524,7 +96549,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/05/24/3284552/001171af-1700-4ddb-9450-7c757c2c2697.jpg",
     "in_stock": true,
     "last_price": 2249.1,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2249.1,
     "missing_scans": 0,
     "model_key": "kadin_746SFA0055T_312",
@@ -96535,7 +96560,7 @@
     "sale_price": 2499.0,
     "sku": "5300305",
     "state_key": "kadin_580224",
-    "stock_count": 202
+    "stock_count": 201
   },
   "kadin_585551": {
     "available_sizes": [
@@ -98933,11 +98958,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "677146",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/05/28/11369884/48657554-a01d-47bc-8c39-6d3b68f171d7.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 2299.8,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2299.8,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "kadin_24ECSXNV17101_X007",
     "name": "No21 Kadın Krem Deri Ayakkabı",
     "pk": 677146,
@@ -101722,6 +101747,35 @@
     "state_key": "kadin_770202",
     "stock_count": 43
   },
+  "kadin_770284": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %30 İndirim",
+    "basket_price": 3625.3,
+    "brand": "PUMA",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 51.0,
+    "first_seen": "2026-10-22T12:36:52Z",
+    "id": "770284",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/04/09/7463475/3b4b598f-20e3-4037-8841-bc2cddd7eb8c.jpg",
+    "in_stock": true,
+    "last_price": 3625.3,
+    "last_updated": "2026-10-22T12:36:52Z",
+    "lowest_price": 3625.3,
+    "missing_scans": 0,
+    "model_key": "kadin_133-392724_16",
+    "name": "Puma Morphic Unisex Gri Spor Ayakkabı",
+    "pk": 770284,
+    "product_url": "https://www.sanalcadir.com/puma-morphic-unisex-gri-spor-ayakkabi-133-392724-1/",
+    "retail_price": 7399.0,
+    "sale_price": 5179.0,
+    "sku": "133-5905490",
+    "state_key": "kadin_770284",
+    "stock_count": 1
+  },
   "kadin_770448": {
     "available_sizes": [
       "39",
@@ -103740,7 +103794,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/21/11483871/d90ed115-2d06-4c90-9ae9-7f363a5f623f.jpg",
     "in_stock": true,
     "last_price": 2239.2,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2239.2,
     "missing_scans": 0,
     "model_key": "kadin_133-EN0EN02620_RBK",
@@ -103751,7 +103805,7 @@
     "sale_price": 2799.0,
     "sku": "133-5925481",
     "state_key": "kadin_841122",
-    "stock_count": 11
+    "stock_count": 10
   },
   "kadin_841124": {
     "available_sizes": [
@@ -104181,7 +104235,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/04/29/13012521/aa6e151e-2bd2-41c0-89cc-b4c7f9cf27b3.jpg",
     "in_stock": true,
     "last_price": 3299.4,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 3299.4,
     "missing_scans": 0,
     "model_key": "kadin_265-DZ2537_004",
@@ -104192,7 +104246,7 @@
     "sale_price": 5499.0,
     "sku": "265-5921223",
     "state_key": "kadin_869354",
-    "stock_count": 11
+    "stock_count": 10
   },
   "kadin_877076": {
     "available_sizes": [
@@ -104272,7 +104326,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/07/11527241/2c801f99-c9f9-4067-b4c7-986807e184e3.jpg",
     "in_stock": true,
     "last_price": 2309.58,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2309.58,
     "missing_scans": 0,
     "model_key": "kadin_A08263C_001",
@@ -104283,7 +104337,7 @@
     "sale_price": 3849.3,
     "sku": "5884605",
     "state_key": "kadin_877290",
-    "stock_count": 142
+    "stock_count": 140
   },
   "kadin_877403": {
     "available_sizes": [
@@ -104511,7 +104565,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/07/02/16200904/f22d0e77-2d58-49e9-81d9-1bc69de3c2b8.jpg",
     "in_stock": true,
     "last_price": 4799.4,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 4799.4,
     "missing_scans": 0,
     "model_key": "kadin_133-B75806_-",
@@ -104522,7 +104576,7 @@
     "sale_price": 7999.0,
     "sku": "133-3212273",
     "state_key": "kadin_882050",
-    "stock_count": 3638
+    "stock_count": 3636
   },
   "kadin_882063": {
     "available_sizes": [
@@ -106741,7 +106795,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/10/15016373/5cbf0303-9ba0-44ac-853f-64a57ed39724.jpg",
     "in_stock": true,
     "last_price": 2899.5,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2899.5,
     "missing_scans": 0,
     "model_key": "kadin_265-JI2321_-",
@@ -106752,7 +106806,7 @@
     "sale_price": 5799.0,
     "sku": "265-6209314",
     "state_key": "kadin_925381",
-    "stock_count": 48
+    "stock_count": 44
   },
   "kadin_925678": {
     "available_sizes": [
@@ -106772,7 +106826,7 @@
     "last_price": 3999.5,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 3999.5,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_265-L47565500_28570",
     "name": "Salomon Drx Bliss 2 Kadın Mor Koşu Ayakkabısı",
     "pk": 925678,
@@ -107831,7 +107885,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/10/15197899/111c7342-c51b-400f-beef-296fa61c6989.jpg",
     "in_stock": true,
     "last_price": 2099.5,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2099.5,
     "missing_scans": 0,
     "model_key": "kadin_265-JI4903_-",
@@ -107842,7 +107896,7 @@
     "sale_price": 4199.0,
     "sku": "265-6209650",
     "state_key": "kadin_963121",
-    "stock_count": 8
+    "stock_count": 7
   },
   "kadin_963141": {
     "available_sizes": [
@@ -107860,7 +107914,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/10/15198977/1d76dcae-4e4e-4ffb-a5c4-092ddd6961b6.jpg",
     "in_stock": true,
     "last_price": 2527.9,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 2527.9,
     "missing_scans": 0,
     "model_key": "kadin_265-JI2326_-",
@@ -107871,7 +107925,7 @@
     "sale_price": 2974.0,
     "sku": "265-6209331",
     "state_key": "kadin_963141",
-    "stock_count": 18
+    "stock_count": 16
   },
   "kadin_963415": {
     "available_sizes": [
@@ -110251,7 +110305,7 @@
     "last_price": 1949.5,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 1949.5,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_265-FD6476_101",
     "name": "Nike Downshifter 13 Kadın Beyaz Koşu Ayakkabısı",
     "pk": 987182,
