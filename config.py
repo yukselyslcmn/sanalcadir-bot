@@ -99,6 +99,8 @@ TELEGRAM_CHAT_ID: str = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 TELEGRAM_RATE_LIMIT_DELAY: float = _parse_float(
     os.getenv("TELEGRAM_RATE_LIMIT_DELAY"), 1.5
 )
+# Tek bir tarama döngüsünde gönderilecek maksimum bildirim sayısı (flood koruması)
+MAX_ALERTS_PER_RUN: int = _parse_int(os.getenv("MAX_ALERTS_PER_RUN"), 25)
 
 
 # ==============================================================================

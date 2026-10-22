@@ -5,8 +5,9 @@ Sanal Çadır (sanalcadir.com - Akinon) Veri Çekme (Scraper) Modülü (scraper.
 - Akinon `?format=json` uç noktasından sayfalama (pagination) desteğiyle tüm ürünleri çeker.
 - WAF/Cloudflare engeline karşı `requests` -> `curl_cffi` -> `cloudscraper` -> `playwright`
   katmanlı (fallback) esnek mimari sunar.
-- Hayalet Stok Koruması: `extra_data.variants` içindeki beden bazlı gerçek stokları (`in_stock` ve `stock > 0`)
-  kontrol ederek sadece hedef numaraları (Erkek: 45, 45.5 | Kadın: 39, 40) gerçekten stokta olan ürünleri alır.
+- Hayalet Stok Koruması: `extra_data.variants` içindeki beden bazlı gerçek stokları (`integration_beden` ve
+  `mp_size` altında `in_stock` ve `stock > 0`) kontrol ederek sadece hedef numaraları
+  (Erkek: 45, 45.5, 45-46, 46 | Kadın: 39, 39.5, 39-40, 40) gerçekten stokta olan ürünleri alır.
 - Çocuk / Yanlış Cinsiyet Filtresi: Kadın kategorisine sızan Çocuk (`integration_cocuk == "1"`) veya Erkek
   ürünlerini otomatik ayıklar (Unisex ürünleri her iki kategoride de destekler).
 - Sepette Ekstra İndirim Algılama: `retail_price`, `price` ve `basket_offers` (`discounted_total_price`)
@@ -284,6 +285,8 @@ class SanalCadirScraper:
         """
         Akinon ürün JSON'unda yer alan 'Sepette Ekstra İndirim' (`basket_offers`,
         `promotions`, `basket_price`) alanlarını ayrıştırır.
+        Varyant satış fiyatı ana kart fiyatından farklıysa sepet indirim oranını
+        varyant fiyatına doğru şekilde oranlar.
         """
         basket_price: Optional[float] = None
         offer_label: Optional[str] = None
@@ -297,10 +300,22 @@ class SanalCadirScraper:
                 label = offer.get("label") or offer.get("name") or offer.get("title")
                 listing_kwargs = offer.get("listing_kwargs") or {}
                 discounted_total = listing_kwargs.get("discounted_total_price")
+                listing_base_price = self._to_float(listing_kwargs.get("price"))
+
                 if discounted_total is not None:
-                    candidate = self._to_float(discounted_total)
+                    raw_disc_total = self._to_float(discounted_total)
+                    if (
+                        listing_base_price > 0
+                        and abs(listing_base_price - sale_price) > 0.05
+                        and 0 < raw_disc_total < listing_base_price
+                    ):
+                        ratio = raw_disc_total / listing_base_price
+                        candidate = round(sale_price * ratio, 2)
+                    else:
+                        candidate = round(raw_disc_total, 2)
+
                     if 0 < candidate < sale_price and (basket_price is None or candidate < basket_price):
-                        basket_price = round(candidate, 2)
+                        basket_price = candidate
                         offer_label = str(label).strip() if label else "Sepette Ekstra İndirim"
                 elif label:
                     match = re.search(r"%\s*(\d+(?:[.,]\d+)?)", str(label))
@@ -341,9 +356,10 @@ class SanalCadirScraper:
     ) -> Tuple[List[str], int, Optional[float], Optional[float]]:
         """
         HAYALET STOK KORUMASI & VARYANT FİYAT DOĞRULAMASI:
-        Ürünün `extra_data.variants` (integration_beden) altındaki beden seçeneklerini
-        kontrol ederek, hedef numaralardan (`target_sizes`) hangilerinin GERÇEKTEN stokta
-        (`in_stock: True` ve `stock > 0`) olduğunu ve bu numaralara ait varyant fiyatlarını tespit eder.
+        Ürünün `extra_data.variants` (`integration_beden` ve Marketplace/Superstep `mp_size`)
+        altındaki beden seçeneklerini kontrol ederek, hedef numaralardan (`target_sizes`)
+        hangilerinin GERÇEKTEN stokta (`in_stock: True` ve `stock > 0`) olduğunu ve bu
+        numaralara ait varyant fiyatlarını tespit eder.
         """
         normalized_targets = {self._normalize_size(s) for s in target_sizes if s}
         available_sizes: List[str] = []
@@ -359,8 +375,12 @@ class SanalCadirScraper:
             for var_group in variants:
                 if not isinstance(var_group, dict):
                     continue
-                attr_key = var_group.get("attribute_key", "")
-                if attr_key in ("integration_beden", "filterable_size", "size", "beden"):
+                attr_key = str(var_group.get("attribute_key") or "").strip().lower()
+                if (
+                    attr_key in ("integration_beden", "mp_size", "filterable_size", "size", "beden")
+                    or "beden" in attr_key
+                    or "size" in attr_key
+                ):
                     options = var_group.get("options") or []
                     if options:
                         has_beden_variants = True
@@ -380,6 +400,7 @@ class SanalCadirScraper:
                         raw_size = (
                             attrs.get("filterable_size")
                             or attrs.get("integration_trBeden")
+                            or attrs.get("mp_size")
                             or opt.get("label")
                             or ""
                         )
@@ -407,7 +428,10 @@ class SanalCadirScraper:
 
         attrs = raw_product.get("attributes") or {}
         top_size = self._normalize_size(
-            attrs.get("filterable_size") or attrs.get("integration_trBeden") or ""
+            attrs.get("filterable_size")
+            or attrs.get("integration_trBeden")
+            or attrs.get("mp_size")
+            or ""
         )
         if top_size and top_size in normalized_targets:
             return [top_size], top_stock, None, None
@@ -474,7 +498,7 @@ class SanalCadirScraper:
         if "çocuk" in prod_gender or "bebek" in prod_gender or "cocuk" in prod_gender:
             return False
 
-        # Erkek kategorisinde (45-45.5) sadece Kadın olarak işaretlenmiş ürünleri ele
+        # Erkek kategorisinde (45-46) sadece Kadın olarak işaretlenmiş ürünleri ele
         if target_key == "erkek":
             if prod_gender == "kadın" or prod_gender == "kadin":
                 return False
@@ -508,6 +532,32 @@ class SanalCadirScraper:
                 return True
         return False
 
+    @staticmethod
+    def _extract_brand(raw_product: Dict[str, Any], attrs: Dict[str, Any], name: str) -> str:
+        """
+        Hem Marketplace (`integration_alt_marka`) hem de Eren Perakende (`attributes_kwargs.integration_marka.label`)
+        ürünlerinden doğru marka adını çıkarır.
+        """
+        attrs_kwargs = raw_product.get("attributes_kwargs") or {}
+        kw_brand = ""
+        if isinstance(attrs_kwargs, dict):
+            for key in ("integration_alt_marka", "integration_marka", "brand"):
+                entry = attrs_kwargs.get(key)
+                if isinstance(entry, dict) and entry.get("label"):
+                    candidate = str(entry["label"]).strip()
+                    if candidate and candidate != "-" and not candidate.isdigit():
+                        kw_brand = candidate
+                        break
+
+        alt_marka = str(attrs.get("integration_alt_marka") or "").strip()
+        if alt_marka and alt_marka != "-" and not alt_marka.isdigit():
+            return alt_marka
+        if kw_brand:
+            return kw_brand
+        if raw_product.get("brand"):
+            return str(raw_product["brand"]).strip()
+        return name.split()[0] if name else ""
+
     # ==========================================================================
     # ÜRÜN NORMALİZASYONU VE PARSE İŞLEMİ
     # ==========================================================================
@@ -532,11 +582,7 @@ class SanalCadirScraper:
 
         attrs = raw_product.get("attributes") or {}
         sub_category = str(attrs.get("cadir_kategori") or attrs.get("integration_tanim") or "").strip()
-        brand = str(
-            attrs.get("integration_alt_marka")
-            or raw_product.get("brand")
-            or name.split()[0]
-        ).strip()
+        brand = self._extract_brand(raw_product, attrs, name)
 
         target_key = str(target_cfg.get("key") or "genel")
 
@@ -594,7 +640,7 @@ class SanalCadirScraper:
         listing_code = str(raw_product.get("listing_code") or "").strip()
         product_id = str(pk) if pk is not None else sku
 
-        # Kategori bazlı benzersiz anahtar: Unisex bir ayakkabı hem Erkek (45) hem Kadın (39-40)
+        # Kategori bazlı benzersiz anahtar: Unisex bir ayakkabı hem Erkek (45-46) hem Kadın (39-40)
         # kategorisinde aynı pk ile yer aldığında birbirinin kaydını ezmesini önler.
         state_key = f"{target_key}_{product_id}"
         model_key = (
@@ -685,6 +731,7 @@ class SanalCadirScraper:
         )
 
         collected: Dict[str, Dict[str, Any]] = {}
+        model_to_skey: Dict[str, str] = {}
         current_page = 1
         num_pages = 1
         raw_total_seen = 0
@@ -722,9 +769,25 @@ class SanalCadirScraper:
                 parsed = self.parse_product(raw_prod, target_cfg)
                 if parsed:
                     s_key = parsed["state_key"]
-                    existing = collected.get(s_key)
-                    if not existing or parsed["effective_price"] < existing["effective_price"]:
+                    m_key = parsed.get("model_key") or s_key
+                    existing_skey = s_key if s_key in collected else model_to_skey.get(m_key)
+                    existing = collected.get(existing_skey) if existing_skey else None
+
+                    if existing:
+                        merged_sizes = sorted(
+                            set(existing.get("available_sizes", [])) | set(parsed.get("available_sizes", []))
+                        )
+                        if parsed["effective_price"] < existing["effective_price"]:
+                            parsed["available_sizes"] = merged_sizes
+                            if existing_skey and existing_skey != s_key:
+                                del collected[existing_skey]
+                            collected[s_key] = parsed
+                            model_to_skey[m_key] = s_key
+                        else:
+                            existing["available_sizes"] = merged_sizes
+                    else:
                         collected[s_key] = parsed
+                        model_to_skey[m_key] = s_key
                     page_valid_count += 1
 
             logger.info(

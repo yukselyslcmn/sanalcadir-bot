@@ -9,7 +9,8 @@ Sanal Çadır (sanalcadir.com) Görselli Telegram Bildirim Modülü (notifier.py
 - 🔘 Mesaj altına tıklanabilir `[🛒 Ürünü Sanal Çadır'da Aç]` inline butonu ekler.
 - Çoklu `TELEGRAM_CHAT_ID` (virgülle ayrılmış birden fazla alıcı) destekler.
 - Görsel URL'si geçersizse veya açıklama sınırı aşarsa otomatik olarak `sendMessage` fallback moduna geçer.
-- Rate-limit (flood) koruması için mesajlar arasında `time.sleep(1.5)` uygular.
+- Rate-limit (flood) koruması için mesajlar arasında `time.sleep(1.5)` uygular ve
+  `MAX_ALERTS_PER_RUN` ile tek seferlik bildirim taşmasını önler.
 """
 
 import html
@@ -290,16 +291,28 @@ class TelegramNotifier:
     def send_batch_alerts(self, alerts: List[Dict[str, Any]]) -> int:
         """
         Bildirim listesini sırayla gönderir.
-        Telegram flood engeline takılmamak için her mesaj arasında `time.sleep(1.5)` bekler.
+        Telegram flood engeline takılmamak için her mesaj arasında `time.sleep(1.5)` bekler
+        ve tek seferde en yüksek öncelikli `MAX_ALERTS_PER_RUN` bildirimi gönderir.
         """
         if not alerts:
             return 0
 
+        max_limit = config.MAX_ALERTS_PER_RUN
+        if max_limit > 0 and len(alerts) > max_limit:
+            logger.info(
+                "Toplam %d bildirim bulundu; flood koruması gereği en yüksek indirimli ilk %d fırsat gönderiliyor.",
+                len(alerts),
+                max_limit,
+            )
+            alerts_to_send = alerts[:max_limit]
+        else:
+            alerts_to_send = alerts
+
         sent_count = 0
-        total = len(alerts)
+        total = len(alerts_to_send)
         logger.info("Toplam %d adet Telegram bildirimi gönderiliyor...", total)
 
-        for idx, alert in enumerate(alerts, start=1):
+        for idx, alert in enumerate(alerts_to_send, start=1):
             success = self.send_alert(alert)
             if success:
                 sent_count += 1

@@ -341,6 +341,19 @@ class ProductStorage:
                             rec["in_stock"] = False
                             rec["last_updated"] = self._now_iso()
 
+        # Bildirimleri öncelik (PRICE_DROP -> BACK_IN_STOCK -> NEW_STOCK) ve indirim oranına göre sırala
+        priority_map = {
+            EVENT_PRICE_DROP: 0,
+            EVENT_BACK_IN_STOCK: 1,
+            EVENT_NEW_STOCK: 2,
+        }
+        notifications.sort(
+            key=lambda x: (
+                priority_map.get(x.get("event_type", ""), 3),
+                -float(x.get("extra_drop_rate", 0.0)),
+            )
+        )
+
         self.save_state()
         stats["total_tracked"] = len(self.state)
         return notifications, stats

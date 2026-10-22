@@ -5,7 +5,7 @@ Ana Çalıştırma Modülü (main.py)
 Kullanım:
   - Tek seferlik çalışma (GitHub Actions uyumlu):
       python main.py --once
-  - Bilgisayar açıkken her 60 dakikada bir sürekli çalışma:
+  - Bilgisayar açıkken her 20 dakikada bir sürekli çalışma:
       python main.py --loop
 """
 
@@ -42,17 +42,18 @@ logger = logging.getLogger(__name__)
 def run_check_cycle(dry_run: bool = False) -> None:
     """
     Tek bir tarama, karşılaştırma ve bildirim döngüsünü çalıştırır:
-    1. Sanal Çadır Erkek (45-45.5) ve Kadın (39-40) kategorilerini tarar.
+    1. Sanal Çadır Erkek (45-46) ve Kadın (39-40) kategorilerini tarar.
     2. `data/products_state.json` ile karşılaştırarak yeni stok ve ekstra indirimleri bulur.
     3. Tespit edilen fırsatları fotoğraflı olarak Telegram'a gönderir.
     """
     logger.info("=" * 72)
     logger.info("SANAL ÇADIR İNDİRİM & STOK TARAMASI BAŞLIYOR...")
     logger.info(
-        "Filtreler -> Max Fiyat: %.0f TL | Min İndirim: %%%.0f | Ekstra Düşüş Eşiği: %%%.0f",
+        "Filtreler -> Max Fiyat: %.0f TL | Min İndirim: %%%.0f | Ekstra Düşüş Eşiği: %%%.0f | Max Bildirim: %d",
         config.MAX_PRICE_LIMIT,
         config.MIN_DISCOUNT_RATE,
         config.PRICE_DROP_THRESHOLD,
+        config.MAX_ALERTS_PER_RUN,
     )
     if config.ALLOWED_BRANDS:
         logger.info("İzin Verilen Markalar: %s", ", ".join(config.ALLOWED_BRANDS))
