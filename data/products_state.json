@@ -11072,7 +11072,7 @@
     "last_price": 2879.2,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 2879.2,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_FM0FM05423_DW5",
     "name": "Tommy Hilfiger Lightweight Knit Rwb Erkek Lacivert Spor Ayakkabı",
     "pk": 1291685,
@@ -24922,7 +24922,7 @@
     "last_price": 5459.3,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 5459.3,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_265-II7405_005",
     "name": "Nike Free Metcon 7 Erkek Gri Antrenman Ayakkabısı",
     "pk": 1458962,
@@ -35637,7 +35637,7 @@
     "last_price": 4199.5,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 4199.5,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_265-L47566900_28571",
     "name": "Salomon Spectur 2 Erkek Yeşil Koşu Ayakkabısı",
     "pk": 925656,
@@ -64232,8 +64232,7 @@
   },
   "kadin_1318767": {
     "available_sizes": [
-      "39",
-      "40"
+      "39"
     ],
     "basket_offer_label": "Sepette %50 İndirim",
     "basket_price": 2749.5,
@@ -64247,7 +64246,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/03/23/19123570/fd06290e-f896-4e07-b566-5c45068c6a4b.jpg",
     "in_stock": true,
     "last_price": 2749.5,
-    "last_updated": "2026-10-22T12:57:08Z",
+    "last_updated": "2026-10-22T15:23:42Z",
     "lowest_price": 2749.5,
     "missing_scans": 0,
     "model_key": "kadin_265-129735_BKW",
@@ -65124,7 +65123,8 @@
   },
   "kadin_1328863": {
     "available_sizes": [
-      "39"
+      "39",
+      "40"
     ],
     "basket_offer_label": "Sepette %20 İndirim",
     "basket_price": 6299.2,
@@ -65138,7 +65138,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/06/15/21838290/834f38de-d10c-4302-a7c9-0d00024d85e8.jpg",
     "in_stock": true,
     "last_price": 6299.2,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T15:23:41Z",
     "lowest_price": 6299.2,
     "missing_scans": 0,
     "model_key": "kadin_265-NF0A8AEQMIU1_-",
@@ -102956,7 +102956,7 @@
     "last_price": 1624.35,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 1624.35,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_749CFA0012T_2E5",
     "name": "Backcourt Kadın Pembe Sneaker",
     "pk": 908478,
