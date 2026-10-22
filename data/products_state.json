@@ -5231,7 +5231,6 @@
   },
   "erkek_1198929": {
     "available_sizes": [
-      "45",
       "46"
     ],
     "basket_offer_label": "Sepette %40 İndirim",
@@ -5246,7 +5245,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/12/10/16682768/85af3c95-0b59-44d1-9541-999cfd96bd14.jpg",
     "in_stock": true,
     "last_price": 5279.4,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T16:16:43Z",
     "lowest_price": 5279.4,
     "missing_scans": 0,
     "model_key": "erkek_265-FQ8685_300",
@@ -9631,7 +9630,7 @@
     "last_price": 4775.3,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 4775.3,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_750SMA0173T_17C",
     "name": "Lacoste Storm 96 Erkek Siyah Spor Ayakkabı",
     "pk": 1256634,
@@ -17243,7 +17242,7 @@
     "last_price": 2749.5,
     "last_updated": "2026-10-22T12:57:08Z",
     "lowest_price": 2749.5,
-    "missing_scans": 1,
+    "missing_scans": 2,
     "model_key": "erkek_265-FQ8293_200",
     "name": "Nike Mercurial Superfly 10 Academy Kylian Mbappe Erkek Bordo Çim Saha Kramponu",
     "pk": 1350273,
@@ -39496,8 +39495,7 @@
   },
   "kadin_1012186": {
     "available_sizes": [
-      "39",
-      "40"
+      "39"
     ],
     "basket_offer_label": "Sepette %30 İndirim",
     "basket_price": 4801.3,
@@ -39511,7 +39509,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/29/15580944/31f4e54a-de0d-4b70-beeb-3d6270fbb27b.jpg",
     "in_stock": true,
     "last_price": 4801.3,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T16:16:43Z",
     "lowest_price": 4801.3,
     "missing_scans": 0,
     "model_key": "kadin_265-J068450_SWC",
@@ -57183,7 +57181,7 @@
     "last_price": 5499.0,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 5499.0,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_FLTYNZELE10_BLACK",
     "name": "Guess Yanzy Kadın Siyah Bot",
     "pk": 1270790,
@@ -74586,7 +74584,7 @@
   },
   "kadin_1386325": {
     "available_sizes": [
-      "39"
+      "40"
     ],
     "basket_offer_label": "Sepette %60 İndirim",
     "basket_price": 2039.6,
@@ -74602,7 +74600,7 @@
     "last_alert_at": "2026-10-22T16:11:31Z",
     "last_alert_price": 2039.6,
     "last_price": 2039.6,
-    "last_updated": "2026-10-22T16:11:31Z",
+    "last_updated": "2026-10-22T16:16:43Z",
     "lowest_price": 2039.6,
     "missing_scans": 0,
     "model_key": "kadin_133-822548801_11",
@@ -81435,7 +81433,7 @@
     "last_price": 3849.3,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 3849.3,
-    "missing_scans": 1,
+    "missing_scans": 2,
     "model_key": "kadin_133-HF2720_002",
     "name": "Nike Free 2025 Kadın Siyah Spor Ayakkabı",
     "pk": 1442825,
@@ -83330,9 +83328,9 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/07/21/22405663/dddf99a0-b1f3-4fea-98d9-c8c11d5e4bdb.jpg",
     "in_stock": true,
     "last_price": 6539.4,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T16:16:43Z",
     "lowest_price": 6539.4,
-    "missing_scans": 1,
+    "missing_scans": 0,
     "model_key": "kadin_265-KH8796_-",
     "name": "adidas Terrex Agravic Sl Kadın Beyaz Arazi Koşu Ayakkabısı",
     "pk": 1444623,
@@ -93157,7 +93155,6 @@
   },
   "kadin_536635": {
     "available_sizes": [
-      "39",
       "40"
     ],
     "basket_offer_label": "Sepette %50 İndirim",
@@ -93172,7 +93169,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/02/22/8446127/f763541e-457b-46c3-8576-025e79203206.jpg",
     "in_stock": true,
     "last_price": 1014.5,
-    "last_updated": "2026-10-22T12:57:08Z",
+    "last_updated": "2026-10-22T16:16:43Z",
     "lowest_price": 1014.5,
     "missing_scans": 0,
     "model_key": "kadin_S00GXG0_AQT",
