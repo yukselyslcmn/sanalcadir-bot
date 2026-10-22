@@ -363,7 +363,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/10/15205457/47d211d4-08da-4186-be4a-8693445f2393.jpg",
     "in_stock": true,
     "last_price": 2999.5,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 2999.5,
     "missing_scans": 0,
     "model_key": "erkek_265-JR8273_-",
@@ -374,7 +374,7 @@
     "sale_price": 5999.0,
     "sku": "265-6420960",
     "state_key": "erkek_1006620",
-    "stock_count": 1
+    "stock_count": 2
   },
   "erkek_1006693": {
     "available_sizes": [
@@ -901,8 +901,7 @@
     "retail_price": 6499.0,
     "sale_price": 6499.0,
     "sku": "133-6417585",
-    "state_key": "erkek_1020638",
-    "stock_count": 169
+    "state_key": "erkek_1020638"
   },
   "erkek_1020928": {
     "available_sizes": [
@@ -1134,8 +1133,7 @@
     "retail_price": 5799.0,
     "sale_price": 5799.0,
     "sku": "133-6258148",
-    "state_key": "erkek_1028016",
-    "stock_count": 6
+    "state_key": "erkek_1028016"
   },
   "erkek_1029249": {
     "available_sizes": [
@@ -1180,11 +1178,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1031674",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/10/10/15792465/b1fff7d1-b04e-4d3c-8832-8c1f7a7c0a09.jpg",
-    "in_stock": false,
+    "in_stock": true,
     "last_price": 2247.2,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 2247.2,
-    "missing_scans": 3,
+    "missing_scans": 2,
     "model_key": "erkek_133-401332_05",
     "name": "Puma Rx 737 Vintage Erkek Beyaz Spor Ayakkabı",
     "pk": 1031674,
@@ -1212,7 +1210,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/04/29/12829933/9e741c6b-4139-4ac6-9275-4079e79a2a60.jpg",
     "in_stock": true,
     "last_price": 5399.25,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 5399.25,
     "missing_scans": 0,
     "model_key": "erkek_133-JI2644_-",
@@ -1222,8 +1220,7 @@
     "retail_price": 7199.0,
     "sale_price": 7199.0,
     "sku": "133-6186412",
-    "state_key": "erkek_1037612",
-    "stock_count": 114
+    "state_key": "erkek_1037612"
   },
   "erkek_1040264": {
     "available_sizes": [
@@ -1397,8 +1394,7 @@
     "retail_price": 7199.0,
     "sale_price": 7199.0,
     "sku": "133-6290720",
-    "state_key": "erkek_1088496",
-    "stock_count": 84
+    "state_key": "erkek_1088496"
   },
   "erkek_1088919": {
     "available_sizes": [
@@ -1455,8 +1451,7 @@
     "retail_price": 4799.0,
     "sale_price": 4799.0,
     "sku": "133-5623383",
-    "state_key": "erkek_1089160",
-    "stock_count": 68
+    "state_key": "erkek_1089160"
   },
   "erkek_1090161": {
     "available_sizes": [
@@ -2506,8 +2501,7 @@
     "retail_price": 4999.0,
     "sale_price": 2999.0,
     "sku": "6018571",
-    "state_key": "erkek_1143979",
-    "stock_count": 42
+    "state_key": "erkek_1143979"
   },
   "erkek_1146229": {
     "available_sizes": [
@@ -2709,8 +2703,7 @@
     "retail_price": 4990.0,
     "sale_price": 3743.0,
     "sku": "6015918",
-    "state_key": "erkek_1151392",
-    "stock_count": 3
+    "state_key": "erkek_1151392"
   },
   "erkek_1151570": {
     "available_sizes": [
@@ -4103,7 +4096,7 @@
     "last_price": 2114.55,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 2114.55,
-    "missing_scans": 1,
+    "missing_scans": 0,
     "model_key": "erkek_A13240C_095",
     "name": "Converse Star Player 76 Suede Unisex Gri Sneaker",
     "pk": 1163456,
@@ -5069,8 +5062,7 @@
     "retail_price": 5799.0,
     "sale_price": 5799.0,
     "sku": "265-6420539",
-    "state_key": "erkek_1188983",
-    "stock_count": 15
+    "state_key": "erkek_1188983"
   },
   "erkek_1189310": {
     "available_sizes": [
@@ -6179,8 +6171,7 @@
     "retail_price": 4499.0,
     "sale_price": 4499.0,
     "sku": "265-6419518",
-    "state_key": "erkek_1200272",
-    "stock_count": 2
+    "state_key": "erkek_1200272"
   },
   "erkek_1200472": {
     "available_sizes": [
@@ -6800,8 +6791,7 @@
     "retail_price": 6099.0,
     "sale_price": 6099.0,
     "sku": "265-6529067",
-    "state_key": "erkek_1200961",
-    "stock_count": 2
+    "state_key": "erkek_1200961"
   },
   "erkek_1200977": {
     "available_sizes": [
@@ -7739,8 +7729,7 @@
     "retail_price": 11999.0,
     "sale_price": 8399.0,
     "sku": "265-6494003",
-    "state_key": "erkek_1203293",
-    "stock_count": 3
+    "state_key": "erkek_1203293"
   },
   "erkek_1203438": {
     "available_sizes": [
@@ -7828,8 +7817,7 @@
     "retail_price": 7999.0,
     "sale_price": 7999.0,
     "sku": "133-5793403",
-    "state_key": "erkek_1206441",
-    "stock_count": 105
+    "state_key": "erkek_1206441"
   },
   "erkek_1206459": {
     "available_sizes": [
@@ -7857,8 +7845,7 @@
     "retail_price": 7499.0,
     "sale_price": 7499.0,
     "sku": "133-4813415",
-    "state_key": "erkek_1206459",
-    "stock_count": 102
+    "state_key": "erkek_1206459"
   },
   "erkek_1207261": {
     "available_sizes": [
@@ -7916,8 +7903,7 @@
     "retail_price": 7399.0,
     "sale_price": 7399.0,
     "sku": "133-5958296",
-    "state_key": "erkek_1207467",
-    "stock_count": 12
+    "state_key": "erkek_1207467"
   },
   "erkek_1208265": {
     "available_sizes": [
@@ -8439,8 +8425,7 @@
     "retail_price": 5399.0,
     "sale_price": 5399.0,
     "sku": "133-6454028",
-    "state_key": "erkek_1230719",
-    "stock_count": 40
+    "state_key": "erkek_1230719"
   },
   "erkek_1233420": {
     "available_sizes": [
@@ -8468,8 +8453,7 @@
     "retail_price": 6599.0,
     "sale_price": 6599.0,
     "sku": "133-6534020",
-    "state_key": "erkek_1233420",
-    "stock_count": 8
+    "state_key": "erkek_1233420"
   },
   "erkek_1233536": {
     "available_sizes": [
@@ -8555,8 +8539,7 @@
     "retail_price": 6899.0,
     "sale_price": 6899.0,
     "sku": "133-6632585",
-    "state_key": "erkek_1234217",
-    "stock_count": 16
+    "state_key": "erkek_1234217"
   },
   "erkek_1234367": {
     "available_sizes": [
@@ -8932,8 +8915,7 @@
     "retail_price": 6599.0,
     "sale_price": 6599.0,
     "sku": "133-6577343",
-    "state_key": "erkek_1247052",
-    "stock_count": 18
+    "state_key": "erkek_1247052"
   },
   "erkek_1247053": {
     "available_sizes": [
@@ -8961,8 +8943,7 @@
     "retail_price": 7499.0,
     "sale_price": 7499.0,
     "sku": "133-6577305",
-    "state_key": "erkek_1247053",
-    "stock_count": 34
+    "state_key": "erkek_1247053"
   },
   "erkek_1247138": {
     "available_sizes": [
@@ -9135,8 +9116,7 @@
     "retail_price": 6599.0,
     "sale_price": 6599.0,
     "sku": "133-6571830",
-    "state_key": "erkek_1247456",
-    "stock_count": 168
+    "state_key": "erkek_1247456"
   },
   "erkek_1247741": {
     "available_sizes": [
@@ -9747,8 +9727,7 @@
     "retail_price": 6990.0,
     "sale_price": 4194.0,
     "sku": "5511825",
-    "state_key": "erkek_1255254",
-    "stock_count": 53
+    "state_key": "erkek_1255254"
   },
   "erkek_1256008": {
     "available_sizes": [
@@ -9776,8 +9755,7 @@
     "retail_price": 4990.0,
     "sale_price": 3743.0,
     "sku": "6018669",
-    "state_key": "erkek_1256008",
-    "stock_count": 63
+    "state_key": "erkek_1256008"
   },
   "erkek_1256381": {
     "available_sizes": [
@@ -9835,8 +9813,7 @@
     "retail_price": 7490.0,
     "sale_price": 5618.0,
     "sku": "6145004",
-    "state_key": "erkek_1256393",
-    "stock_count": 50
+    "state_key": "erkek_1256393"
   },
   "erkek_1256433": {
     "available_sizes": [
@@ -9893,8 +9870,7 @@
     "retail_price": 4990.0,
     "sale_price": 3743.0,
     "sku": "6018677",
-    "state_key": "erkek_1256437",
-    "stock_count": 55
+    "state_key": "erkek_1256437"
   },
   "erkek_1256449": {
     "available_sizes": [
@@ -9923,8 +9899,7 @@
     "retail_price": 6990.0,
     "sale_price": 4194.0,
     "sku": "6005402",
-    "state_key": "erkek_1256449",
-    "stock_count": 110
+    "state_key": "erkek_1256449"
   },
   "erkek_1256634": {
     "available_sizes": [
@@ -10011,8 +9986,7 @@
     "retail_price": 6490.0,
     "sale_price": 4867.5,
     "sku": "6319361",
-    "state_key": "erkek_1257233",
-    "stock_count": 71
+    "state_key": "erkek_1257233"
   },
   "erkek_1258448": {
     "available_sizes": [
@@ -10040,8 +10014,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "6135215",
-    "state_key": "erkek_1258448",
-    "stock_count": 70
+    "state_key": "erkek_1258448"
   },
   "erkek_1259739": {
     "available_sizes": [
@@ -10069,8 +10042,7 @@
     "retail_price": 7990.0,
     "sale_price": 4794.0,
     "sku": "6247948",
-    "state_key": "erkek_1259739",
-    "stock_count": 57
+    "state_key": "erkek_1259739"
   },
   "erkek_1259751": {
     "available_sizes": [
@@ -10566,8 +10538,7 @@
     "retail_price": 5243.0,
     "sale_price": 5242.5,
     "sku": "6057899",
-    "state_key": "erkek_1264524",
-    "stock_count": 47
+    "state_key": "erkek_1264524"
   },
   "erkek_1265078": {
     "available_sizes": [
@@ -10830,8 +10801,7 @@
     "retail_price": 7990.0,
     "sale_price": 5993.0,
     "sku": "6469706",
-    "state_key": "erkek_1273145",
-    "stock_count": 64
+    "state_key": "erkek_1273145"
   },
   "erkek_1273171": {
     "available_sizes": [
@@ -10860,8 +10830,7 @@
     "retail_price": 6490.0,
     "sale_price": 4867.0,
     "sku": "6469389",
-    "state_key": "erkek_1273171",
-    "stock_count": 9
+    "state_key": "erkek_1273171"
   },
   "erkek_1273301": {
     "available_sizes": [
@@ -11122,8 +11091,7 @@
     "retail_price": 7490.0,
     "sale_price": 5618.0,
     "sku": "6469536",
-    "state_key": "erkek_1282320",
-    "stock_count": 35
+    "state_key": "erkek_1282320"
   },
   "erkek_1284032": {
     "available_sizes": [
@@ -11470,8 +11438,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "6141314",
-    "state_key": "erkek_1292006",
-    "stock_count": 16
+    "state_key": "erkek_1292006"
   },
   "erkek_1292475": {
     "available_sizes": [
@@ -11674,8 +11641,7 @@
     "retail_price": 7990.0,
     "sale_price": 5993.0,
     "sku": "6469692",
-    "state_key": "erkek_1296050",
-    "stock_count": 45
+    "state_key": "erkek_1296050"
   },
   "erkek_1296055": {
     "available_sizes": [
@@ -11762,8 +11728,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "6452053",
-    "state_key": "erkek_1296089",
-    "stock_count": 59
+    "state_key": "erkek_1296089"
   },
   "erkek_1296098": {
     "available_sizes": [
@@ -11792,8 +11757,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "6452057",
-    "state_key": "erkek_1296098",
-    "stock_count": 4
+    "state_key": "erkek_1296098"
   },
   "erkek_1296923": {
     "available_sizes": [
@@ -11822,8 +11786,7 @@
     "retail_price": 7490.0,
     "sale_price": 5618.0,
     "sku": "6469752",
-    "state_key": "erkek_1296923",
-    "stock_count": 63
+    "state_key": "erkek_1296923"
   },
   "erkek_1296945": {
     "available_sizes": [
@@ -11939,8 +11902,7 @@
     "retail_price": 7990.0,
     "sale_price": 5992.0,
     "sku": "6469452",
-    "state_key": "erkek_1297742",
-    "stock_count": 3
+    "state_key": "erkek_1297742"
   },
   "erkek_1297830": {
     "available_sizes": [
@@ -11997,8 +11959,7 @@
     "retail_price": 7490.0,
     "sale_price": 5618.0,
     "sku": "6469309",
-    "state_key": "erkek_1297849",
-    "stock_count": 1
+    "state_key": "erkek_1297849"
   },
   "erkek_1298587": {
     "available_sizes": [
@@ -14575,7 +14536,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/05/20/20007247/8cb19775-c1f3-4406-b0da-336e1f698735.jpg",
     "in_stock": true,
     "last_price": 2649.5,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 2649.5,
     "missing_scans": 0,
     "model_key": "erkek_265-FQ8377_200",
@@ -14586,7 +14547,7 @@
     "sale_price": 5299.0,
     "sku": "265-6589904",
     "state_key": "erkek_1332319",
-    "stock_count": 33
+    "stock_count": 34
   },
   "erkek_1332339": {
     "available_sizes": [
@@ -15660,8 +15621,7 @@
     "retail_price": 8149.0,
     "sale_price": 8149.0,
     "sku": "133-6197792",
-    "state_key": "erkek_1342596",
-    "stock_count": 182
+    "state_key": "erkek_1342596"
   },
   "erkek_1342606": {
     "available_sizes": [
@@ -17583,8 +17543,7 @@
     "retail_price": 10999.0,
     "sale_price": 10999.0,
     "sku": "133-6196238",
-    "state_key": "erkek_1349699",
-    "stock_count": 2
+    "state_key": "erkek_1349699"
   },
   "erkek_1349765": {
     "available_sizes": [
@@ -17612,8 +17571,7 @@
     "retail_price": 6599.0,
     "sale_price": 6599.0,
     "sku": "133-6579424",
-    "state_key": "erkek_1349765",
-    "stock_count": 18
+    "state_key": "erkek_1349765"
   },
   "erkek_1349806": {
     "available_sizes": [
@@ -18542,8 +18500,7 @@
     "retail_price": 6599.0,
     "sale_price": 6599.0,
     "sku": "133-6607531",
-    "state_key": "erkek_1380138",
-    "stock_count": 4
+    "state_key": "erkek_1380138"
   },
   "erkek_1380142": {
     "available_sizes": [
@@ -18687,8 +18644,7 @@
     "retail_price": 9999.0,
     "sale_price": 9999.0,
     "sku": "133-6607337",
-    "state_key": "erkek_1381273",
-    "stock_count": 4
+    "state_key": "erkek_1381273"
   },
   "erkek_1381511": {
     "available_sizes": [
@@ -18716,8 +18672,7 @@
     "retail_price": 6599.0,
     "sale_price": 6599.0,
     "sku": "133-6577143",
-    "state_key": "erkek_1381511",
-    "stock_count": 7
+    "state_key": "erkek_1381511"
   },
   "erkek_1382429": {
     "available_sizes": [
@@ -19239,8 +19194,7 @@
     "retail_price": 7490.0,
     "sale_price": 5618.0,
     "sku": "6526245",
-    "state_key": "erkek_1409031",
-    "stock_count": 26
+    "state_key": "erkek_1409031"
   },
   "erkek_1409982": {
     "available_sizes": [
@@ -19472,8 +19426,7 @@
     "retail_price": 7499.0,
     "sale_price": 5999.0,
     "sku": "4746289",
-    "state_key": "erkek_1417543",
-    "stock_count": 4
+    "state_key": "erkek_1417543"
   },
   "erkek_1422578": {
     "available_sizes": [
@@ -19532,8 +19485,7 @@
     "retail_price": 7490.0,
     "sale_price": 5618.0,
     "sku": "6469590",
-    "state_key": "erkek_1422587",
-    "stock_count": 31
+    "state_key": "erkek_1422587"
   },
   "erkek_1422606": {
     "available_sizes": [
@@ -19561,8 +19513,7 @@
     "retail_price": 7490.0,
     "sale_price": 5618.0,
     "sku": "6469543",
-    "state_key": "erkek_1422606",
-    "stock_count": 14
+    "state_key": "erkek_1422606"
   },
   "erkek_1422616": {
     "available_sizes": [
@@ -19650,8 +19601,7 @@
     "retail_price": 7490.0,
     "sale_price": 5618.0,
     "sku": "6469801",
-    "state_key": "erkek_1423042",
-    "stock_count": 18
+    "state_key": "erkek_1423042"
   },
   "erkek_1423200": {
     "available_sizes": [
@@ -19680,8 +19630,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "6147230",
-    "state_key": "erkek_1423200",
-    "stock_count": 51
+    "state_key": "erkek_1423200"
   },
   "erkek_1423207": {
     "available_sizes": [
@@ -19738,8 +19687,7 @@
     "retail_price": 8990.0,
     "sale_price": 6743.0,
     "sku": "6453311",
-    "state_key": "erkek_1423209",
-    "stock_count": 85
+    "state_key": "erkek_1423209"
   },
   "erkek_1423271": {
     "available_sizes": [
@@ -19797,8 +19745,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "6288166",
-    "state_key": "erkek_1423288",
-    "stock_count": 17
+    "state_key": "erkek_1423288"
   },
   "erkek_1423406": {
     "available_sizes": [
@@ -19855,8 +19802,7 @@
     "retail_price": 6490.0,
     "sale_price": 4867.0,
     "sku": "6468181",
-    "state_key": "erkek_1423462",
-    "stock_count": 37
+    "state_key": "erkek_1423462"
   },
   "erkek_1423607": {
     "available_sizes": [
@@ -19942,8 +19888,7 @@
     "retail_price": 8990.0,
     "sale_price": 6743.0,
     "sku": "6452033",
-    "state_key": "erkek_1423733",
-    "stock_count": 23
+    "state_key": "erkek_1423733"
   },
   "erkek_1423739": {
     "available_sizes": [
@@ -19971,8 +19916,7 @@
     "retail_price": 8990.0,
     "sale_price": 6742.0,
     "sku": "6452003",
-    "state_key": "erkek_1423739",
-    "stock_count": 120
+    "state_key": "erkek_1423739"
   },
   "erkek_1426047": {
     "available_sizes": [
@@ -20116,8 +20060,7 @@
     "retail_price": 9499.0,
     "sale_price": 7499.0,
     "sku": "4745106",
-    "state_key": "erkek_1429113",
-    "stock_count": 1
+    "state_key": "erkek_1429113"
   },
   "erkek_1429205": {
     "available_sizes": [
@@ -20175,8 +20118,7 @@
     "retail_price": 7990.0,
     "sale_price": 5993.0,
     "sku": "6469456",
-    "state_key": "erkek_1429351",
-    "stock_count": 19
+    "state_key": "erkek_1429351"
   },
   "erkek_1429978": {
     "available_sizes": [
@@ -20204,8 +20146,7 @@
     "retail_price": 7499.0,
     "sale_price": 5999.0,
     "sku": "4746307",
-    "state_key": "erkek_1429978",
-    "stock_count": 6
+    "state_key": "erkek_1429978"
   },
   "erkek_1430322": {
     "available_sizes": [
@@ -20495,8 +20436,7 @@
     "retail_price": 7990.0,
     "sale_price": 5992.0,
     "sku": "6469353",
-    "state_key": "erkek_1432505",
-    "stock_count": 13
+    "state_key": "erkek_1432505"
   },
   "erkek_1432508": {
     "available_sizes": [
@@ -20583,8 +20523,7 @@
     "retail_price": 7490.0,
     "sale_price": 5617.5,
     "sku": "6144964",
-    "state_key": "erkek_1432547",
-    "stock_count": 76
+    "state_key": "erkek_1432547"
   },
   "erkek_1432664": {
     "available_sizes": [
@@ -20728,8 +20667,7 @@
     "retail_price": 8990.0,
     "sale_price": 6743.0,
     "sku": "6469278",
-    "state_key": "erkek_1433441",
-    "stock_count": 2
+    "state_key": "erkek_1433441"
   },
   "erkek_1433446": {
     "available_sizes": [
@@ -20758,8 +20696,7 @@
     "retail_price": 6490.0,
     "sale_price": 4867.0,
     "sku": "6469376",
-    "state_key": "erkek_1433446",
-    "stock_count": 17
+    "state_key": "erkek_1433446"
   },
   "erkek_1433558": {
     "available_sizes": [
@@ -20787,8 +20724,7 @@
     "retail_price": 7490.0,
     "sale_price": 5617.5,
     "sku": "6144161",
-    "state_key": "erkek_1433558",
-    "stock_count": 2
+    "state_key": "erkek_1433558"
   },
   "erkek_1433562": {
     "available_sizes": [
@@ -20816,8 +20752,7 @@
     "retail_price": 7990.0,
     "sale_price": 5993.0,
     "sku": "6469554",
-    "state_key": "erkek_1433562",
-    "stock_count": 24
+    "state_key": "erkek_1433562"
   },
   "erkek_1433563": {
     "available_sizes": [
@@ -20845,8 +20780,7 @@
     "retail_price": 7490.0,
     "sale_price": 5618.0,
     "sku": "6469527",
-    "state_key": "erkek_1433563",
-    "stock_count": 35
+    "state_key": "erkek_1433563"
   },
   "erkek_1433845": {
     "available_sizes": [
@@ -23505,7 +23439,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/10/14531154/66e09185-8a9c-4c46-9c14-f3259102dbf0.jpg",
     "in_stock": true,
     "last_price": 6119.4,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 6119.4,
     "missing_scans": 0,
     "model_key": "erkek_133-JP7149_-",
@@ -23516,7 +23450,7 @@
     "sale_price": 10199.0,
     "sku": "133-6611551",
     "state_key": "erkek_1450305",
-    "stock_count": 13
+    "stock_count": 15
   },
   "erkek_1450696": {
     "available_sizes": [
@@ -24885,8 +24819,7 @@
     "retail_price": 6999.0,
     "sale_price": 6999.0,
     "sku": "133-6632597",
-    "state_key": "erkek_1458013",
-    "stock_count": 19
+    "state_key": "erkek_1458013"
   },
   "erkek_1458023": {
     "available_sizes": [
@@ -25727,8 +25660,7 @@
     "retail_price": 7799.0,
     "sale_price": 7799.0,
     "sku": "265-6813203",
-    "state_key": "erkek_1458962",
-    "stock_count": 1
+    "state_key": "erkek_1458962"
   },
   "erkek_1459377": {
     "available_sizes": [
@@ -26644,8 +26576,7 @@
     "retail_price": 15999.0,
     "sale_price": 11199.0,
     "sku": "133-6314767",
-    "state_key": "erkek_1461038",
-    "stock_count": 2
+    "state_key": "erkek_1461038"
   },
   "erkek_1461049": {
     "available_sizes": [
@@ -27401,8 +27332,7 @@
     "retail_price": 5999.0,
     "sale_price": 5999.0,
     "sku": "67-6744569",
-    "state_key": "erkek_1466253",
-    "stock_count": 1
+    "state_key": "erkek_1466253"
   },
   "erkek_1466847": {
     "available_sizes": [
@@ -27518,8 +27448,7 @@
     "retail_price": 6499.0,
     "sale_price": 6499.0,
     "sku": "265-6741887",
-    "state_key": "erkek_1467050",
-    "stock_count": 4
+    "state_key": "erkek_1467050"
   },
   "erkek_1467058": {
     "available_sizes": [
@@ -27901,8 +27830,7 @@
     "retail_price": 9999.0,
     "sale_price": 6999.0,
     "sku": "265-6598875",
-    "state_key": "erkek_1468163",
-    "stock_count": 4
+    "state_key": "erkek_1468163"
   },
   "erkek_1468344": {
     "available_sizes": [
@@ -28337,8 +28265,7 @@
     "retail_price": 5999.0,
     "sale_price": 5999.0,
     "sku": "133-6632545",
-    "state_key": "erkek_1479563",
-    "stock_count": 55
+    "state_key": "erkek_1479563"
   },
   "erkek_1479596": {
     "available_sizes": [
@@ -29099,8 +29026,7 @@
     "retail_price": 7999.0,
     "sale_price": 7999.0,
     "sku": "133-7004323",
-    "state_key": "erkek_1492042",
-    "stock_count": 180
+    "state_key": "erkek_1492042"
   },
   "erkek_1492140": {
     "available_sizes": [
@@ -29593,7 +29519,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/08/11/22798313/fe9fa279-eff4-4e02-b3c6-730936678856.jpg",
     "in_stock": true,
     "last_price": 3899.4,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 3899.4,
     "missing_scans": 0,
     "model_key": "erkek_A18157C_259",
@@ -29604,7 +29530,7 @@
     "sale_price": 6499.0,
     "sku": "6759770",
     "state_key": "erkek_1495238",
-    "stock_count": 14
+    "stock_count": 15
   },
   "erkek_1495239": {
     "available_sizes": [
@@ -29899,8 +29825,7 @@
     "retail_price": 6490.0,
     "sale_price": 4867.5,
     "sku": "4462877",
-    "state_key": "erkek_244128",
-    "stock_count": 307
+    "state_key": "erkek_244128"
   },
   "erkek_276876": {
     "available_sizes": [
@@ -30018,8 +29943,7 @@
     "retail_price": 5499.0,
     "sale_price": 5499.0,
     "sku": "4597493",
-    "state_key": "erkek_282673",
-    "stock_count": 150
+    "state_key": "erkek_282673"
   },
   "erkek_285531": {
     "available_sizes": [
@@ -30137,8 +30061,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "4814163",
-    "state_key": "erkek_410381",
-    "stock_count": 54
+    "state_key": "erkek_410381"
   },
   "erkek_410958": {
     "available_sizes": [
@@ -30196,8 +30119,7 @@
     "retail_price": 6990.0,
     "sale_price": 4194.0,
     "sku": "5241606",
-    "state_key": "erkek_480043",
-    "stock_count": 111
+    "state_key": "erkek_480043"
   },
   "erkek_481504": {
     "available_sizes": [
@@ -30254,8 +30176,7 @@
     "retail_price": 6990.0,
     "sale_price": 5243.0,
     "sku": "4753136",
-    "state_key": "erkek_481638",
-    "stock_count": 66
+    "state_key": "erkek_481638"
   },
   "erkek_481715": {
     "available_sizes": [
@@ -30399,8 +30320,7 @@
     "retail_price": 5999.0,
     "sale_price": 5999.0,
     "sku": "133-3218731",
-    "state_key": "erkek_486383",
-    "stock_count": 40
+    "state_key": "erkek_486383"
   },
   "erkek_490250": {
     "available_sizes": [
@@ -30457,8 +30377,7 @@
     "retail_price": 5499.0,
     "sale_price": 5499.0,
     "sku": "133-2644280",
-    "state_key": "erkek_490707",
-    "stock_count": 42
+    "state_key": "erkek_490707"
   },
   "erkek_511067": {
     "available_sizes": [
@@ -30515,8 +30434,7 @@
     "retail_price": 6478.0,
     "sale_price": 6478.0,
     "sku": "133-5485753",
-    "state_key": "erkek_544206",
-    "stock_count": 101
+    "state_key": "erkek_544206"
   },
   "erkek_544253": {
     "available_sizes": [
@@ -30573,8 +30491,7 @@
     "retail_price": 6478.0,
     "sale_price": 6478.0,
     "sku": "133-5526526",
-    "state_key": "erkek_544268",
-    "stock_count": 186
+    "state_key": "erkek_544268"
   },
   "erkek_569341": {
     "available_sizes": [
@@ -30720,8 +30637,7 @@
     "retail_price": 5999.0,
     "sale_price": 5999.0,
     "sku": "4761861",
-    "state_key": "erkek_576278",
-    "stock_count": 77
+    "state_key": "erkek_576278"
   },
   "erkek_576497": {
     "available_sizes": [
@@ -30750,8 +30666,7 @@
     "retail_price": 7490.0,
     "sale_price": 5617.5,
     "sku": "5241127",
-    "state_key": "erkek_576497",
-    "stock_count": 273
+    "state_key": "erkek_576497"
   },
   "erkek_577886": {
     "available_sizes": [
@@ -30810,8 +30725,7 @@
     "retail_price": 8490.0,
     "sale_price": 6367.5,
     "sku": "5240607",
-    "state_key": "erkek_577974",
-    "stock_count": 91
+    "state_key": "erkek_577974"
   },
   "erkek_578617": {
     "available_sizes": [
@@ -30840,8 +30754,7 @@
     "retail_price": 8490.0,
     "sale_price": 6367.5,
     "sku": "5240554",
-    "state_key": "erkek_578617",
-    "stock_count": 83
+    "state_key": "erkek_578617"
   },
   "erkek_579602": {
     "available_sizes": [
@@ -30958,8 +30871,7 @@
     "retail_price": 6790.0,
     "sale_price": 6790.0,
     "sku": "5519008",
-    "state_key": "erkek_583983",
-    "stock_count": 27
+    "state_key": "erkek_583983"
   },
   "erkek_584078": {
     "available_sizes": [
@@ -31045,8 +30957,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "5589062",
-    "state_key": "erkek_586158",
-    "stock_count": 191
+    "state_key": "erkek_586158"
   },
   "erkek_587717": {
     "available_sizes": [
@@ -31192,8 +31103,7 @@
     "retail_price": 6990.0,
     "sale_price": 5242.5,
     "sku": "5512399",
-    "state_key": "erkek_636569",
-    "stock_count": 141
+    "state_key": "erkek_636569"
   },
   "erkek_636617": {
     "available_sizes": [
@@ -31485,8 +31395,7 @@
     "retail_price": 6490.0,
     "sale_price": 4868.0,
     "sku": "5518896",
-    "state_key": "erkek_648443",
-    "stock_count": 157
+    "state_key": "erkek_648443"
   },
   "erkek_648676": {
     "available_sizes": [
@@ -31984,8 +31893,7 @@
     "retail_price": 6490.0,
     "sale_price": 4868.0,
     "sku": "5710986",
-    "state_key": "erkek_671544",
-    "stock_count": 8
+    "state_key": "erkek_671544"
   },
   "erkek_671553": {
     "available_sizes": [
@@ -32013,8 +31921,7 @@
     "retail_price": 6990.0,
     "sale_price": 4194.0,
     "sku": "5710964",
-    "state_key": "erkek_671553",
-    "stock_count": 160
+    "state_key": "erkek_671553"
   },
   "erkek_672562": {
     "available_sizes": [
@@ -32072,8 +31979,7 @@
     "retail_price": 6990.0,
     "sale_price": 5242.5,
     "sku": "5512407",
-    "state_key": "erkek_672587",
-    "stock_count": 134
+    "state_key": "erkek_672587"
   },
   "erkek_672719": {
     "available_sizes": [
@@ -32102,8 +32008,7 @@
     "retail_price": 8490.0,
     "sale_price": 6367.5,
     "sku": "5511689",
-    "state_key": "erkek_672719",
-    "stock_count": 125
+    "state_key": "erkek_672719"
   },
   "erkek_672730": {
     "available_sizes": [
@@ -32162,8 +32067,7 @@
     "retail_price": 5243.0,
     "sale_price": 5242.5,
     "sku": "5511739",
-    "state_key": "erkek_673061",
-    "stock_count": 89
+    "state_key": "erkek_673061"
   },
   "erkek_673084": {
     "available_sizes": [
@@ -32192,8 +32096,7 @@
     "retail_price": 6990.0,
     "sale_price": 4194.0,
     "sku": "5511768",
-    "state_key": "erkek_673084",
-    "stock_count": 84
+    "state_key": "erkek_673084"
   },
   "erkek_676274": {
     "available_sizes": [
@@ -32950,8 +32853,7 @@
     "retail_price": 5299.0,
     "sale_price": 3709.3,
     "sku": "5913335",
-    "state_key": "erkek_765533",
-    "stock_count": 54
+    "state_key": "erkek_765533"
   },
   "erkek_765558": {
     "available_sizes": [
@@ -34410,8 +34312,7 @@
     "retail_price": 7999.0,
     "sale_price": 3999.0,
     "sku": "5241669",
-    "state_key": "erkek_877048",
-    "stock_count": 10
+    "state_key": "erkek_877048"
   },
   "erkek_877152": {
     "available_sizes": [
@@ -34498,8 +34399,7 @@
     "retail_price": 6490.0,
     "sale_price": 4868.0,
     "sku": "5710771",
-    "state_key": "erkek_877607",
-    "stock_count": 83
+    "state_key": "erkek_877607"
   },
   "erkek_877703": {
     "available_sizes": [
@@ -34674,8 +34574,7 @@
     "retail_price": 7999.0,
     "sale_price": 7999.0,
     "sku": "133-3212273",
-    "state_key": "erkek_882050",
-    "stock_count": 1048
+    "state_key": "erkek_882050"
   },
   "erkek_882063": {
     "available_sizes": [
@@ -34703,8 +34602,7 @@
     "retail_price": 7999.0,
     "sale_price": 7999.0,
     "sku": "133-5270602",
-    "state_key": "erkek_882063",
-    "stock_count": 53
+    "state_key": "erkek_882063"
   },
   "erkek_883830": {
     "available_sizes": [
@@ -34733,8 +34631,7 @@
     "retail_price": 5999.0,
     "sale_price": 5999.0,
     "sku": "133-5530860",
-    "state_key": "erkek_883830",
-    "stock_count": 122
+    "state_key": "erkek_883830"
   },
   "erkek_884860": {
     "available_sizes": [
@@ -34849,8 +34746,7 @@
     "retail_price": 6599.0,
     "sale_price": 6599.0,
     "sku": "133-4300735",
-    "state_key": "erkek_886914",
-    "stock_count": 38
+    "state_key": "erkek_886914"
   },
   "erkek_891501": {
     "available_sizes": [
@@ -34907,8 +34803,7 @@
     "retail_price": 7499.0,
     "sale_price": 7499.0,
     "sku": "133-5810542",
-    "state_key": "erkek_891523",
-    "stock_count": 60
+    "state_key": "erkek_891523"
   },
   "erkek_891571": {
     "available_sizes": [
@@ -34995,8 +34890,7 @@
     "retail_price": 8149.0,
     "sale_price": 8149.0,
     "sku": "133-6186095",
-    "state_key": "erkek_891644",
-    "stock_count": 282
+    "state_key": "erkek_891644"
   },
   "erkek_891761": {
     "available_sizes": [
@@ -35082,8 +34976,7 @@
     "retail_price": 5999.0,
     "sale_price": 5999.0,
     "sku": "133-6187328",
-    "state_key": "erkek_891840",
-    "stock_count": 33
+    "state_key": "erkek_891840"
   },
   "erkek_892648": {
     "available_sizes": [
@@ -36345,8 +36238,7 @@
     "retail_price": 6990.0,
     "sale_price": 6990.0,
     "sku": "5511561",
-    "state_key": "erkek_920521",
-    "stock_count": 23
+    "state_key": "erkek_920521"
   },
   "erkek_920703": {
     "available_sizes": [
@@ -36730,8 +36622,7 @@
     "retail_price": 12999.0,
     "sale_price": 12999.0,
     "sku": "265-6315834",
-    "state_key": "erkek_925228",
-    "stock_count": 3
+    "state_key": "erkek_925228"
   },
   "erkek_925656": {
     "available_sizes": [
@@ -36759,8 +36650,7 @@
     "retail_price": 11999.0,
     "sale_price": 8399.0,
     "sku": "265-6314815",
-    "state_key": "erkek_925656",
-    "stock_count": 1
+    "state_key": "erkek_925656"
   },
   "erkek_925799": {
     "available_sizes": [
@@ -36788,8 +36678,7 @@
     "retail_price": 14499.0,
     "sale_price": 14499.0,
     "sku": "265-6262872",
-    "state_key": "erkek_925799",
-    "stock_count": 1
+    "state_key": "erkek_925799"
   },
   "erkek_925812": {
     "available_sizes": [
@@ -36992,8 +36881,7 @@
     "retail_price": 4999.0,
     "sale_price": 4999.0,
     "sku": "265-6218322",
-    "state_key": "erkek_928823",
-    "stock_count": 2
+    "state_key": "erkek_928823"
   },
   "erkek_930402": {
     "available_sizes": [
@@ -37283,8 +37171,7 @@
     "retail_price": 9999.0,
     "sale_price": 9999.0,
     "sku": "265-6304396",
-    "state_key": "erkek_961757",
-    "stock_count": 12
+    "state_key": "erkek_961757"
   },
   "erkek_962517": {
     "available_sizes": [
@@ -38132,8 +38019,7 @@
     "retail_price": 7490.0,
     "sale_price": 5617.5,
     "sku": "5865148",
-    "state_key": "erkek_987909",
-    "stock_count": 28
+    "state_key": "erkek_987909"
   },
   "erkek_988796": {
     "available_sizes": [
@@ -38161,8 +38047,7 @@
     "retail_price": 5499.0,
     "sale_price": 3499.0,
     "sku": "6019257",
-    "state_key": "erkek_988796",
-    "stock_count": 13
+    "state_key": "erkek_988796"
   },
   "erkek_989269": {
     "available_sizes": [
@@ -38191,8 +38076,7 @@
     "retail_price": 6490.0,
     "sale_price": 4868.0,
     "sku": "6016430",
-    "state_key": "erkek_989269",
-    "stock_count": 60
+    "state_key": "erkek_989269"
   },
   "erkek_990764": {
     "available_sizes": [
@@ -38539,7 +38423,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/27/12576016/17024a85-6656-45fd-a540-9f936b3df40b.jpg",
     "in_stock": true,
     "last_price": 1199.7,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 1199.7,
     "missing_scans": 0,
     "model_key": "erkek_A10534C_665",
@@ -38550,7 +38434,7 @@
     "sale_price": 3999.0,
     "sku": "6210980",
     "state_key": "erkek_991553",
-    "stock_count": 23
+    "stock_count": 24
   },
   "erkek_991591": {
     "available_sizes": [
@@ -38599,7 +38483,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/27/12574399/80521dd0-fb3e-40c2-b013-8653b46c2c3e.jpg",
     "in_stock": true,
     "last_price": 1839.2,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T13:17:46Z",
     "lowest_price": 1839.2,
     "missing_scans": 0,
     "model_key": "erkek_A13378C_001",
@@ -38610,7 +38494,7 @@
     "sale_price": 2299.0,
     "sku": "6223029",
     "state_key": "erkek_992020",
-    "stock_count": 288
+    "stock_count": 289
   },
   "erkek_992063": {
     "available_sizes": [
@@ -38872,8 +38756,7 @@
     "retail_price": 5599.0,
     "sale_price": 5599.0,
     "sku": "265-6443943",
-    "state_key": "erkek_995381",
-    "stock_count": 10
+    "state_key": "erkek_995381"
   },
   "erkek_995512": {
     "available_sizes": [
@@ -39225,8 +39108,7 @@
     "retail_price": 4999.0,
     "sale_price": 4999.0,
     "sku": "133-5933166",
-    "state_key": "kadin_1007639",
-    "stock_count": 64
+    "state_key": "kadin_1007639"
   },
   "kadin_1007651": {
     "available_sizes": [
@@ -39697,8 +39579,7 @@
     "retail_price": 8499.0,
     "sale_price": 8499.0,
     "sku": "133-3190060",
-    "state_key": "kadin_1007996",
-    "stock_count": 668
+    "state_key": "kadin_1007996"
   },
   "kadin_1008324": {
     "available_sizes": [
@@ -40083,8 +39964,7 @@
     "retail_price": 4399.0,
     "sale_price": 4399.0,
     "sku": "265-6444374",
-    "state_key": "kadin_1010456",
-    "stock_count": 69
+    "state_key": "kadin_1010456"
   },
   "kadin_1010459": {
     "available_sizes": [
@@ -40103,7 +39983,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/10/10/16059153/616796e7-6e36-4f44-a9fa-667ac32496c5.jpg",
     "in_stock": true,
     "last_price": 2649.5,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T12:57:08Z",
     "lowest_price": 2649.5,
     "missing_scans": 0,
     "model_key": "kadin_265-IF2628_600",
@@ -40114,7 +39994,7 @@
     "sale_price": 5299.0,
     "sku": "265-6445532",
     "state_key": "kadin_1010459",
-    "stock_count": 13
+    "stock_count": 14
   },
   "kadin_1010470": {
     "available_sizes": [
@@ -40320,8 +40200,7 @@
     "retail_price": 4749.0,
     "sale_price": 4749.0,
     "sku": "265-5880418",
-    "state_key": "kadin_1010989",
-    "stock_count": 10
+    "state_key": "kadin_1010989"
   },
   "kadin_1011013": {
     "available_sizes": [
@@ -40350,8 +40229,7 @@
     "retail_price": 5099.0,
     "sale_price": 5099.0,
     "sku": "265-6210671",
-    "state_key": "kadin_1011013",
-    "stock_count": 6
+    "state_key": "kadin_1011013"
   },
   "kadin_1011080": {
     "available_sizes": [
@@ -40675,8 +40553,7 @@
     "retail_price": 3699.0,
     "sale_price": 3699.0,
     "sku": "265-6444029",
-    "state_key": "kadin_1012089",
-    "stock_count": 39
+    "state_key": "kadin_1012089"
   },
   "kadin_1012153": {
     "available_sizes": [
@@ -41209,8 +41086,7 @@
     "retail_price": 7599.0,
     "sale_price": 5699.0,
     "sku": "133-5803525",
-    "state_key": "kadin_1024983",
-    "stock_count": 30
+    "state_key": "kadin_1024983"
   },
   "kadin_1025050": {
     "available_sizes": [
@@ -41593,8 +41469,7 @@
     "retail_price": 7199.0,
     "sale_price": 7199.0,
     "sku": "133-6290720",
-    "state_key": "kadin_1088496",
-    "stock_count": 416
+    "state_key": "kadin_1088496"
   },
   "kadin_1088618": {
     "available_sizes": [
@@ -44326,8 +44201,7 @@
     "retail_price": 6499.0,
     "sale_price": 3999.0,
     "sku": "6138946",
-    "state_key": "kadin_1141540",
-    "stock_count": 75
+    "state_key": "kadin_1141540"
   },
   "kadin_1141955": {
     "available_sizes": [
@@ -44347,7 +44221,7 @@
     "last_price": 1999.5,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 1999.5,
-    "missing_scans": 1,
+    "missing_scans": 0,
     "model_key": "kadin_746SFA0070T_OT6",
     "name": "L002 Winter Kadın Bej Sneaker",
     "pk": 1141955,
@@ -44472,8 +44346,7 @@
     "retail_price": 5499.0,
     "sale_price": 2999.0,
     "sku": "6137848",
-    "state_key": "kadin_1143497",
-    "stock_count": 22
+    "state_key": "kadin_1143497"
   },
   "kadin_1143508": {
     "available_sizes": [
@@ -45201,8 +45074,7 @@
     "retail_price": 5999.0,
     "sale_price": 2499.0,
     "sku": "6018940",
-    "state_key": "kadin_1149135",
-    "stock_count": 46
+    "state_key": "kadin_1149135"
   },
   "kadin_1149141": {
     "available_sizes": [
@@ -45282,7 +45154,7 @@
     "last_price": 5719.35,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 5719.35,
-    "missing_scans": 2,
+    "missing_scans": 1,
     "model_key": "kadin_1144059_SCHRC",
     "name": "UGG Classic Brellah Mini Kadın Pembe Bot",
     "pk": 1150520,
@@ -48293,8 +48165,7 @@
     "retail_price": 6999.0,
     "sale_price": 3999.0,
     "sku": "6137930",
-    "state_key": "kadin_1180585",
-    "stock_count": 41
+    "state_key": "kadin_1180585"
   },
   "kadin_1180736": {
     "available_sizes": [
@@ -48324,8 +48195,7 @@
     "retail_price": 6999.0,
     "sale_price": 3999.0,
     "sku": "6140335",
-    "state_key": "kadin_1180736",
-    "stock_count": 131
+    "state_key": "kadin_1180736"
   },
   "kadin_1181322": {
     "available_sizes": [
@@ -48386,8 +48256,7 @@
     "retail_price": 6499.0,
     "sale_price": 3999.0,
     "sku": "6319324",
-    "state_key": "kadin_1181327",
-    "stock_count": 118
+    "state_key": "kadin_1181327"
   },
   "kadin_1181501": {
     "available_sizes": [
@@ -48476,8 +48345,7 @@
     "retail_price": 4999.0,
     "sale_price": 2999.0,
     "sku": "6137136",
-    "state_key": "kadin_1181714",
-    "stock_count": 73
+    "state_key": "kadin_1181714"
   },
   "kadin_1181739": {
     "available_sizes": [
@@ -48535,8 +48403,7 @@
     "retail_price": 5499.0,
     "sale_price": 2999.0,
     "sku": "6137696",
-    "state_key": "kadin_1181948",
-    "stock_count": 196
+    "state_key": "kadin_1181948"
   },
   "kadin_1181961": {
     "available_sizes": [
@@ -48555,7 +48422,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/11/20/16365503/b689b6e5-0796-46a2-8212-97759697b813.jpg",
     "in_stock": true,
     "last_price": 2624.25,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T13:33:05Z",
     "lowest_price": 2624.25,
     "missing_scans": 0,
     "model_key": "kadin_750SFA0083_396",
@@ -48565,8 +48432,7 @@
     "retail_price": 5999.0,
     "sale_price": 3499.0,
     "sku": "6319284",
-    "state_key": "kadin_1181961",
-    "stock_count": 154
+    "state_key": "kadin_1181961"
   },
   "kadin_1182262": {
     "available_sizes": [
@@ -48953,8 +48819,7 @@
     "retail_price": 5499.0,
     "sale_price": 2499.0,
     "sku": "6017555",
-    "state_key": "kadin_1188184",
-    "stock_count": 144
+    "state_key": "kadin_1188184"
   },
   "kadin_1188196": {
     "available_sizes": [
@@ -49102,8 +48967,7 @@
     "retail_price": 4799.0,
     "sale_price": 4799.0,
     "sku": "265-6592009",
-    "state_key": "kadin_1189186",
-    "stock_count": 59
+    "state_key": "kadin_1189186"
   },
   "kadin_1189232": {
     "available_sizes": [
@@ -49221,8 +49085,7 @@
     "retail_price": 5299.0,
     "sale_price": 3709.0,
     "sku": "265-6530515",
-    "state_key": "kadin_1190149",
-    "stock_count": 16
+    "state_key": "kadin_1190149"
   },
   "kadin_1190252": {
     "available_sizes": [
@@ -49270,7 +49133,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/03/16/19137411/45fbe83b-f3cd-4f87-93ea-9adb1558bd0d.jpg",
     "in_stock": true,
     "last_price": 3119.4,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 3119.4,
     "missing_scans": 0,
     "model_key": "kadin_265-150494_NTGD",
@@ -49281,7 +49144,7 @@
     "sale_price": 5199.0,
     "sku": "265-6460944",
     "state_key": "kadin_1190286",
-    "stock_count": 1
+    "stock_count": 2
   },
   "kadin_1190323": {
     "available_sizes": [
@@ -49784,8 +49647,7 @@
     "retail_price": 4799.0,
     "sale_price": 4799.0,
     "sku": "265-6591035",
-    "state_key": "kadin_1193249",
-    "stock_count": 8
+    "state_key": "kadin_1193249"
   },
   "kadin_1193259": {
     "available_sizes": [
@@ -49874,8 +49736,7 @@
     "retail_price": 8599.0,
     "sale_price": 8599.0,
     "sku": "265-6598694",
-    "state_key": "kadin_1194382",
-    "stock_count": 4
+    "state_key": "kadin_1194382"
   },
   "kadin_1194824": {
     "available_sizes": [
@@ -53192,8 +53053,7 @@
     "retail_price": 7499.0,
     "sale_price": 7499.0,
     "sku": "133-4813415",
-    "state_key": "kadin_1206459",
-    "stock_count": 387
+    "state_key": "kadin_1206459"
   },
   "kadin_1207363": {
     "available_sizes": [
@@ -53579,8 +53439,7 @@
     "retail_price": 11599.0,
     "sale_price": 11599.0,
     "sku": "133-6521838",
-    "state_key": "kadin_1216974",
-    "stock_count": 89
+    "state_key": "kadin_1216974"
   },
   "kadin_1217575": {
     "available_sizes": [
@@ -53727,8 +53586,7 @@
     "retail_price": 6399.0,
     "sale_price": 6399.0,
     "sku": "67-6193791",
-    "state_key": "kadin_1219827",
-    "stock_count": 39
+    "state_key": "kadin_1219827"
   },
   "kadin_1224822": {
     "available_sizes": [
@@ -55009,8 +54867,7 @@
     "retail_price": 5499.0,
     "sale_price": 5499.0,
     "sku": "133-6486296",
-    "state_key": "kadin_1239598",
-    "stock_count": 369
+    "state_key": "kadin_1239598"
   },
   "kadin_1239605": {
     "available_sizes": [
@@ -55069,8 +54926,7 @@
     "retail_price": 9499.0,
     "sale_price": 5699.0,
     "sku": "133-6577152",
-    "state_key": "kadin_1239792",
-    "stock_count": 162
+    "state_key": "kadin_1239792"
   },
   "kadin_1239809": {
     "available_sizes": [
@@ -55099,8 +54955,7 @@
     "retail_price": 8849.0,
     "sale_price": 5309.0,
     "sku": "133-6577473",
-    "state_key": "kadin_1239809",
-    "stock_count": 416
+    "state_key": "kadin_1239809"
   },
   "kadin_1240242": {
     "available_sizes": [
@@ -55249,8 +55104,7 @@
     "retail_price": 5499.0,
     "sale_price": 5499.0,
     "sku": "133-6579572",
-    "state_key": "kadin_1240661",
-    "stock_count": 143
+    "state_key": "kadin_1240661"
   },
   "kadin_1240694": {
     "available_sizes": [
@@ -57231,8 +57085,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "6139499",
-    "state_key": "kadin_1255436",
-    "stock_count": 197
+    "state_key": "kadin_1255436"
   },
   "kadin_1255554": {
     "available_sizes": [
@@ -57262,8 +57115,7 @@
     "retail_price": 7490.0,
     "sale_price": 7490.0,
     "sku": "6319269",
-    "state_key": "kadin_1255554",
-    "stock_count": 168
+    "state_key": "kadin_1255554"
   },
   "kadin_1255561": {
     "available_sizes": [
@@ -57380,8 +57232,7 @@
     "retail_price": 7490.0,
     "sale_price": 5618.0,
     "sku": "6135899",
-    "state_key": "kadin_1256141",
-    "stock_count": 3
+    "state_key": "kadin_1256141"
   },
   "kadin_1256332": {
     "available_sizes": [
@@ -57501,8 +57352,7 @@
     "retail_price": 7490.0,
     "sale_price": 5617.5,
     "sku": "5860840",
-    "state_key": "kadin_1257302",
-    "stock_count": 561
+    "state_key": "kadin_1257302"
   },
   "kadin_1257526": {
     "available_sizes": [
@@ -58174,8 +58024,7 @@
     "retail_price": 6490.0,
     "sale_price": 4867.0,
     "sku": "6016152",
-    "state_key": "kadin_1264598",
-    "stock_count": 68
+    "state_key": "kadin_1264598"
   },
   "kadin_1264877": {
     "available_sizes": [
@@ -58705,8 +58554,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "6135019",
-    "state_key": "kadin_1267330",
-    "stock_count": 9
+    "state_key": "kadin_1267330"
   },
   "kadin_1269299": {
     "available_sizes": [
@@ -58766,8 +58614,7 @@
     "retail_price": 6490.0,
     "sale_price": 4867.0,
     "sku": "6467932",
-    "state_key": "kadin_1269508",
-    "stock_count": 263
+    "state_key": "kadin_1269508"
   },
   "kadin_1269573": {
     "available_sizes": [
@@ -61307,8 +61154,7 @@
     "retail_price": 6990.0,
     "sale_price": 5243.0,
     "sku": "6451831",
-    "state_key": "kadin_1292033",
-    "stock_count": 254
+    "state_key": "kadin_1292033"
   },
   "kadin_1292172": {
     "available_sizes": [
@@ -61695,8 +61541,7 @@
     "retail_price": 8490.0,
     "sale_price": 8490.0,
     "sku": "6469249",
-    "state_key": "kadin_1296125",
-    "stock_count": 260
+    "state_key": "kadin_1296125"
   },
   "kadin_1296137": {
     "available_sizes": [
@@ -61845,8 +61690,7 @@
     "retail_price": 7490.0,
     "sale_price": 7490.0,
     "sku": "6468984",
-    "state_key": "kadin_1296903",
-    "stock_count": 27
+    "state_key": "kadin_1296903"
   },
   "kadin_1296963": {
     "available_sizes": [
@@ -61875,8 +61719,7 @@
     "retail_price": 7490.0,
     "sale_price": 5618.0,
     "sku": "6469197",
-    "state_key": "kadin_1296963",
-    "stock_count": 11
+    "state_key": "kadin_1296963"
   },
   "kadin_1296969": {
     "available_sizes": [
@@ -61996,8 +61839,7 @@
     "retail_price": 7990.0,
     "sale_price": 5993.0,
     "sku": "6468903",
-    "state_key": "kadin_1297296",
-    "stock_count": 102
+    "state_key": "kadin_1297296"
   },
   "kadin_1297545": {
     "available_sizes": [
@@ -62119,8 +61961,7 @@
     "retail_price": 5490.0,
     "sale_price": 4118.0,
     "sku": "6137088",
-    "state_key": "kadin_1298214",
-    "stock_count": 358
+    "state_key": "kadin_1298214"
   },
   "kadin_1298392": {
     "available_sizes": [
@@ -66450,8 +66291,7 @@
     "retail_price": 5999.0,
     "sale_price": 3999.0,
     "sku": "6319297",
-    "state_key": "kadin_1322675",
-    "stock_count": 153
+    "state_key": "kadin_1322675"
   },
   "kadin_1323252": {
     "available_sizes": [
@@ -66538,8 +66378,7 @@
     "retail_price": 4299.0,
     "sale_price": 3224.0,
     "sku": "6213845",
-    "state_key": "kadin_1323979",
-    "stock_count": 79
+    "state_key": "kadin_1323979"
   },
   "kadin_1324124": {
     "available_sizes": [
@@ -66893,8 +66732,7 @@
     "retail_price": 5799.0,
     "sale_price": 2999.0,
     "sku": "6018809",
-    "state_key": "kadin_1327236",
-    "stock_count": 23
+    "state_key": "kadin_1327236"
   },
   "kadin_1327324": {
     "available_sizes": [
@@ -69673,7 +69511,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/06/18/21903808/5dec2fcd-c981-4f0d-855d-828fb6973e50.jpg",
     "in_stock": true,
     "last_price": 4159.2,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 4159.2,
     "missing_scans": 0,
     "model_key": "kadin_67-IH9221_-",
@@ -69684,7 +69522,7 @@
     "sale_price": 5199.0,
     "sku": "67-6609783",
     "state_key": "kadin_1340456",
-    "stock_count": 15
+    "stock_count": 16
   },
   "kadin_1340569": {
     "available_sizes": [
@@ -70453,8 +70291,7 @@
     "retail_price": 6999.0,
     "sale_price": 6999.0,
     "sku": "133-6794377",
-    "state_key": "kadin_1344464",
-    "stock_count": 43
+    "state_key": "kadin_1344464"
   },
   "kadin_1344569": {
     "available_sizes": [
@@ -70808,8 +70645,7 @@
     "retail_price": 9999.0,
     "sale_price": 9999.0,
     "sku": "265-6589710",
-    "state_key": "kadin_1345641",
-    "stock_count": 6
+    "state_key": "kadin_1345641"
   },
   "kadin_1345677": {
     "available_sizes": [
@@ -71045,8 +70881,7 @@
     "retail_price": 6799.0,
     "sale_price": 6799.0,
     "sku": "265-6601524",
-    "state_key": "kadin_1346020",
-    "stock_count": 24
+    "state_key": "kadin_1346020"
   },
   "kadin_1346059": {
     "available_sizes": [
@@ -73239,7 +73074,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/04/28/19345995/4654306b-c64c-4e27-babc-c09d877aac19.jpg",
     "in_stock": true,
     "last_price": 1799.5,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T13:17:46Z",
     "lowest_price": 1799.5,
     "missing_scans": 0,
     "model_key": "kadin_133-822618818_2",
@@ -73250,7 +73085,7 @@
     "sale_price": 3599.0,
     "sku": "133-6651743",
     "state_key": "kadin_1347543",
-    "stock_count": 426
+    "stock_count": 427
   },
   "kadin_1347572": {
     "available_sizes": [
@@ -74435,8 +74270,7 @@
     "retail_price": 9999.0,
     "sale_price": 9999.0,
     "sku": "133-5590569",
-    "state_key": "kadin_1348056",
-    "stock_count": 134
+    "state_key": "kadin_1348056"
   },
   "kadin_1348071": {
     "available_sizes": [
@@ -76429,7 +76263,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/04/28/19345104/84ca28ce-8f2d-42b2-8d67-c8db09f9825c.jpg",
     "in_stock": true,
     "last_price": 2024.5,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T13:38:21Z",
     "lowest_price": 2024.5,
     "missing_scans": 0,
     "model_key": "kadin_133-822617713_4",
@@ -76440,7 +76274,7 @@
     "sale_price": 4049.0,
     "sku": "133-6651665",
     "state_key": "kadin_1381001",
-    "stock_count": 83
+    "stock_count": 84
   },
   "kadin_1381149": {
     "available_sizes": [
@@ -76528,8 +76362,7 @@
     "retail_price": 7199.0,
     "sale_price": 7199.0,
     "sku": "133-6582136",
-    "state_key": "kadin_1381346",
-    "stock_count": 26
+    "state_key": "kadin_1381346"
   },
   "kadin_1381496": {
     "available_sizes": [
@@ -76558,8 +76391,7 @@
     "retail_price": 8299.0,
     "sale_price": 8299.0,
     "sku": "133-6610259",
-    "state_key": "kadin_1381496",
-    "stock_count": 31
+    "state_key": "kadin_1381496"
   },
   "kadin_1381777": {
     "available_sizes": [
@@ -78100,8 +77932,7 @@
     "retail_price": 8990.0,
     "sale_price": 6742.0,
     "sku": "6525637",
-    "state_key": "kadin_1422440",
-    "stock_count": 50
+    "state_key": "kadin_1422440"
   },
   "kadin_1422837": {
     "available_sizes": [
@@ -78193,8 +78024,7 @@
     "retail_price": 6490.0,
     "sale_price": 4867.0,
     "sku": "6467876",
-    "state_key": "kadin_1422859",
-    "stock_count": 169
+    "state_key": "kadin_1422859"
   },
   "kadin_1422866": {
     "available_sizes": [
@@ -78285,8 +78115,7 @@
     "retail_price": 7490.0,
     "sale_price": 5618.0,
     "sku": "6139967",
-    "state_key": "kadin_1422947",
-    "stock_count": 136
+    "state_key": "kadin_1422947"
   },
   "kadin_1423253": {
     "available_sizes": [
@@ -78768,8 +78597,7 @@
     "retail_price": 7990.0,
     "sale_price": 7990.0,
     "sku": "6451746",
-    "state_key": "kadin_1423310",
-    "stock_count": 35
+    "state_key": "kadin_1423310"
   },
   "kadin_1423315": {
     "available_sizes": [
@@ -79608,8 +79436,7 @@
     "retail_price": 7499.0,
     "sale_price": 5999.0,
     "sku": "5307114",
-    "state_key": "kadin_1430465",
-    "stock_count": 4
+    "state_key": "kadin_1430465"
   },
   "kadin_1431476": {
     "available_sizes": [
@@ -79905,8 +79732,7 @@
     "retail_price": 5490.0,
     "sale_price": 5490.0,
     "sku": "6136170",
-    "state_key": "kadin_1432458",
-    "stock_count": 88
+    "state_key": "kadin_1432458"
   },
   "kadin_1432478": {
     "available_sizes": [
@@ -79997,8 +79823,7 @@
     "retail_price": 7990.0,
     "sale_price": 5993.0,
     "sku": "6468914",
-    "state_key": "kadin_1432493",
-    "stock_count": 181
+    "state_key": "kadin_1432493"
   },
   "kadin_1432596": {
     "available_sizes": [
@@ -80059,8 +79884,7 @@
     "retail_price": 8990.0,
     "sale_price": 6742.0,
     "sku": "6453212",
-    "state_key": "kadin_1432660",
-    "stock_count": 204
+    "state_key": "kadin_1432660"
   },
   "kadin_1432672": {
     "available_sizes": [
@@ -88739,7 +88563,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/10/02/23995156/b81e57dc-07bb-488c-98a1-f86e0b036500.jpg",
     "in_stock": true,
     "last_price": 2249.5,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T13:38:21Z",
     "lowest_price": 2249.5,
     "missing_scans": 0,
     "model_key": "kadin_133-822625592D_2",
@@ -88750,7 +88574,7 @@
     "sale_price": 4499.0,
     "sku": "133-6651867",
     "state_key": "kadin_1451418",
-    "stock_count": 150
+    "stock_count": 151
   },
   "kadin_1451456": {
     "available_sizes": [
@@ -89911,8 +89735,7 @@
     "retail_price": 9990.0,
     "sale_price": 9990.0,
     "sku": "133-6446159",
-    "state_key": "kadin_1462536",
-    "stock_count": 6
+    "state_key": "kadin_1462536"
   },
   "kadin_1462633": {
     "available_sizes": [
@@ -91383,8 +91206,7 @@
     "retail_price": 5299.0,
     "sale_price": 5299.0,
     "sku": "265-6742273",
-    "state_key": "kadin_1467195",
-    "stock_count": 29
+    "state_key": "kadin_1467195"
   },
   "kadin_1467209": {
     "available_sizes": [
@@ -91829,8 +91651,7 @@
     "retail_price": 15399.0,
     "sale_price": 10779.0,
     "sku": "265-6598794",
-    "state_key": "kadin_1468107",
-    "stock_count": 19
+    "state_key": "kadin_1468107"
   },
   "kadin_1468150": {
     "available_sizes": [
@@ -91995,7 +91816,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/10/19/16281382/7c9f13f1-7d33-4247-89aa-011e1ecb27bc.jpg",
     "in_stock": true,
     "last_price": 7499.0,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T13:33:05Z",
     "lowest_price": 7499.0,
     "missing_scans": 0,
     "model_key": "kadin_133-IF7087_-",
@@ -92005,8 +91826,7 @@
     "retail_price": 7499.0,
     "sale_price": 7499.0,
     "sku": "133-5794096",
-    "state_key": "kadin_1477306",
-    "stock_count": 618
+    "state_key": "kadin_1477306"
   },
   "kadin_1477308": {
     "available_sizes": [
@@ -92353,7 +92173,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/08/11/22445667/9d0a1786-ee01-4f1f-ab38-f48e7413c927.jpg",
     "in_stock": true,
     "last_price": 5219.4,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T13:17:46Z",
     "lowest_price": 5219.4,
     "missing_scans": 0,
     "model_key": "kadin_133-KK2267_-",
@@ -92364,7 +92184,7 @@
     "sale_price": 8699.0,
     "sku": "133-6808295",
     "state_key": "kadin_1479663",
-    "stock_count": 456
+    "stock_count": 457
   },
   "kadin_1479817": {
     "available_sizes": [
@@ -93485,8 +93305,7 @@
     "retail_price": 8490.0,
     "sale_price": 5094.0,
     "sku": "6138991",
-    "state_key": "kadin_1483916",
-    "stock_count": 266
+    "state_key": "kadin_1483916"
   },
   "kadin_1484577": {
     "available_sizes": [
@@ -94103,8 +93922,7 @@
     "retail_price": 8599.0,
     "sale_price": 8599.0,
     "sku": "133-6467137",
-    "state_key": "kadin_1490796",
-    "stock_count": 229
+    "state_key": "kadin_1490796"
   },
   "kadin_1490809": {
     "available_sizes": [
@@ -94250,8 +94068,7 @@
     "retail_price": 8490.0,
     "sale_price": 8490.0,
     "sku": "133-6445852",
-    "state_key": "kadin_1491301",
-    "stock_count": 4
+    "state_key": "kadin_1491301"
   },
   "kadin_1492234": {
     "available_sizes": [
@@ -94931,7 +94748,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2022/07/07/532223/4f215905-f91c-4007-8a10-7331089e8645.jpg",
     "in_stock": true,
     "last_price": 2719.2,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 2719.2,
     "missing_scans": 0,
     "model_key": "kadin_166799C_102",
@@ -94942,7 +94759,7 @@
     "sale_price": 3399.0,
     "sku": "4106757",
     "state_key": "kadin_282620",
-    "stock_count": 1764
+    "stock_count": 1765
   },
   "kadin_282669": {
     "available_sizes": [
@@ -94999,8 +94816,7 @@
     "retail_price": 5499.0,
     "sale_price": 5499.0,
     "sku": "4597493",
-    "state_key": "kadin_282673",
-    "stock_count": 80
+    "state_key": "kadin_282673"
   },
   "kadin_282915": {
     "available_sizes": [
@@ -95030,8 +94846,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "4570065",
-    "state_key": "kadin_282915",
-    "stock_count": 133
+    "state_key": "kadin_282915"
   },
   "kadin_285531": {
     "available_sizes": [
@@ -95379,7 +95194,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2023/10/03/915812/342b66dc-b9b4-4ed4-af1f-df6d959cfbbc.jpg",
     "in_stock": true,
     "last_price": 2996.5,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T13:17:46Z",
     "lowest_price": 2996.5,
     "missing_scans": 0,
     "model_key": "kadin_745SFA0017T_WN8",
@@ -95389,8 +95204,7 @@
     "retail_price": 7990.0,
     "sale_price": 5993.0,
     "sku": "4816691",
-    "state_key": "kadin_415346",
-    "stock_count": 200
+    "state_key": "kadin_415346"
   },
   "kadin_430368": {
     "available_sizes": [
@@ -95647,7 +95461,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/03/06/8271348/076b14c5-b58f-46e3-89dd-349245241290.jpg",
     "in_stock": true,
     "last_price": 1949.35,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T13:50:38Z",
     "lowest_price": 1949.35,
     "missing_scans": 0,
     "model_key": "kadin_746SFA0070T_02H",
@@ -95657,8 +95471,7 @@
     "retail_price": 4490.0,
     "sale_price": 2999.0,
     "sku": "5300611",
-    "state_key": "kadin_483493",
-    "stock_count": 230
+    "state_key": "kadin_483493"
   },
   "kadin_485568": {
     "available_sizes": [
@@ -95717,8 +95530,7 @@
     "retail_price": 5999.0,
     "sale_price": 5999.0,
     "sku": "133-3218731",
-    "state_key": "kadin_486383",
-    "stock_count": 117
+    "state_key": "kadin_486383"
   },
   "kadin_487772": {
     "available_sizes": [
@@ -95807,8 +95619,7 @@
     "retail_price": 5499.0,
     "sale_price": 5499.0,
     "sku": "133-2644280",
-    "state_key": "kadin_490707",
-    "stock_count": 356
+    "state_key": "kadin_490707"
   },
   "kadin_497499": {
     "available_sizes": [
@@ -96161,8 +95972,7 @@
     "retail_price": 6478.0,
     "sale_price": 6478.0,
     "sku": "133-5526526",
-    "state_key": "kadin_544268",
-    "stock_count": 190
+    "state_key": "kadin_544268"
   },
   "kadin_544898": {
     "available_sizes": [
@@ -96299,7 +96109,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/05/23/4420757/aee5d576-ec25-47a0-9fc3-59dfdedadb15.jpg",
     "in_stock": true,
     "last_price": 1799.7,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T12:36:52Z",
     "lowest_price": 1799.7,
     "missing_scans": 0,
     "model_key": "kadin_A05347C_001",
@@ -96309,8 +96119,7 @@
     "retail_price": 5999.0,
     "sale_price": 5999.0,
     "sku": "4761861",
-    "state_key": "kadin_576278",
-    "stock_count": 10
+    "state_key": "kadin_576278"
   },
   "kadin_576463": {
     "available_sizes": [
@@ -96368,8 +96177,7 @@
     "retail_price": 4999.0,
     "sale_price": 4999.0,
     "sku": "5230397",
-    "state_key": "kadin_577724",
-    "stock_count": 183
+    "state_key": "kadin_577724"
   },
   "kadin_577886": {
     "available_sizes": [
@@ -96612,8 +96420,7 @@
     "retail_price": 5499.0,
     "sale_price": 2499.0,
     "sku": "5300305",
-    "state_key": "kadin_580224",
-    "stock_count": 202
+    "state_key": "kadin_580224"
   },
   "kadin_585551": {
     "available_sizes": [
@@ -96701,8 +96508,7 @@
     "retail_price": 6999.0,
     "sale_price": 2999.0,
     "sku": "5239316",
-    "state_key": "kadin_586514",
-    "stock_count": 443
+    "state_key": "kadin_586514"
   },
   "kadin_586611": {
     "available_sizes": [
@@ -96732,8 +96538,7 @@
     "retail_price": 6499.0,
     "sale_price": 3499.0,
     "sku": "5239653",
-    "state_key": "kadin_586611",
-    "stock_count": 160
+    "state_key": "kadin_586611"
   },
   "kadin_586648": {
     "available_sizes": [
@@ -96763,8 +96568,7 @@
     "retail_price": 4499.0,
     "sale_price": 2499.0,
     "sku": "5298444",
-    "state_key": "kadin_586648",
-    "stock_count": 184
+    "state_key": "kadin_586648"
   },
   "kadin_587203": {
     "available_sizes": [
@@ -96794,8 +96598,7 @@
     "retail_price": 5999.0,
     "sale_price": 2499.0,
     "sku": "5518697",
-    "state_key": "kadin_587203",
-    "stock_count": 150
+    "state_key": "kadin_587203"
   },
   "kadin_587669": {
     "available_sizes": [
@@ -96824,8 +96627,7 @@
     "retail_price": 5299.0,
     "sale_price": 3499.3,
     "sku": "4499704",
-    "state_key": "kadin_587669",
-    "stock_count": 2163
+    "state_key": "kadin_587669"
   },
   "kadin_588609": {
     "available_sizes": [
@@ -97416,8 +97218,7 @@
     "retail_price": 3499.0,
     "sale_price": 2499.0,
     "sku": "5509574",
-    "state_key": "kadin_636440",
-    "stock_count": 161
+    "state_key": "kadin_636440"
   },
   "kadin_639177": {
     "available_sizes": [
@@ -97447,8 +97248,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "5618265",
-    "state_key": "kadin_639177",
-    "stock_count": 651
+    "state_key": "kadin_639177"
   },
   "kadin_639767": {
     "available_sizes": [
@@ -97983,8 +97783,7 @@
     "retail_price": 6999.0,
     "sale_price": 2999.0,
     "sku": "5239294",
-    "state_key": "kadin_649008",
-    "stock_count": 160
+    "state_key": "kadin_649008"
   },
   "kadin_650167": {
     "available_sizes": [
@@ -98845,8 +98644,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "5710306",
-    "state_key": "kadin_671817",
-    "stock_count": 503
+    "state_key": "kadin_671817"
   },
   "kadin_672792": {
     "available_sizes": [
@@ -98905,8 +98703,7 @@
     "retail_price": 6990.0,
     "sale_price": 5242.5,
     "sku": "5508901",
-    "state_key": "kadin_672797",
-    "stock_count": 258
+    "state_key": "kadin_672797"
   },
   "kadin_672821": {
     "available_sizes": [
@@ -98965,8 +98762,7 @@
     "retail_price": 8490.0,
     "sale_price": 5094.0,
     "sku": "5509090",
-    "state_key": "kadin_673090",
-    "stock_count": 405
+    "state_key": "kadin_673090"
   },
   "kadin_676274": {
     "available_sizes": [
@@ -99259,8 +99055,7 @@
     "retail_price": 5999.0,
     "sale_price": 2499.0,
     "sku": "5238562",
-    "state_key": "kadin_693966",
-    "stock_count": 795
+    "state_key": "kadin_693966"
   },
   "kadin_693998": {
     "available_sizes": [
@@ -99290,8 +99085,7 @@
     "retail_price": 6999.0,
     "sale_price": 2999.0,
     "sku": "5239093",
-    "state_key": "kadin_693998",
-    "stock_count": 88
+    "state_key": "kadin_693998"
   },
   "kadin_694007": {
     "available_sizes": [
@@ -99528,8 +99322,7 @@
     "retail_price": 6999.0,
     "sale_price": 1999.0,
     "sku": "5710178",
-    "state_key": "kadin_706189",
-    "stock_count": 21
+    "state_key": "kadin_706189"
   },
   "kadin_706190": {
     "available_sizes": [
@@ -100352,8 +100145,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "5588495",
-    "state_key": "kadin_720817",
-    "stock_count": 1235
+    "state_key": "kadin_720817"
   },
   "kadin_727426": {
     "available_sizes": [
@@ -100529,8 +100321,7 @@
     "retail_price": 5990.0,
     "sale_price": 4493.0,
     "sku": "5710539",
-    "state_key": "kadin_738551",
-    "stock_count": 575
+    "state_key": "kadin_738551"
   },
   "kadin_738728": {
     "available_sizes": [
@@ -100648,8 +100439,7 @@
     "retail_price": 6490.0,
     "sale_price": 4868.0,
     "sku": "5710197",
-    "state_key": "kadin_743943",
-    "stock_count": 482
+    "state_key": "kadin_743943"
   },
   "kadin_743973": {
     "available_sizes": [
@@ -100824,8 +100614,7 @@
     "retail_price": 5699.0,
     "sale_price": 5699.0,
     "sku": "133-3469806",
-    "state_key": "kadin_754253",
-    "stock_count": 3079
+    "state_key": "kadin_754253"
   },
   "kadin_754437": {
     "available_sizes": [
@@ -101255,7 +101044,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/12/04/11528371/31e4a595-2275-456b-9a0b-2822a598c340.jpg",
     "in_stock": true,
     "last_price": 1649.7,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 1649.7,
     "missing_scans": 0,
     "model_key": "kadin_A08308C_639",
@@ -101266,7 +101055,7 @@
     "sale_price": 5499.0,
     "sku": "5912825",
     "state_key": "kadin_765814",
-    "stock_count": 112
+    "stock_count": 113
   },
   "kadin_765818": {
     "available_sizes": [
@@ -101383,8 +101172,7 @@
     "retail_price": 4999.0,
     "sale_price": 1999.0,
     "sku": "5491493",
-    "state_key": "kadin_765862",
-    "stock_count": 405
+    "state_key": "kadin_765862"
   },
   "kadin_765887": {
     "available_sizes": [
@@ -101975,8 +101763,7 @@
     "retail_price": 4999.0,
     "sale_price": 1999.0,
     "sku": "5491487",
-    "state_key": "kadin_773911",
-    "stock_count": 167
+    "state_key": "kadin_773911"
   },
   "kadin_790329": {
     "available_sizes": [
@@ -103533,8 +103320,7 @@
     "retail_price": 5199.0,
     "sale_price": 5199.0,
     "sku": "133-5613618",
-    "state_key": "kadin_837371",
-    "stock_count": 66
+    "state_key": "kadin_837371"
   },
   "kadin_837952": {
     "available_sizes": [
@@ -103828,8 +103614,7 @@
     "retail_price": 6099.0,
     "sale_price": 6099.0,
     "sku": "265-6056283",
-    "state_key": "kadin_840572",
-    "stock_count": 17
+    "state_key": "kadin_840572"
   },
   "kadin_841122": {
     "available_sizes": [
@@ -104329,8 +104114,7 @@
     "retail_price": 5499.0,
     "sale_price": 2499.0,
     "sku": "5239907",
-    "state_key": "kadin_877076",
-    "stock_count": 257
+    "state_key": "kadin_877076"
   },
   "kadin_877136": {
     "available_sizes": [
@@ -104360,8 +104144,7 @@
     "retail_price": 5999.0,
     "sale_price": 2499.0,
     "sku": "5239750",
-    "state_key": "kadin_877136",
-    "stock_count": 333
+    "state_key": "kadin_877136"
   },
   "kadin_877290": {
     "available_sizes": [
@@ -104451,8 +104234,7 @@
     "retail_price": 5499.0,
     "sale_price": 2999.0,
     "sku": "5931598",
-    "state_key": "kadin_877501",
-    "stock_count": 363
+    "state_key": "kadin_877501"
   },
   "kadin_877806": {
     "available_sizes": [
@@ -104628,8 +104410,7 @@
     "retail_price": 7999.0,
     "sale_price": 7999.0,
     "sku": "133-3212273",
-    "state_key": "kadin_882050",
-    "stock_count": 3631
+    "state_key": "kadin_882050"
   },
   "kadin_882063": {
     "available_sizes": [
@@ -104747,8 +104528,7 @@
     "retail_price": 5999.0,
     "sale_price": 5999.0,
     "sku": "133-5530860",
-    "state_key": "kadin_883830",
-    "stock_count": 70
+    "state_key": "kadin_883830"
   },
   "kadin_886463": {
     "available_sizes": [
@@ -104836,8 +104616,7 @@
     "retail_price": 6299.0,
     "sale_price": 6299.0,
     "sku": "133-5597182",
-    "state_key": "kadin_886511",
-    "stock_count": 431
+    "state_key": "kadin_886511"
   },
   "kadin_886561": {
     "available_sizes": [
@@ -104896,8 +104675,7 @@
     "retail_price": 7999.0,
     "sale_price": 7999.0,
     "sku": "133-6185052",
-    "state_key": "kadin_886603",
-    "stock_count": 210
+    "state_key": "kadin_886603"
   },
   "kadin_886608": {
     "available_sizes": [
@@ -105075,8 +104853,7 @@
     "retail_price": 7799.0,
     "sale_price": 7799.0,
     "sku": "133-3499621",
-    "state_key": "kadin_890978",
-    "stock_count": 372
+    "state_key": "kadin_890978"
   },
   "kadin_891571": {
     "available_sizes": [
@@ -105252,8 +105029,7 @@
     "retail_price": 5999.0,
     "sale_price": 5999.0,
     "sku": "133-6220360",
-    "state_key": "kadin_891934",
-    "stock_count": 1813
+    "state_key": "kadin_891934"
   },
   "kadin_892252": {
     "available_sizes": [
@@ -105341,8 +105117,7 @@
     "retail_price": 5999.0,
     "sale_price": 5999.0,
     "sku": "133-6245320",
-    "state_key": "kadin_897975",
-    "stock_count": 121
+    "state_key": "kadin_897975"
   },
   "kadin_899303": {
     "available_sizes": [
@@ -105788,8 +105563,7 @@
     "retail_price": 7490.0,
     "sale_price": 5617.5,
     "sku": "5860972",
-    "state_key": "kadin_905874",
-    "stock_count": 49
+    "state_key": "kadin_905874"
   },
   "kadin_905939": {
     "available_sizes": [
@@ -106027,8 +105801,7 @@
     "retail_price": 5999.0,
     "sale_price": 2999.0,
     "sku": "5710516",
-    "state_key": "kadin_907947",
-    "stock_count": 155
+    "state_key": "kadin_907947"
   },
   "kadin_908241": {
     "available_sizes": [
@@ -106203,8 +105976,7 @@
     "retail_price": 5999.0,
     "sale_price": 2499.0,
     "sku": "6017111",
-    "state_key": "kadin_908478",
-    "stock_count": 1
+    "state_key": "kadin_908478"
   },
   "kadin_908710": {
     "available_sizes": [
@@ -106472,8 +106244,7 @@
     "retail_price": 4599.0,
     "sale_price": 4599.0,
     "sku": "6216067",
-    "state_key": "kadin_920020",
-    "stock_count": 209
+    "state_key": "kadin_920020"
   },
   "kadin_920186": {
     "available_sizes": [
@@ -107889,8 +107660,7 @@
     "retail_price": 5499.0,
     "sale_price": 5499.0,
     "sku": "265-6231435",
-    "state_key": "kadin_963010",
-    "stock_count": 69
+    "state_key": "kadin_963010"
   },
   "kadin_963015": {
     "available_sizes": [
@@ -110217,8 +109987,7 @@
     "retail_price": 4799.0,
     "sale_price": 4799.0,
     "sku": "265-6442424",
-    "state_key": "kadin_984827",
-    "stock_count": 51
+    "state_key": "kadin_984827"
   },
   "kadin_984846": {
     "available_sizes": [
@@ -110295,7 +110064,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/10/09/16063418/be450a79-a797-436c-84c2-c103e629db8f.jpg",
     "in_stock": true,
     "last_price": 2724.5,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T13:33:05Z",
     "lowest_price": 2724.5,
     "missing_scans": 0,
     "model_key": "kadin_265-IH0308_-",
@@ -110306,7 +110075,7 @@
     "sale_price": 5449.0,
     "sku": "265-5883081",
     "state_key": "kadin_984916",
-    "stock_count": 4
+    "stock_count": 5
   },
   "kadin_98687": {
     "available_sizes": [
@@ -110455,8 +110224,7 @@
     "retail_price": 6990.0,
     "sale_price": 5243.0,
     "sku": "5710462",
-    "state_key": "kadin_989381",
-    "stock_count": 485
+    "state_key": "kadin_989381"
   },
   "kadin_989404": {
     "available_sizes": [
@@ -110772,7 +110540,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/27/12574399/80521dd0-fb3e-40c2-b013-8653b46c2c3e.jpg",
     "in_stock": true,
     "last_price": 1839.2,
-    "last_updated": "2026-10-22T13:48:55Z",
+    "last_updated": "2026-10-22T12:57:08Z",
     "lowest_price": 1839.2,
     "missing_scans": 0,
     "model_key": "kadin_A13378C_001",
@@ -110783,7 +110551,7 @@
     "sale_price": 2299.0,
     "sku": "6223029",
     "state_key": "kadin_992020",
-    "stock_count": 55
+    "stock_count": 57
   },
   "kadin_992213": {
     "available_sizes": [

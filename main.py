@@ -91,15 +91,19 @@ def run_check_cycle(dry_run: bool = False) -> None:
     # 3. Bildirim Gönderimi
     if not alerts:
         logger.info("Bildirim kriterlerini sağlayan yeni bir indirim veya stok bulunmadı.")
+        storage.save_state()
         return
 
     if dry_run:
         logger.info("--dry-run modu aktif: %d bildirim Telegram'a gönderilmedi.", len(alerts))
         for item in alerts[:10]:
             logger.info("\n%s", notifier.format_caption(item))
+        storage.save_state()
         return
 
-    notifier.send_batch_alerts(alerts)
+    # Bildirimleri gönder; gönderilemeyenler storage.revert_alert() ile kurtarılır
+    notifier.send_batch_alerts(alerts, storage=storage)
+    storage.save_state()
 
 
 def run_loop_mode(interval_minutes: int, dry_run: bool = False) -> None:

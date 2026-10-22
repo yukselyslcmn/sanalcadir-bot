@@ -178,6 +178,22 @@ CRITICAL_STOCK_LIMIT: int = _parse_int(os.getenv("CRITICAL_STOCK_LIMIT"), 3)
 # Bir ürün kaç ardışık tam taramada stokta görünmezse "Stok Tükendi" olarak işaretlensin?
 OUT_OF_STOCK_CONFIRM_SCANS: int = _parse_int(os.getenv("OUT_OF_STOCK_CONFIRM_SCANS"), 3)
 
+# Aynı ürün için tekrar bildirim bekleme süresi (saat). Bu süre içinde ürün aynı veya daha
+# yüksek fiyatla tekrar "fırsat" gibi görünürse (varyant fiyat dalgalanması, sepet kampanyasının
+# kapanıp açılması, stok gidip gelmesi vb.) mükerrer bildirim gönderilmez. Daha düşük fiyat her zaman bildirilir.
+ALERT_COOLDOWN_HOURS: float = _parse_float(os.getenv("ALERT_COOLDOWN_HOURS"), 24.0)
+
+# Stoğu tükenmiş ve bu kadar gündür hiç görülmemiş kayıtlar veritabanından temizlenir (dosya şişmesini önler)
+STALE_RECORD_DAYS: int = _parse_int(os.getenv("STALE_RECORD_DAYS"), 30)
+
+# Güvenlik eşiği: Bir kategoride bulunan ürün sayısı, takipteki stoklu ürün sayısının bu oranının
+# altına düşerse (site/API arızası, yapı değişikliği vb.) o tarama "eksik" sayılır ve hiçbir ürün
+# yanlışlıkla "stok tükendi" olarak işaretlenmez (sonrasında toplu sahte "tekrar stokta" bildirimi önlenir).
+MIN_SCAN_COMPLETENESS: float = _parse_float(os.getenv("MIN_SCAN_COMPLETENESS"), 0.5)
+
+# MAX_ALERTS_PER_RUN sınırını aşan fırsatlar kaybolmasın diye tek bir özet mesajda listelenecek maksimum ürün sayısı
+OVERFLOW_SUMMARY_LIMIT: int = _parse_int(os.getenv("OVERFLOW_SUMMARY_LIMIT"), 30)
+
 
 # ==============================================================================
 # 4. ÇALIŞMA VE DURUM TAKİP AYARLARI

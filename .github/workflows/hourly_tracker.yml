@@ -80,13 +80,15 @@ jobs:
               echo "ℹ️ Periyot $CYCLE: data/products_state.json dosyasında fiyat/stok değişikliği yok, commit atlanıyor."
             else
               git commit -m "chore(state): 5dk periyodik fiyat ve stok durumu güncellendi [skip ci]"
-              git push origin HEAD:"$REF_NAME"
+              git push origin HEAD:"$REF_NAME" || (git pull --rebase origin "$REF_NAME" && git push origin HEAD:"$REF_NAME")
               echo "✅ Periyot $CYCLE: data/products_state.json başarıyla GitHub deposuna kaydedildi."
             fi
 
-            # Bir sonraki tarama için 4 dk 20 sn bekle (~40 sn tarama + 260 sn bekleme = 5 dakika)
-            echo "⏳ Bir sonraki tarama için 4 dakika 20 saniye (5 dk periyot) bekleniyor..."
-            sleep 260
+            # Son periyot (12.) değilse bir sonraki tarama için 4 dk 20 sn bekle (~40 sn tarama + 260 sn bekleme = 5 dakika)
+            if [ "$CYCLE" -lt 12 ]; then
+              echo "⏳ Bir sonraki tarama için 4 dakika 20 saniye (5 dk periyot) bekleniyor..."
+              sleep 260
+            fi
           done
 
       - name: 🔁 Sonraki 1 Saatlik Vardiyayı Kuyruk Kontrollü Başlat
@@ -96,8 +98,10 @@ jobs:
           REPO_NAME: ${{ github.repository }}
           REF_NAME: ${{ github.ref_name }}
         run: |
-          QUEUED_COUNT=$(gh run list --repo "$REPO_NAME" --workflow="hourly_tracker.yml" --status="queued" --json databaseId --jq 'length' || echo "0")
-          WAITING_COUNT=$(gh run list --repo "$REPO_NAME" --workflow="hourly_tracker.yml" --status="waiting" --json databaseId --jq 'length' || echo "0")
+          QUEUED_COUNT=$(gh run list --repo "$REPO_NAME" --workflow="hourly_tracker.yml" --status="queued" --json databaseId --jq 'length' 2>/dev/null || echo "0")
+          WAITING_COUNT=$(gh run list --repo "$REPO_NAME" --workflow="hourly_tracker.yml" --status="waiting" --json databaseId --jq 'length' 2>/dev/null || echo "0")
+          [[ "$QUEUED_COUNT" =~ ^[0-9]+$ ]] || QUEUED_COUNT=0
+          [[ "$WAITING_COUNT" =~ ^[0-9]+$ ]] || WAITING_COUNT=0
           echo "Kuyrukta bekleyen görev sayısı -> queued: $QUEUED_COUNT, waiting: $WAITING_COUNT"
           if [ "$QUEUED_COUNT" -eq "0" ] && [ "$WAITING_COUNT" -eq "0" ]; then
             echo "🚀 Yeni 1 saatlik (12x5dk) tarama vardiyası otomatik olarak tetikleniyor..."

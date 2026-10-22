@@ -16,7 +16,7 @@ Sanal Çadır (sanalcadir.com) Görselli Telegram Bildirim Modülü (notifier.py
 import html
 import logging
 import time
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 import requests
 from requests.adapters import HTTPAdapter
@@ -288,11 +288,66 @@ class TelegramNotifier:
 
         return any_sent
 
-    def send_batch_alerts(self, alerts: List[Dict[str, Any]]) -> int:
+    def send_text_message(self, text: str, disable_preview: bool = True) -> bool:
+        """
+        Düz veya zengin HTML formatında bir metin mesajını tüm hedef chat ID'lerine gönderir.
+        """
+        if not self.is_configured():
+            logger.warning("Telegram ayarları eksik. Metin konsola yazdırılıyor:\n%s", text)
+            return False
+
+        any_sent = False
+        for target_chat_id in self.chat_ids:
+            payload = {
+                "chat_id": target_chat_id,
+                "text": text,
+                "parse_mode": "HTML",
+                "disable_web_page_preview": disable_preview,
+            }
+            if self._post_telegram("sendMessage", payload):
+                any_sent = True
+        return any_sent
+
+    def format_overflow_summary(self, overflow_alerts: List[Dict[str, Any]]) -> str:
+        """
+        Tek seferlik bildirim sınırını (MAX_ALERTS_PER_RUN) aşan fırsatları
+        tek bir kompakt HTML özet mesajı haline getirir.
+        """
+        lines = [
+            "📢 <b>DİĞER ÖNE ÇIKAN FIRSATLAR (ÖZET LİSTE)</b>",
+            f"<i>Tek seferlik fotoğraflı mesaj sınırını aşan sonraki {len(overflow_alerts)} fırsat:</i>",
+            "",
+        ]
+
+        for alert in overflow_alerts:
+            prod = alert["product"]
+            brand = html.escape(str(prod.get("brand") or "").strip())
+            name = html.escape(str(prod.get("name") or "").strip()[:65])
+            title = f"{brand} - {name}" if brand and brand.lower() not in name.lower() else name
+            price = self._format_tl(float(alert.get("new_price") or prod.get("effective_price") or 0))
+            old_price = self._format_tl(float(alert.get("old_price") or prod.get("retail_price") or 0))
+            drop = float(alert.get("extra_drop_rate") or prod.get("discount_rate") or 0)
+            sizes = ", ".join(str(s) for s in (prod.get("available_sizes") or []))
+            url = html.escape(str(prod.get("product_url") or config.BASE_URL), quote=True)
+            cat_icon = "🚹" if "erkek" in str(prod.get("category_key", "")).lower() else "🚺"
+
+            line = (
+                f"{cat_icon} <a href=\"{url}\"><b>{title}</b></a>\n"
+                f"   💰 <b>{price}</b> (<s>{old_price}</s> - %{drop:.0f}) | Numara: <code>{html.escape(sizes)}</code>"
+            )
+            lines.append(line)
+
+        return "\n".join(lines)
+
+    def send_batch_alerts(
+        self, alerts: List[Dict[str, Any]], storage: Optional[Any] = None
+    ) -> int:
         """
         Bildirim listesini sırayla gönderir.
-        Telegram flood engeline takılmamak için her mesaj arasında `time.sleep(1.5)` bekler
-        ve tek seferde en yüksek öncelikli `MAX_ALERTS_PER_RUN` bildirimi gönderir.
+        - En yüksek indirimli ilk `MAX_ALERTS_PER_RUN` fırsatı fotoğraflı olarak tek tek gönderir.
+        - Kalan taşan fırsatları (`OVERFLOW_SUMMARY_LIMIT` adede kadar) tek bir toplu özet mesajı olarak iletir.
+        - Gönderilemeyen mesajların durumunu `storage.revert_alert()` ile geri alır,
+          böylece fırsatlar veritabanında kaybolmaz ve bir sonraki taramada tekrar bildirilebilir.
         """
         if not alerts:
             return 0
@@ -300,24 +355,56 @@ class TelegramNotifier:
         max_limit = config.MAX_ALERTS_PER_RUN
         if max_limit > 0 and len(alerts) > max_limit:
             logger.info(
-                "Toplam %d bildirim bulundu; flood koruması gereği en yüksek indirimli ilk %d fırsat gönderiliyor.",
+                "Toplam %d bildirim bulundu; tek tek ilk %d fırsat gönderilecek, kalanlar özetlenecek.",
                 len(alerts),
                 max_limit,
             )
             alerts_to_send = alerts[:max_limit]
+            overflow = alerts[max_limit:]
         else:
             alerts_to_send = alerts
+            overflow = []
 
         sent_count = 0
         total = len(alerts_to_send)
-        logger.info("Toplam %d adet Telegram bildirimi gönderiliyor...", total)
+        logger.info("Toplam %d adet fotoğraflı Telegram bildirimi gönderiliyor...", total)
 
         for idx, alert in enumerate(alerts_to_send, start=1):
             success = self.send_alert(alert)
             if success:
                 sent_count += 1
+            elif storage is not None:
+                # Gönderim başarısız olursa durumu geri al ki fırsat kalıcı olarak kaybolmasın
+                storage.revert_alert(alert)
+
             if idx < total:
                 time.sleep(self.rate_limit_delay)
 
-        logger.info("Telegram bildirim gönderimi tamamlandı: %d/%d başarılı.", sent_count, total)
+        # Taşan fırsatlar için toplu özet mesajı gönderimi
+        if overflow:
+            summary_limit = max(config.OVERFLOW_SUMMARY_LIMIT, 10)
+            summary_items = overflow[:summary_limit]
+            unhandled = overflow[summary_limit:]
+
+            time.sleep(self.rate_limit_delay)
+            summary_text = self.format_overflow_summary(summary_items)
+            summary_success = self.send_text_message(summary_text, disable_preview=True)
+
+            if summary_success:
+                sent_count += 1
+                logger.info("Taşan %d fırsat özet mesaj olarak Telegram'a gönderildi.", len(summary_items))
+            elif storage is not None:
+                for a in summary_items:
+                    storage.revert_alert(a)
+
+            # Özet sınırını da aşan ürünler varsa durumlarını geri al ki sonraki taramada bildirilebilsinler
+            if storage is not None and unhandled:
+                logger.info(
+                    "Özet sınırını aşan %d fırsat sonraki taramada gönderilmek üzere havuza iade edildi.",
+                    len(unhandled),
+                )
+                for a in unhandled:
+                    storage.revert_alert(a)
+
+        logger.info("Telegram bildirim gönderimi tamamlandı: %d başarılı.", sent_count)
         return sent_count

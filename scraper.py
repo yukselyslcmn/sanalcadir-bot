@@ -371,6 +371,7 @@ class SanalCadirScraper:
         variants = extra_data.get("variants") if isinstance(extra_data, dict) else None
 
         has_beden_variants = False
+        seen_variant_ids: Set[str] = set()
         if isinstance(variants, list):
             for var_group in variants:
                 if not isinstance(var_group, dict):
@@ -391,10 +392,20 @@ class SanalCadirScraper:
                         opt_selectable = bool(opt.get("is_selectable", True))
                         sub_prod = opt.get("product") or {}
                         sub_in_stock = bool(sub_prod.get("in_stock", opt_in_stock))
-                        sub_stock_qty = int(sub_prod.get("stock", 1 if sub_in_stock else 0) or 0)
+                        try:
+                            sub_stock_qty = int(sub_prod.get("stock", 1 if sub_in_stock else 0) or 0)
+                        except (TypeError, ValueError):
+                            sub_stock_qty = 1 if sub_in_stock else 0
 
                         if not (opt_in_stock and opt_selectable and sub_in_stock and sub_stock_qty > 0):
                             continue
+
+                        # Aynı alt ürün (varyant) birden fazla beden grubunda listelenmişse stoğu çift sayma
+                        variant_id = str(sub_prod.get("pk") or sub_prod.get("sku") or "")
+                        if variant_id:
+                            if variant_id in seen_variant_ids:
+                                continue
+                            seen_variant_ids.add(variant_id)
 
                         attrs = sub_prod.get("attributes") or {}
                         raw_size = (
@@ -422,7 +433,10 @@ class SanalCadirScraper:
             return sorted(available_sizes), total_target_stock, variant_sale_price, variant_retail_price
 
         top_in_stock = bool(raw_product.get("in_stock", False))
-        top_stock = int(raw_product.get("stock", 1 if top_in_stock else 0) or 0)
+        try:
+            top_stock = int(raw_product.get("stock", 1 if top_in_stock else 0) or 0)
+        except (TypeError, ValueError):
+            top_stock = 1 if top_in_stock else 0
         if not (top_in_stock and top_stock > 0):
             return [], 0, None, None
 
@@ -766,7 +780,12 @@ class SanalCadirScraper:
             page_valid_count = 0
 
             for raw_prod in raw_products:
-                parsed = self.parse_product(raw_prod, target_cfg)
+                try:
+                    parsed = self.parse_product(raw_prod, target_cfg)
+                except Exception as exc:  # Tek bir bozuk ürün kaydı tüm taramayı durdurmasın
+                    logger.debug("[%s] Ürün ayrıştırma hatası (pk=%s): %s", category_name,
+                                 raw_prod.get("pk") if isinstance(raw_prod, dict) else "?", exc)
+                    parsed = None
                 if parsed:
                     s_key = parsed["state_key"]
                     m_key = parsed.get("model_key") or s_key
