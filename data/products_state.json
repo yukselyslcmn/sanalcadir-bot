@@ -8027,7 +8027,7 @@
     "last_price": 3659.4,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 3659.4,
-    "missing_scans": 1,
+    "missing_scans": 2,
     "model_key": "erkek_133-IO2083_010",
     "name": "Nike Total 90 III 'Black Coconut Milk' Erkek Siyah Spor Ayakkabı",
     "pk": 1230690,
@@ -60667,8 +60667,7 @@
   },
   "kadin_1300593": {
     "available_sizes": [
-      "39",
-      "40"
+      "39"
     ],
     "basket_offer_label": null,
     "basket_price": null,
@@ -60682,7 +60681,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/12/23/15727188/fec3d97b-e50b-41f4-aa0c-3cb55e48171d.jpg",
     "in_stock": true,
     "last_price": 4199.0,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T18:50:30Z",
     "lowest_price": 4199.0,
     "missing_scans": 0,
     "model_key": "kadin_JQ3216_-",
@@ -61168,7 +61167,7 @@
     "last_price": 3539.0,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 3539.0,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_HF3969_201",
     "name": "Nike Air Jordan 1 Low Method of Make Kadın Yeşil Sneaker",
     "pk": 1302517,
@@ -69580,7 +69579,7 @@
     "last_price": 4499.5,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 4499.5,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_265-NF0A8DB3L5P1_-",
     "name": "The North Face Altamesa 500 V2 Kadın Gri Koşu Ayakkabı",
     "pk": 1346371,
