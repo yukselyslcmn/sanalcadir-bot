@@ -695,7 +695,7 @@
     "last_price": 2349.5,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 2349.5,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_265-JH6300_-",
     "name": "adidas Copa Pure 3 League Firm-Multi Ground Erkek Siyah Çim Saha Kramponu",
     "pk": 1006964,
@@ -24194,7 +24194,7 @@
     "last_price": 2249.5,
     "last_updated": "2026-10-22T12:57:08Z",
     "lowest_price": 2249.5,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_133-812628812_4",
     "name": "Anta Millennium Td Erkek Siyah Spor Ayakkabı",
     "pk": 1458156,
@@ -63909,11 +63909,11 @@
     "first_seen": "2026-10-22T12:14:54Z",
     "id": "1317482",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/03/23/19341433/aa22bc8c-1fd0-45c3-8a9a-7270f89ac052.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_price": 2249.5,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T14:47:01Z",
     "lowest_price": 2249.5,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "kadin_265-JP5947_-",
     "name": "adidas Astrastar Kadın Krem Spor Ayakkabı",
     "pk": 1317482,
@@ -68999,7 +68999,8 @@
   },
   "kadin_1346152": {
     "available_sizes": [
-      "39"
+      "39",
+      "40"
     ],
     "basket_offer_label": "Sepette %50 İndirim",
     "basket_price": 4799.5,
@@ -69013,7 +69014,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/05/20/20129346/efb1d365-8a07-4657-bdbe-b186e8718b74.jpg",
     "in_stock": true,
     "last_price": 4799.5,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T14:47:01Z",
     "lowest_price": 4799.5,
     "missing_scans": 0,
     "model_key": "kadin_265-JR4867_-",
@@ -86133,8 +86134,7 @@
   "kadin_1456797": {
     "available_sizes": [
       "39",
-      "39.5",
-      "40"
+      "39.5"
     ],
     "basket_offer_label": "Sepette %30 İndirim",
     "basket_price": 5809.3,
@@ -86148,7 +86148,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/08/28/22874580/3e9b483f-50b1-4f52-940b-f13bc14047b7.jpg",
     "in_stock": true,
     "last_price": 5809.3,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T14:47:01Z",
     "lowest_price": 5809.3,
     "missing_scans": 0,
     "model_key": "kadin_265-1072A132_100",
