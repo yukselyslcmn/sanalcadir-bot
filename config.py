@@ -183,7 +183,7 @@ OUT_OF_STOCK_CONFIRM_SCANS: int = _parse_int(os.getenv("OUT_OF_STOCK_CONFIRM_SCA
 # 4. ÇALIŞMA VE DURUM TAKİP AYARLARI
 # ==============================================================================
 NOTIFY_ON_FIRST_RUN: bool = _parse_bool(os.getenv("NOTIFY_ON_FIRST_RUN"), default=False)
-CHECK_INTERVAL_MINUTES: int = _parse_int(os.getenv("CHECK_INTERVAL_MINUTES"), 20)
+CHECK_INTERVAL_MINUTES: int = _parse_int(os.getenv("CHECK_INTERVAL_MINUTES"), 5)
 MAX_PAGES_PER_CATEGORY: int = _parse_int(os.getenv("MAX_PAGES_PER_CATEGORY"), 0)
 
 # HTTP İstek Ayarları

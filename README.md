@@ -1,6 +1,6 @@
 # 👟 Sanal Çadır (sanalcadir.com) 7/24 Otomatik Ayakkabı İndirim & Stok Takip Botu
 
-`https://www.sanalcadir.com/` (Akinon altyapısı) üzerinde yer alan **Erkek (45, 45.5, 45-46 ve 46 numara)** ve **Kadın (39, 39.5, 39-40 ve 40 numara)** ayakkabıları her 20 dakikada bir otomatik tarayan, **gerçek bir fiyat düşüşü** olduğunda veya **yeni indirimli stok** girdiğinde Telegram üzerinden **ürün fotoğrafı, fiyatı, sepette ekstra indirimi ve satın alma linkiyle** bildirim gönderen modüler Python projesi.
+`https://www.sanalcadir.com/` (Akinon altyapısı) üzerinde yer alan **Erkek (45, 45.5, 45-46 ve 46 numara)** ve **Kadın (39, 39.5, 39-40 ve 40 numara)** ayakkabıları **her 5 dakikada bir** otomatik tarayan, **gerçek bir fiyat düşüşü** olduğunda veya **yeni indirimli stok** girdiğinde Telegram üzerinden **ürün fotoğrafı, fiyatı, sepette ekstra indirimi ve satın alma linkiyle** bildirim gönderen modüler Python projesi.
 
 Bilgisayarınız kapalıyken bile **GitHub Actions** üzerinde 7/24 ücretsiz çalışır.
 
@@ -11,18 +11,19 @@ Bilgisayarınız kapalıyken bile **GitHub Actions** üzerinde 7/24 ücretsiz ç
 1. **Akinon JSON & Sayfalama (Pagination) Mimarisi (`scraper.py`):**
    - Kategori URL'lerine `?format=json` ekleyerek tüm sayfaları otomatik gezer.
    - Standart `requests` isteği WAF/Cloudflare engeline takılırsa sırasıyla `curl_cffi`, `cloudscraper` ve `playwright` katmanlarına otomatik geçiş yapar.
-2. **Hayalet Stok Koruması (Ghost Stock Protection):**
-   - Sadece üst ürün kartına değil, `extra_data.variants` (`integration_beden`) altındaki numara bazlı gerçek stoklara (`in_stock: true` ve `stock > 0`) bakar. Hedef numarası (`45`, `45.5` veya `39`, `40`) gerçekten stokta olmayan ürünleri kesin olarak eler.
+2. **Hayalet Stok Koruması (`integration_beden` & `mp_size`):**
+   - Sadece üst ürün kartına değil, `extra_data.variants` (`integration_beden` ve Marketplace/Superstep `mp_size`) altındaki numara bazlı gerçek stoklara (`in_stock: true` ve `stock > 0`) bakar. Hedef numarası (`45`, `45.5`, `45-46`, `46` veya `39`, `39.5`, `39-40`, `40`) gerçekten stokta olmayan ürünleri kesin olarak eler.
 3. **Sepette Ekstra İndirim Algılama:**
    - Ürün verisindeki liste fiyatını (`retail_price`), indirimli satış fiyatını (`price`) ve varsa **Sepette Ekstra İndirim** (`basket_offers` -> `discounted_total_price`) kampanyasını ayrıştırarak gerçek net fiyatı hesaplar.
 4. **Akıllı Durum Takibi & Spam Koruması (`storage.py`):**
-   - `data/products_state.json` içinde her ürünün son bilinen net fiyatını saklar.
-   - **İlk Çalıştırma Koruması (`NOTIFY_ON_FIRST_RUN=False`):** İlk çalışmada mevcut yüzlerce ürünü mesaj olarak atmak yerine sessizce veritabanına kaydeder.
+   - `data/products_state.json` içinde her ürünün son bilinen net fiyatını ve şimdiye kadarki en düşük fiyatını (`lowest_price`) saklar.
+   - **İlk Çalıştırma Koruması (`NOTIFY_ON_FIRST_RUN=False`):** İlk çalışmada mevcut binlerce ürünü mesaj olarak atmak yerine sessizce veritabanına kaydeder.
    - **🔥 EKSTRA FİYAT DÜŞÜŞÜ:** Kayıtlı bir ürünün net fiyatı en az **%5** daha düşerse bildirim gönderir.
+   - **🔄 TEKRAR STOĞA GİRDİ:** Daha önce stoğu tükenen bir ürün tekrar stoğa girerse bildirim gönderir.
    - **🆕 YENİ STOK GELDİ:** Daha önce veritabanında olmayan bir ürün hedef numaralarda stoğa girerse ve filtre kriterlerini (`MIN_DISCOUNT_RATE`, `MAX_PRICE_LIMIT`, `ALLOWED_BRANDS`) sağlıyorsa bildirim gönderir.
 5. **Görselli Telegram Bildirimi (`notifier.py`):**
-   - Telegram Bot API `sendPhoto` uç noktasını kullanarak ürün fotoğrafıyla birlikte zengin HTML mesajı gönderir (fotoğraf yüklenemezse `sendMessage` fallback olarak devreye girer).
-   - Flood/rate-limit koruması için mesajlar arasında `1.5` saniye bekler.
+   - Telegram Bot API `sendPhoto` uç noktasını kullanarak ürün fotoğrafıyla ve tıklanabilir satın alma butonuyla zengin HTML mesajı gönderir (fotoğraf yüklenemezse `sendMessage` fallback olarak devreye girer).
+   - Flood/rate-limit koruması için mesajlar arasında `1.5` saniye bekler ve en yüksek indirimli fırsatları önceliklendirir (`MAX_ALERTS_PER_RUN=25`).
 
 ---
 
@@ -32,7 +33,7 @@ Bilgisayarınız kapalıyken bile **GitHub Actions** üzerinde 7/24 ücretsiz ç
 SanalCadir_Bot/
 ├── .github/
 │   └── workflows/
-│       └── hourly_tracker.yml   # Saatlik çalışan ve state dosyasını geri pushlayan GitHub Actions
+│       └── hourly_tracker.yml   # 5 dakikada bir çalışan (12x5dk) ve state dosyasını güncelleyen GitHub Actions
 ├── data/
 │   └── products_state.json      # Ürün fiyat ve stok hafızası (GitHub Actions tarafından güncellenir)
 ├── .env.example                 # Ortam değişkenleri ve filtre ayar şablonu
@@ -75,20 +76,7 @@ python test_scraper.py
   ```bash
   python main.py --once
   ```
-- **Bilgisayar Açıkken Sürekli Tarama (Her 60 Dakikada Bir):**
+- **Bilgisayar Açıkken Sürekli Tarama (Her 5 Dakikada Bir):**
   ```bash
   python main.py --loop
   ```
-
----
-
-## ☁️ GitHub Actions ile 7/24 Ücretsiz Bulutta Çalıştırma
-
-1. GitHub'da yeni bir depo (repository) oluşturun (**Private** yapmanız önerilir) ve bu klasördeki tüm dosyaları yükleyin.
-2. GitHub deponuzda **Settings** ➡️ **Secrets and variables** ➡️ **Actions** menüsüne gidin.
-3. **New repository secret** butonuna tıklayarak şu iki gizli değişkeni ekleyin:
-   - `TELEGRAM_BOT_TOKEN` : Telegram Bot Token'ınız
-   - `TELEGRAM_CHAT_ID` : Telegram Chat ID'niz
-4. *(İsteğe Bağlı)* Filtreleri değiştirmek isterseniz **Variables** sekmesinden `MAX_PRICE_LIMIT`, `MIN_DISCOUNT_RATE`, `ALLOWED_BRANDS` değişkenlerini ekleyebilir veya doğrudan `config.py` dosyasından düzenleyebilirsiniz.
-5. **Actions** sekmesine gidin, **"Sanal Çadır 7/24 Saatlik Ayakkabı İndirim & Stok Takip Botu"** iş akışını seçin ve sağdaki **Run workflow** butonuna tıklayarak ilk çalışmayı başlatın.
-   - İlk çalışmada `data/products_state.json` otomatik olarak mevcut ürünlerle doldurulup deponuza geri kaydedilecek (`git commit & push`), sonraki her saat başı gerçek fiyat düşüşleri ve yeni stoklar Telegram'ınıza fotoğraflı olarak gelecektir!
