@@ -4036,7 +4036,7 @@
     "last_price": 2290.6,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 2290.6,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_A13278C_095",
     "name": "Converse Chuck Taylor All Star Leather Unisex Gri Sneaker",
     "pk": 1163522,
@@ -14707,7 +14707,7 @@
     "last_price": 3999.0,
     "last_updated": "2026-10-22T12:14:54Z",
     "lowest_price": 3999.0,
-    "missing_scans": 1,
+    "missing_scans": 2,
     "model_key": "erkek_67-HM0HM02130_0HV",
     "name": "Calvin Klein Classic Cups Laceup Knit Erkek Krem Sneaker",
     "pk": 1336485,
@@ -35586,8 +35586,7 @@
   },
   "erkek_925228": {
     "available_sizes": [
-      "45",
-      "46"
+      "45"
     ],
     "basket_offer_label": "Sepette %50 İndirim",
     "basket_price": 6499.5,
@@ -35601,7 +35600,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/10/15165995/97dcdd46-b5e3-4fb3-917c-d88cad559c3b.jpg",
     "in_stock": true,
     "last_price": 6499.5,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-22T19:38:10Z",
     "lowest_price": 6499.5,
     "missing_scans": 0,
     "model_key": "erkek_265-L47386700_4536",
@@ -41534,7 +41533,7 @@
     "last_price": 3119.4,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 3119.4,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_JI0060_-",
     "name": "adidas Forum Bold Stripes Kadın Beyaz Spor Ayakkabı",
     "pk": 1121276,
@@ -47315,8 +47314,7 @@
   },
   "kadin_1185699": {
     "available_sizes": [
-      "39",
-      "40"
+      "39"
     ],
     "basket_offer_label": "Sepette %40 İndirim",
     "basket_price": 4770.6,
@@ -47330,7 +47328,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/05/04/13068842/7f6c9de2-a3c8-488c-9d0c-2dff77069267.jpg",
     "in_stock": true,
     "last_price": 4770.6,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T19:38:10Z",
     "lowest_price": 4770.6,
     "missing_scans": 0,
     "model_key": "kadin_S70740_12",
@@ -50172,7 +50170,7 @@
     "last_price": 4499.5,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 4499.5,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_265-1204351B_090",
     "name": "Brooks Glycerin GTS 22 Kadın Siyah Koşu Ayakkabısı",
     "pk": 1201230,
@@ -53538,7 +53536,7 @@
     "last_price": 4399.2,
     "last_updated": "2026-10-22T18:34:50Z",
     "lowest_price": 4399.2,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_133-IH0087_-",
     "name": "adidas By Stella Mccartney Ultraboost DNA Kadın Siyah Koşu Ayakkabısı",
     "pk": 1240252,
@@ -57962,7 +57960,6 @@
   },
   "kadin_1278294": {
     "available_sizes": [
-      "39",
       "40"
     ],
     "basket_offer_label": null,
@@ -57977,7 +57974,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/12/29/17574678/ec38bd93-59fb-4f27-8dd9-bffaddc03b26.jpg",
     "in_stock": true,
     "last_price": 2799.0,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-22T19:38:10Z",
     "lowest_price": 2799.0,
     "missing_scans": 0,
     "model_key": "kadin_FW0FW08816_YBL",
@@ -77367,7 +77364,7 @@
     "last_price": 3399.15,
     "last_updated": "2026-10-22T11:01:37Z",
     "lowest_price": 3399.15,
-    "missing_scans": 1,
+    "missing_scans": 2,
     "model_key": "kadin_745SFA0055_216",
     "name": "Lacoste Carnaby Pro Kadın Beyaz Sneaker",
     "pk": 1432079,
