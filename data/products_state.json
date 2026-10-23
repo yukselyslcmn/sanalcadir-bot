@@ -94749,7 +94749,8 @@
   },
   "kadin_287464": {
     "available_sizes": [
-      "39"
+      "39",
+      "40"
     ],
     "basket_offer_label": "Sepette %70 İndirim",
     "basket_price": 1499.7,
@@ -94761,11 +94762,13 @@
     "first_seen": "2026-10-21T16:51:23Z",
     "id": "287464",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2023/03/08/533662/bee7a66f-7ba6-4615-b8d3-540acee46700.jpg",
-    "in_stock": false,
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T01:41:31Z",
+    "last_alert_price": 1499.7,
     "last_price": 1499.7,
-    "last_updated": "2026-10-22T08:16:04Z",
+    "last_updated": "2026-10-23T01:41:31Z",
     "lowest_price": 1499.7,
-    "missing_scans": 13,
+    "missing_scans": 0,
     "model_key": "kadin_A00869C_001",
     "name": "Converse Run Star Legacy Cx Future Comfort Unisex Siyah Sneaker",
     "pk": 287464,
@@ -94773,8 +94776,7 @@
     "retail_price": 4999.0,
     "sale_price": 4999.0,
     "sku": "4597349",
-    "state_key": "kadin_287464",
-    "stock_count": 1
+    "state_key": "kadin_287464"
   },
   "kadin_288477": {
     "available_sizes": [
