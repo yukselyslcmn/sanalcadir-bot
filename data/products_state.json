@@ -8585,7 +8585,7 @@
     "last_price": 2799.6,
     "last_updated": "2026-10-22T21:09:41Z",
     "lowest_price": 2799.6,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_133-812535584_5",
     "name": "Anta Mach 4 Pro V2 Erkek Turuncu Koşu Ayakkabısı",
     "pk": 1233281,
@@ -22832,6 +22832,36 @@
     "sale_price": 8799.0,
     "sku": "133-6599885",
     "state_key": "erkek_1447548"
+  },
+  "erkek_1447590": {
+    "available_sizes": [
+      "45"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 4999.5,
+    "brand": "NIKE",
+    "category": "Erkek",
+    "category_badge": "🚹 Erkek (45 / 45,5 / 45-46 / 46)",
+    "category_key": "erkek",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:40:16Z",
+    "id": "1447590",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/08/28/19343455/60dee0d1-bc9b-4a01-8df2-a34f254397bc.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:40:15Z",
+    "last_alert_price": 4999.5,
+    "last_price": 4999.5,
+    "last_updated": "2026-10-23T06:40:16Z",
+    "lowest_price": 4999.5,
+    "missing_scans": 0,
+    "model_key": "erkek_133-IM8072_999",
+    "name": "Nike Vomero Plus Se Erkek Yeşil Koşu Ayakkabısı",
+    "pk": 1447590,
+    "product_url": "https://www.sanalcadir.com/nike-vomero-plus-se-erkek-yesil-kosu-ayakkabisi-133-im8072-2/",
+    "retail_price": 9999.0,
+    "sale_price": 9999.0,
+    "sku": "133-6530713",
+    "state_key": "erkek_1447590"
   },
   "erkek_1447624": {
     "available_sizes": [
@@ -47600,7 +47630,7 @@
     "last_price": 1949.35,
     "last_updated": "2026-10-23T06:01:50Z",
     "lowest_price": 1949.35,
-    "missing_scans": 1,
+    "missing_scans": 2,
     "model_key": "kadin_746CFA0036T_GT1",
     "name": "Lacoste L002 Winter Mid Kadın Gri Bot",
     "pk": 1173185,
@@ -51096,6 +51126,36 @@
     "sale_price": 7799.0,
     "sku": "265-6333264",
     "state_key": "kadin_1200049"
+  },
+  "kadin_1200145": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 3849.5,
+    "brand": "ASICS",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:40:16Z",
+    "id": "1200145",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/10/31/15206422/f043e037-6915-4d94-85e7-86e0fc8d0b1a.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:40:15Z",
+    "last_alert_price": 3849.5,
+    "last_price": 3849.5,
+    "last_updated": "2026-10-23T06:40:16Z",
+    "lowest_price": 3849.5,
+    "missing_scans": 0,
+    "model_key": "kadin_265-1012B772_020",
+    "name": "Asics Gel-Cumulus 27 Kadın Gri Koşu Ayakkabısı",
+    "pk": 1200145,
+    "product_url": "https://www.sanalcadir.com/asics-gel-cumulus-27-kadin-gri-kosu-ayakkabisi-265-1012b772-1/",
+    "retail_price": 7699.0,
+    "sale_price": 7699.0,
+    "sku": "265-6470176",
+    "state_key": "kadin_1200145"
   },
   "kadin_1200166": {
     "available_sizes": [
@@ -104627,6 +104687,36 @@
     "sku": "133-5613618",
     "state_key": "kadin_837371"
   },
+  "kadin_837389": {
+    "available_sizes": [
+      "40"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 1949.5,
+    "brand": "SKECHERS",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:40:16Z",
+    "id": "837389",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/08/12/7464427/4018bd74-01a1-44bb-a0ee-24156cf4333d.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:40:15Z",
+    "last_alert_price": 1949.5,
+    "last_price": 1949.5,
+    "last_updated": "2026-10-23T06:40:16Z",
+    "lowest_price": 1949.5,
+    "missing_scans": 0,
+    "model_key": "kadin_133-150093_WMLT",
+    "name": "Skechers D'Lux Walker 2.0-Daisy Doll Kadın Beyaz Spor Ayakkabı",
+    "pk": 837389,
+    "product_url": "https://www.sanalcadir.com/skechers-d-lux-walker-2-0-daisy-doll-kadin-beyaz-spor-ayakkabi-133-150093-3/",
+    "retail_price": 3899.0,
+    "sale_price": 3899.0,
+    "sku": "133-5597193",
+    "state_key": "kadin_837389"
+  },
   "kadin_837952": {
     "available_sizes": [
       "39",
@@ -106215,6 +106305,36 @@
     "sale_price": 4999.0,
     "sku": "133-5933298",
     "state_key": "kadin_886715"
+  },
+  "kadin_886718": {
+    "available_sizes": [
+      "40"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 2824.5,
+    "brand": "adidas",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:40:16Z",
+    "id": "886718",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/21/12589533/d7531014-18df-4420-b675-a4c35917b474.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:40:15Z",
+    "last_alert_price": 2824.5,
+    "last_price": 2824.5,
+    "last_updated": "2026-10-23T06:40:16Z",
+    "lowest_price": 2824.5,
+    "missing_scans": 0,
+    "model_key": "kadin_133-JH5412_-",
+    "name": "adidas Gazelle Indoor Kadın Kahverengi Spor Ayakkabı",
+    "pk": 886718,
+    "product_url": "https://www.sanalcadir.com/adidas-gazelle-indoor-kadin-kahverengi-spor-ayakkabi-133-jh5412-4/",
+    "retail_price": 5649.0,
+    "sale_price": 5649.0,
+    "sku": "133-6185548",
+    "state_key": "kadin_886718"
   },
   "kadin_887795": {
     "available_sizes": [
@@ -109462,6 +109582,36 @@
     "sale_price": 6099.0,
     "sku": "265-6303035",
     "state_key": "kadin_964751"
+  },
+  "kadin_964808": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 2649.5,
+    "brand": "SKECHERS",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:40:16Z",
+    "id": "964808",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/05/15280966/ae127394-136f-4efe-a6a7-986f900d53dd.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:40:15Z",
+    "last_alert_price": 2649.5,
+    "last_price": 2649.5,
+    "last_updated": "2026-10-23T06:40:16Z",
+    "lowest_price": 2649.5,
+    "missing_scans": 0,
+    "model_key": "kadin_265-129525_WBK",
+    "name": "Skechers Go Run Trail Altitude 2.0 Ravine Kadın Beyaz Koşu Ayakkabısı",
+    "pk": 964808,
+    "product_url": "https://www.sanalcadir.com/skechers-go-run-trail-altitude-2-0-ravine-kadin-beyaz-kosu-ayakkabisi-265-129525-4/",
+    "retail_price": 5299.0,
+    "sale_price": 5299.0,
+    "sku": "265-6257436",
+    "state_key": "kadin_964808"
   },
   "kadin_964902": {
     "available_sizes": [
