@@ -23498,6 +23498,36 @@
     "sku": "133-6301834",
     "state_key": "erkek_1451245"
   },
+  "erkek_1451650": {
+    "available_sizes": [
+      "45"
+    ],
+    "basket_offer_label": "Sepette %30 İndirim",
+    "basket_price": 6999.3,
+    "brand": "NIKE",
+    "category": "Erkek",
+    "category_badge": "🚹 Erkek (45 / 45,5 / 45-46 / 46)",
+    "category_key": "erkek",
+    "discount_rate": 30.0,
+    "first_seen": "2026-10-23T04:28:16Z",
+    "id": "1451650",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/03/23/19343069/ed724e01-dba7-48bd-8f92-45facfa6ed67.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T04:28:16Z",
+    "last_alert_price": 6999.3,
+    "last_price": 6999.3,
+    "last_updated": "2026-10-23T04:28:16Z",
+    "lowest_price": 6999.3,
+    "missing_scans": 0,
+    "model_key": "erkek_133-HQ3048_001",
+    "name": "Nike Structure Plus Erkek Siyah Koşu Ayakkabısı",
+    "pk": 1451650,
+    "product_url": "https://www.sanalcadir.com/nike-structure-plus-erkek-siyah-kosu-ayakkabisi-133-hq3048-3/",
+    "retail_price": 9999.0,
+    "sale_price": 9999.0,
+    "sku": "133-6529975",
+    "state_key": "erkek_1451650"
+  },
   "erkek_1451916": {
     "available_sizes": [
       "45"
@@ -98740,7 +98770,7 @@
     "last_price": 4949.45,
     "last_updated": "2026-10-22T20:47:06Z",
     "lowest_price": 4949.45,
-    "missing_scans": 1,
+    "missing_scans": 2,
     "model_key": "kadin_VX0702892A_-",
     "name": "Veja V10 CWL Kadın Beyaz Sneaker",
     "pk": 676240,
