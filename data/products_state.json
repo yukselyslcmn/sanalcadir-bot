@@ -95539,7 +95539,6 @@
   },
   "kadin_512951": {
     "available_sizes": [
-      "39",
       "39.5"
     ],
     "basket_offer_label": "Sepette %40 İndirim",
@@ -95556,7 +95555,7 @@
     "last_alert_at": "2026-10-23T00:48:46Z",
     "last_alert_price": 1199.4,
     "last_price": 1199.4,
-    "last_updated": "2026-10-23T00:48:46Z",
+    "last_updated": "2026-10-23T04:18:03Z",
     "lowest_price": 1199.4,
     "missing_scans": 0,
     "model_key": "kadin_A04634C_244",
