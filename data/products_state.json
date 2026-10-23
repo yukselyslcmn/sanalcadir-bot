@@ -68144,6 +68144,37 @@
     "state_key": "kadin_1333454",
     "stock_count": 1
   },
+  "kadin_1334135": {
+    "available_sizes": [
+      "39",
+      "40"
+    ],
+    "basket_offer_label": "Sepette %40 İndirim",
+    "basket_price": 7799.94,
+    "brand": "UGG",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 40.0,
+    "first_seen": "2026-10-23T05:56:32Z",
+    "id": "1334135",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/06/18/21904334/9f0849aa-bc54-4304-8864-425fe4cc16ea.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T05:56:32Z",
+    "last_alert_price": 7799.94,
+    "last_price": 7799.94,
+    "last_updated": "2026-10-23T05:56:32Z",
+    "lowest_price": 7799.94,
+    "missing_scans": 0,
+    "model_key": "kadin_67-1016222_SAN",
+    "name": "UGG Classic Mini II Kadın Bej Bot",
+    "pk": 1334135,
+    "product_url": "https://www.sanalcadir.com/ugg-classic-mini-ii-kadin-bej-bot-67-1016222/",
+    "retail_price": 12999.9,
+    "sale_price": 12999.9,
+    "sku": "67-5965538",
+    "state_key": "kadin_1334135"
+  },
   "kadin_1334224": {
     "available_sizes": [
       "39",
@@ -77883,6 +77914,7 @@
   },
   "kadin_1421829": {
     "available_sizes": [
+      "39",
       "40"
     ],
     "basket_offer_label": "Sepette %20 İndirim",
@@ -77897,7 +77929,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/06/05/21126060/a5bd67f8-2de7-432f-abd0-4a9cbf3dd177.jpg",
     "in_stock": true,
     "last_price": 2799.2,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-23T05:56:32Z",
     "lowest_price": 2799.2,
     "missing_scans": 0,
     "model_key": "kadin_A17596C_457",
@@ -86204,13 +86236,13 @@
     "first_seen": "2026-10-22T20:41:11Z",
     "id": "1444890",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/09/25/23871022/101015b0-fd96-4ca2-95a1-38cc63b94f6e.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_alert_at": "2026-10-22T20:41:11Z",
     "last_alert_price": 5399.4,
     "last_price": 5399.4,
-    "last_updated": "2026-10-22T20:41:11Z",
+    "last_updated": "2026-10-23T05:56:32Z",
     "lowest_price": 5399.4,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "kadin_265-1012B926_001",
     "name": "Asics Gel Pulse 17 Gore-Tex Kadın Siyah Yol Koşusu Ayakkabısı",
     "pk": 1444890,
@@ -100549,7 +100581,6 @@
   },
   "kadin_745381": {
     "available_sizes": [
-      "39",
       "40"
     ],
     "basket_offer_label": "Sepette %40 İndirim",
@@ -100564,7 +100595,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/07/11528421/00464930-e2b8-4a26-95f5-077f3c8dede4.jpg",
     "in_stock": true,
     "last_price": 2309.58,
-    "last_updated": "2026-10-23T01:14:26Z",
+    "last_updated": "2026-10-23T05:56:32Z",
     "lowest_price": 2309.58,
     "missing_scans": 0,
     "model_key": "kadin_A08262C_286",
@@ -110338,6 +110369,36 @@
     "sale_price": 5499.0,
     "sku": "3411529",
     "state_key": "kadin_98687"
+  },
+  "kadin_986919": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %10 İndirim",
+    "basket_price": 3149.1,
+    "brand": "GANT",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 51.5,
+    "first_seen": "2026-10-23T05:56:32Z",
+    "id": "986919",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/10/09/16067577/ed3ad3b9-b780-4658-b931-a468e708b6dc.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T05:56:32Z",
+    "last_alert_price": 3149.1,
+    "last_price": 3149.1,
+    "last_updated": "2026-10-23T05:56:32Z",
+    "lowest_price": 3149.1,
+    "missing_scans": 0,
+    "model_key": "kadin_1-29543705_G00",
+    "name": "GANT Kadın Siyah Süet Bot",
+    "pk": 986919,
+    "product_url": "https://www.sanalcadir.com/gant-kadin-siyah-suet-bot-1-29543705-3/",
+    "retail_price": 6499.0,
+    "sale_price": 3499.0,
+    "sku": "1-5971107",
+    "state_key": "kadin_986919"
   },
   "kadin_987182": {
     "available_sizes": [
