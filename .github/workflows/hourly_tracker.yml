@@ -1,11 +1,10 @@
-name: Sanal Çadır 7/24 Saatlik Ayakkabı İndirim & Stok Takip Botu
+name: Sanal Çadır Günlük Nöbetçi & İndirim Takip Botu
 
 on:
   schedule:
-    # Emniyet bekçisi (Safety Watchdog): Ana döngü self-dispatch ile 7/24 kesintisiz akar.
-    # Eğer GitHub altyapısında geçici bir kesinti olursa, her 4 saatte bir kontrol edip sistemi yeniden uyandırır.
-    # 20 dakikalık gereksiz kuyruk çakışmalarını ve iptal (grey/cancelled) kayıtlarını engeller.
-    - cron: '0 */4 * * *'
+    # Hafif Nöbet Modu (Daily Sentry): Her gün akşam saat 20:05 TSİ (17:05 UTC) tek seferlik kontrol yapar.
+    # Sanal Çadır açılışları 20:00'de yapıldığı için erken açılışları ve sürpriz indirimleri anında yakalar.
+    - cron: '5 17 * * *'
   workflow_dispatch:
     inputs:
       notify_on_first_run:
@@ -13,20 +12,19 @@ on:
         required: false
         default: 'False'
 
-# Aynı anda 2 görevin paralel çalışmasını kesin olarak engelleyen resmi GitHub Actions kilidi
+# Aynı anda birden fazla görevin çakışmasını engelleyen kilit
 concurrency:
   group: sanalcadir-tracker-${{ github.ref }}
   cancel-in-progress: false
 
-# data/products_state.json dosyasını depoya geri commit/push edebilmek ve sonraki vardiyayı tetiklemek için izinler
+# data/products_state.json dosyasını depoya geri commit/push edebilmek için yazma izni
 permissions:
   contents: write
-  actions: write
 
 jobs:
   track-discounts:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 15
 
     steps:
       - name: 📥 Depoyu İndir (Checkout)
@@ -45,7 +43,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 🔄 5 Dakikada Bir Kesintisiz Tarama Döngüsü (12 Periyot = 60 Dakika)
+      - name: 🛡️ Tek Seferlik Nöbetçi Tarama
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -59,19 +57,19 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          for CYCLE in $(seq 1 12); do
-            echo "=================================================================="
-            echo "🚀 TARAMA PERİYODU $CYCLE / 12 BAŞLIYOR (Saat: $(date -u +'%H:%M:%S UTC'))"
-            echo "=================================================================="
+          echo "=================================================================="
+          echo "🚀 GÜNLÜK SANAL ÇADIR NÖBET TARAMASI BAŞLIYOR (Saat: $(date -u +'%H:%M:%S UTC'))"
+          echo "=================================================================="
 
-            # 1. Her tarama öncesi depodaki en güncel products_state.json dosyasını çek
-            git fetch origin "$REF_NAME"
-            git reset --hard "origin/$REF_NAME"
+          # 1. Depodaki en güncel durum dosyasını çek
+          git fetch origin "$REF_NAME"
+          git reset --hard "origin/$REF_NAME"
 
-            # 2. Sanal Çadır taramasını çalıştır ve fırsat varsa Telegram'a gönder
-            python main.py --once
+          # 2. Sanal Çadır kontrolünü çalıştır (Site açıksa fırsatları Telegram'a iletir)
+          python main.py --once
 
-            # 3. Güncellenen products_state.json dosyasını çakışmasız (conflict-free) olarak depoya kaydet
+          # 3. Eğer fiyat/stokta bir değişiklik olduysa depoya kaydet
+          if [ -f data/products_state.json ]; then
             cp data/products_state.json /tmp/products_state_latest.json
             git fetch origin "$REF_NAME"
             git reset --hard "origin/$REF_NAME"
@@ -79,35 +77,10 @@ jobs:
             git add data/products_state.json
 
             if git diff --staged --quiet; then
-              echo "ℹ️ Periyot $CYCLE: data/products_state.json dosyasında fiyat/stok değişikliği yok, commit atlanıyor."
+              echo "ℹ️ data/products_state.json dosyasında fiyat/stok değişikliği yok, commit atlanıyor."
             else
-              git commit -m "chore(state): 5dk periyodik fiyat ve stok durumu güncellendi [skip ci]"
+              git commit -m "chore(state): gunluk nobet taramasi guncellendi [skip ci]"
               git push origin HEAD:"$REF_NAME" || (git pull --rebase origin "$REF_NAME" && git push origin HEAD:"$REF_NAME")
-              echo "✅ Periyot $CYCLE: data/products_state.json başarıyla GitHub deposuna kaydedildi."
+              echo "✅ data/products_state.json başarıyla GitHub deposuna kaydedildi."
             fi
-
-            # Son periyot (12.) değilse bir sonraki tarama için 4 dk 20 sn bekle (~40 sn tarama + 260 sn bekleme = 5 dakika)
-            if [ "$CYCLE" -lt 12 ]; then
-              echo "⏳ Bir sonraki tarama için 4 dakika 20 saniye (5 dk periyot) bekleniyor..."
-              sleep 260
-            fi
-          done
-
-      - name: 🔁 Sonraki 1 Saatlik Vardiyayı Kuyruk Kontrollü Başlat
-        if: always() && !cancelled()
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO_NAME: ${{ github.repository }}
-          REF_NAME: ${{ github.ref_name }}
-        run: |
-          QUEUED_COUNT=$(gh run list --repo "$REPO_NAME" --workflow="hourly_tracker.yml" --status="queued" --json databaseId --jq 'length' 2>/dev/null || echo "0")
-          WAITING_COUNT=$(gh run list --repo "$REPO_NAME" --workflow="hourly_tracker.yml" --status="waiting" --json databaseId --jq 'length' 2>/dev/null || echo "0")
-          [[ "$QUEUED_COUNT" =~ ^[0-9]+$ ]] || QUEUED_COUNT=0
-          [[ "$WAITING_COUNT" =~ ^[0-9]+$ ]] || WAITING_COUNT=0
-          echo "Kuyrukta bekleyen görev sayısı -> queued: $QUEUED_COUNT, waiting: $WAITING_COUNT"
-          if [ "$QUEUED_COUNT" -eq "0" ] && [ "$WAITING_COUNT" -eq "0" ]; then
-            echo "🚀 Yeni 1 saatlik (12x5dk) tarama vardiyası otomatik olarak tetikleniyor..."
-            gh workflow run hourly_tracker.yml --repo "$REPO_NAME" --ref "$REF_NAME" || true
-          else
-            echo "ℹ️ Kuyrukta zaten bekleyen bir vardiya var, yeni tetikleme atlanıyor."
           fi
