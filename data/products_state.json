@@ -36740,13 +36740,13 @@
     "first_seen": "2026-10-22T21:09:41Z",
     "id": "924637",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/28/12818354/5ffa64e3-05c6-495d-8e97-6177d8588714.jpg",
-    "in_stock": true,
+    "in_stock": false,
     "last_alert_at": "2026-10-22T21:09:41Z",
     "last_alert_price": 2641.1,
     "last_price": 2641.1,
-    "last_updated": "2026-10-22T21:09:41Z",
+    "last_updated": "2026-10-23T06:29:49Z",
     "lowest_price": 2641.1,
-    "missing_scans": 2,
+    "missing_scans": 3,
     "model_key": "erkek_265-3027523_103",
     "name": "Under Armour Infinite Erkek Beyaz Koşu Ayakkabısı",
     "pk": 924637,
@@ -82437,8 +82437,7 @@
   },
   "kadin_1440684": {
     "available_sizes": [
-      "39",
-      "40"
+      "39"
     ],
     "basket_offer_label": "Sepette %30 İndirim",
     "basket_price": 6999.3,
@@ -82452,7 +82451,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/09/22/23811318/beec9151-dcd3-41cc-a524-505d11802daa.jpg",
     "in_stock": true,
     "last_price": 6999.3,
-    "last_updated": "2026-10-22T12:14:54Z",
+    "last_updated": "2026-10-23T06:29:49Z",
     "lowest_price": 6999.3,
     "missing_scans": 0,
     "model_key": "kadin_133-HM6804_300",
