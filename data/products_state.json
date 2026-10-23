@@ -5990,7 +5990,7 @@
     "last_price": 2639.4,
     "last_updated": "2026-10-22T20:41:11Z",
     "lowest_price": 2639.4,
-    "missing_scans": 1,
+    "missing_scans": 2,
     "model_key": "erkek_265-HV9972_003",
     "name": "Nike Flex Train Erkek Siyah Antrenman Ayakkabısı",
     "pk": 1199792,
@@ -79447,7 +79447,7 @@
   },
   "kadin_1432245": {
     "available_sizes": [
-      "39.5"
+      "40"
     ],
     "basket_offer_label": "Sepette %70 İndirim",
     "basket_price": 1647.0,
@@ -79459,11 +79459,13 @@
     "first_seen": "2026-10-21T18:11:40Z",
     "id": "1432245",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/04/28/15198781/44fcb695-f0bc-497a-a994-66e3b1068e43.jpg",
-    "in_stock": false,
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T04:38:35Z",
+    "last_alert_price": 1647.0,
     "last_price": 1647.0,
-    "last_updated": "2026-10-21T19:54:43Z",
+    "last_updated": "2026-10-23T04:38:35Z",
     "lowest_price": 1647.0,
-    "missing_scans": 59,
+    "missing_scans": 0,
     "model_key": "kadin_749SFA0142_21G",
     "name": "Neo Run Base Kadın Beyaz Koşu Ayakkabısı",
     "pk": 1432245,
@@ -79471,8 +79473,7 @@
     "retail_price": 5490.0,
     "sale_price": 5490.0,
     "sku": "6136136",
-    "state_key": "kadin_1432245",
-    "stock_count": 10
+    "state_key": "kadin_1432245"
   },
   "kadin_1432294": {
     "available_sizes": [
