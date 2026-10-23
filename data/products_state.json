@@ -95070,8 +95070,7 @@
   },
   "kadin_454079": {
     "available_sizes": [
-      "39",
-      "39.5"
+      "39"
     ],
     "basket_offer_label": null,
     "basket_price": null,
@@ -95087,7 +95086,7 @@
     "last_alert_at": "2026-10-22T21:04:26Z",
     "last_alert_price": 1499.0,
     "last_price": 1499.0,
-    "last_updated": "2026-10-22T21:04:26Z",
+    "last_updated": "2026-10-23T00:23:15Z",
     "lowest_price": 1499.0,
     "missing_scans": 0,
     "model_key": "kadin_745SFA0031T_B53",
