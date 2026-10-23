@@ -4952,6 +4952,36 @@
     "state_key": "erkek_1187794",
     "stock_count": 1
   },
+  "erkek_1188520": {
+    "available_sizes": [
+      "45"
+    ],
+    "basket_offer_label": "Sepette %30 İndirim",
+    "basket_price": 5389.3,
+    "brand": "VANS",
+    "category": "Erkek",
+    "category_badge": "🚹 Erkek (45 / 45,5 / 45-46 / 46)",
+    "category_key": "erkek",
+    "discount_rate": 51.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1188520",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/02/17/18167727/336e600e-cad6-48c7-81a0-5753c877fa00.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 5389.3,
+    "last_price": 5389.3,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 5389.3,
+    "missing_scans": 0,
+    "model_key": "erkek_265-VN000DAYBKA1_-",
+    "name": "Vans Mte Mountain Mid Gore-Tex Insulated Unisex Siyah Sneaker",
+    "pk": 1188520,
+    "product_url": "https://www.sanalcadir.com/vans-mte-mountain-mid-gore-tex-insulated-unisex-siyah-sneaker-265-vn000daybka1-5/",
+    "retail_price": 10999.0,
+    "sale_price": 7699.0,
+    "sku": "265-6471120",
+    "state_key": "erkek_1188520"
+  },
   "erkek_1188932": {
     "available_sizes": [
       "45"
@@ -5007,6 +5037,36 @@
     "sale_price": 5799.0,
     "sku": "265-6420539",
     "state_key": "erkek_1188983"
+  },
+  "erkek_1189039": {
+    "available_sizes": [
+      "45"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 2399.5,
+    "brand": "adidas",
+    "category": "Erkek",
+    "category_badge": "🚹 Erkek (45 / 45,5 / 45-46 / 46)",
+    "category_key": "erkek",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1189039",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/02/24/18581874/990b6499-9b98-47c2-814a-17b07c549bc6.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 2399.5,
+    "last_price": 2399.5,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 2399.5,
+    "missing_scans": 0,
+    "model_key": "erkek_265-HQ7284_-",
+    "name": "adidas Technochaos 2000 Erkek Beyaz Spor Ayakkabı",
+    "pk": 1189039,
+    "product_url": "https://www.sanalcadir.com/adidas-technochaos-2000-erkek-beyaz-spor-ayakkabi-265-hq7284-2/",
+    "retail_price": 4799.0,
+    "sale_price": 4799.0,
+    "sku": "265-6590762",
+    "state_key": "erkek_1189039"
   },
   "erkek_1189310": {
     "available_sizes": [
@@ -6171,6 +6231,36 @@
     "sale_price": 4499.0,
     "sku": "265-6419518",
     "state_key": "erkek_1200272"
+  },
+  "erkek_1200333": {
+    "available_sizes": [
+      "46"
+    ],
+    "basket_offer_label": "Sepette %30 İndirim",
+    "basket_price": 4409.3,
+    "brand": "MERRELL",
+    "category": "Erkek",
+    "category_badge": "🚹 Erkek (45 / 45,5 / 45-46 / 46)",
+    "category_key": "erkek",
+    "discount_rate": 51.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1200333",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/01/20/16687053/79fc0fad-ad45-4664-9a0d-3d650a70ff09.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 4409.3,
+    "last_price": 4409.3,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 4409.3,
+    "missing_scans": 0,
+    "model_key": "erkek_265-J068683_7371",
+    "name": "Merrell Morphlite Gore-Tex Erkek Lacivert Koşu Ayakkabısı",
+    "pk": 1200333,
+    "product_url": "https://www.sanalcadir.com/merrell-morphlite-gore-tex-erkek-lacivert-kosu-ayakkabisi-265-j068683/",
+    "retail_price": 8999.0,
+    "sale_price": 6299.0,
+    "sku": "265-6493132",
+    "state_key": "erkek_1200333"
   },
   "erkek_1200472": {
     "available_sizes": [
@@ -7750,13 +7840,13 @@
     "first_seen": "2026-10-22T20:53:01Z",
     "id": "1204149",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/12/02/16757429/d5b7c7c6-606d-4f51-a998-8f06a6af864b.jpg",
-    "in_stock": false,
+    "in_stock": true,
     "last_alert_at": "2026-10-22T20:53:01Z",
     "last_alert_price": 2499.5,
     "last_price": 2499.5,
-    "last_updated": "2026-10-22T21:31:09Z",
+    "last_updated": "2026-10-23T06:01:50Z",
     "lowest_price": 2499.5,
-    "missing_scans": 3,
+    "missing_scans": 0,
     "model_key": "erkek_265-1071A104_001",
     "name": "Asics Upcourt 6 Erkek Siyah Voleybol Ayakkabısı",
     "pk": 1204149,
@@ -15155,6 +15245,36 @@
     "sku": "67-6602323",
     "state_key": "erkek_1337109"
   },
+  "erkek_1338494": {
+    "available_sizes": [
+      "45"
+    ],
+    "basket_offer_label": null,
+    "basket_price": null,
+    "brand": "CALVIN KLEIN",
+    "category": "Erkek",
+    "category_badge": "🚹 Erkek (45 / 45,5 / 45-46 / 46)",
+    "category_key": "erkek",
+    "discount_rate": 39.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1338494",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/06/18/21907522/89bac15a-2efd-4690-9cc1-d699034dcccb.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 4699.0,
+    "last_price": 4699.0,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 4699.0,
+    "missing_scans": 0,
+    "model_key": "erkek_67-HM0HM02154_01W",
+    "name": "Calvin Klein Hike Runner Laceup Strip Erkek Beyaz Sneaker",
+    "pk": 1338494,
+    "product_url": "https://www.sanalcadir.com/calvin-klein-hike-runner-laceup-strip-erkek-beyaz-sneaker-67-hm0hm02154-2/",
+    "retail_price": 7699.0,
+    "sale_price": 4699.0,
+    "sku": "67-6619301",
+    "state_key": "erkek_1338494"
+  },
   "erkek_1338938": {
     "available_sizes": [
       "45"
@@ -17494,6 +17614,36 @@
     "sale_price": 6099.0,
     "sku": "133-6578256",
     "state_key": "erkek_1349866"
+  },
+  "erkek_1350235": {
+    "available_sizes": [
+      "46"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 2699.5,
+    "brand": "NIKE",
+    "category": "Erkek",
+    "category_badge": "🚹 Erkek (45 / 45,5 / 45-46 / 46)",
+    "category_key": "erkek",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1350235",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/02/24/18167427/e554347d-64b5-4cd2-97bb-3326dfc38846.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 2699.5,
+    "last_price": 2699.5,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 2699.5,
+    "missing_scans": 0,
+    "model_key": "erkek_265-HJ4564_446",
+    "name": "Nike Phantom 6 Low Academy Erkek Lacivert Çim Saha Kramponu",
+    "pk": 1350235,
+    "product_url": "https://www.sanalcadir.com/nike-phantom-6-low-academy-erkek-lacivert-cim-saha-kramponu-265-hj4564/",
+    "retail_price": 5399.0,
+    "sale_price": 5399.0,
+    "sku": "265-6590308",
+    "state_key": "erkek_1350235"
   },
   "erkek_1350237": {
     "available_sizes": [
@@ -21070,11 +21220,11 @@
     "first_seen": "2026-10-20T21:51:57Z",
     "id": "1437809",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/08/15/126076/268784e5-7bc7-490b-8b8e-8fe268019b29.jpg",
-    "in_stock": false,
+    "in_stock": true,
     "last_price": 4549.0,
-    "last_updated": "2026-10-22T17:04:20Z",
+    "last_updated": "2026-10-23T06:01:50Z",
     "lowest_price": 4549.0,
-    "missing_scans": 3,
+    "missing_scans": 0,
     "model_key": "erkek_CQ2809_-",
     "name": "adidas Gazelle Unisex Siyah Spor Ayakkabı",
     "pk": 1437809,
@@ -27829,6 +27979,36 @@
     "sku": "265-6306436",
     "state_key": "erkek_1468517"
   },
+  "erkek_1468518": {
+    "available_sizes": [
+      "45"
+    ],
+    "basket_offer_label": "Sepette %15 İndirim",
+    "basket_price": 3390.65,
+    "brand": "KEEN",
+    "category": "Erkek",
+    "category_badge": "🚹 Erkek (45 / 45,5 / 45-46 / 46)",
+    "category_key": "erkek",
+    "discount_rate": 40.5,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1468518",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/10/05/24102656/3c36f907-eadf-4e06-9644-48f60a655bd8.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 3390.65,
+    "last_price": 3390.65,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 3390.65,
+    "missing_scans": 0,
+    "model_key": "erkek_265-1028056_0682",
+    "name": "Keen Zionic Speed Erkek Siyah Yürüyüş Ayakkabısı",
+    "pk": 1468518,
+    "product_url": "https://www.sanalcadir.com/keen-zionic-speed-erkek-siyah-yuruyus-ayakkabisi-265-1028056-4/",
+    "retail_price": 5699.0,
+    "sale_price": 3989.0,
+    "sku": "265-6306375",
+    "state_key": "erkek_1468518"
+  },
   "erkek_1475647": {
     "available_sizes": [
       "45",
@@ -30163,6 +30343,36 @@
     "sale_price": 5499.0,
     "sku": "133-2644280",
     "state_key": "erkek_490707"
+  },
+  "erkek_495216": {
+    "available_sizes": [
+      "45"
+    ],
+    "basket_offer_label": "Sepette %20 İndirim",
+    "basket_price": 1000.0,
+    "brand": "PUMA",
+    "category": "Erkek",
+    "category_badge": "🚹 Erkek (45 / 45,5 / 45-46 / 46)",
+    "category_key": "erkek",
+    "discount_rate": 60.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "495216",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/03/07/10281965/ae443597-d8a2-43fa-ba9a-2d22eb79308f.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 1000.0,
+    "last_price": 1000.0,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 1000.0,
+    "missing_scans": 0,
+    "model_key": "erkek_265-107381_02",
+    "name": "Puma Future Play Tt Erkek Siyah Halı Saha Kramponu",
+    "pk": 495216,
+    "product_url": "https://www.sanalcadir.com/puma-future-play-tt-erkek-siyah-hali-saha-kramponu-265-107381-4/",
+    "retail_price": 2500.0,
+    "sale_price": 1250.0,
+    "sku": "265-5349171",
+    "state_key": "erkek_495216"
   },
   "erkek_511067": {
     "available_sizes": [
@@ -38766,6 +38976,36 @@
     "sku": "265-6433230",
     "state_key": "erkek_995512"
   },
+  "erkek_995647": {
+    "available_sizes": [
+      "45"
+    ],
+    "basket_offer_label": "Sepette %30 İndirim",
+    "basket_price": 3919.3,
+    "brand": "VANS",
+    "category": "Erkek",
+    "category_badge": "🚹 Erkek (45 / 45,5 / 45-46 / 46)",
+    "category_key": "erkek",
+    "discount_rate": 51.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "995647",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/10/10/16067871/cd8eb621-b070-42c5-9691-e90f4d7478da.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 3919.3,
+    "last_price": 3919.3,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 3919.3,
+    "missing_scans": 0,
+    "model_key": "erkek_265-VN000DAQZO21_-",
+    "name": "Vans Mte Sk8-Hi Waterproof Insulated Unisex Krem Sneaker",
+    "pk": 995647,
+    "product_url": "https://www.sanalcadir.com/vans-mte-sk8-hi-waterproof-insulated-unisex-krem-sneaker-265-vn000daqzo21-3/",
+    "retail_price": 7999.0,
+    "sale_price": 5599.0,
+    "sku": "265-6471107",
+    "state_key": "erkek_995647"
+  },
   "erkek_995747": {
     "available_sizes": [
       "45"
@@ -42453,6 +42693,36 @@
     "sale_price": 5599.0,
     "sku": "5356381",
     "state_key": "kadin_1119250"
+  },
+  "kadin_1119309": {
+    "available_sizes": [
+      "40"
+    ],
+    "basket_offer_label": "Sepette %20 İndirim",
+    "basket_price": 7839.2,
+    "brand": "UGG",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 34.7,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1119309",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/29/15738546/917a9faa-5d3a-4922-84de-8be07dccf46d.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 7839.2,
+    "last_price": 7839.2,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 7839.2,
+    "missing_scans": 0,
+    "model_key": "kadin_1168170_CHE",
+    "name": "UGG Classic Mini Dipper Kadın Kahverengi Bot",
+    "pk": 1119309,
+    "product_url": "https://www.sanalcadir.com/ugg-classic-mini-dipper-kadin-kahverengi-bot-1168170-3/",
+    "retail_price": 11999.0,
+    "sale_price": 9799.0,
+    "sku": "5967422",
+    "state_key": "kadin_1119309"
   },
   "kadin_1119621": {
     "available_sizes": [
@@ -46304,6 +46574,36 @@
     "sku": "6408590",
     "state_key": "kadin_1163178"
   },
+  "kadin_1163210": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %20 İndirim",
+    "basket_price": 2783.2,
+    "brand": "CONVERSE",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 52.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1163210",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/08/22/14294930/d6e1e875-9468-4c35-b0c3-931c73da5c54.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 2783.2,
+    "last_price": 2783.2,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 2783.2,
+    "missing_scans": 0,
+    "model_key": "kadin_A13340C_517",
+    "name": "Converse Chuck 70 Unisex Mavi Sneaker",
+    "pk": 1163210,
+    "product_url": "https://www.sanalcadir.com/converse-chuck-70-unisex-mavi-sneaker-a13340c-4/",
+    "retail_price": 5799.0,
+    "sale_price": 3479.0,
+    "sku": "6416810",
+    "state_key": "kadin_1163210"
+  },
   "kadin_1163568": {
     "available_sizes": [
       "39"
@@ -47141,11 +47441,13 @@
     "first_seen": "2026-10-21T16:51:23Z",
     "id": "1173185",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/03/13/12979885/3683b9a6-8e05-412f-bd69-4fac3032b5c2.jpg",
-    "in_stock": false,
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 1949.35,
     "last_price": 1949.35,
-    "last_updated": "2026-10-21T18:13:05Z",
+    "last_updated": "2026-10-23T06:01:50Z",
     "lowest_price": 1949.35,
-    "missing_scans": 64,
+    "missing_scans": 0,
     "model_key": "kadin_746CFA0036T_GT1",
     "name": "Lacoste L002 Winter Mid Kadın Gri Bot",
     "pk": 1173185,
@@ -47153,8 +47455,7 @@
     "retail_price": 4990.0,
     "sale_price": 2999.0,
     "sku": "5299542",
-    "state_key": "kadin_1173185",
-    "stock_count": 1
+    "state_key": "kadin_1173185"
   },
   "kadin_1173491": {
     "available_sizes": [
@@ -52743,11 +53044,13 @@
     "first_seen": "2026-10-21T20:16:10Z",
     "id": "1203993",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/09/09/15165324/161913d6-ddd8-4a0d-a0d5-b267906d97a2.jpg",
-    "in_stock": false,
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 3799.5,
     "last_price": 3799.5,
-    "last_updated": "2026-10-21T20:57:37Z",
+    "last_updated": "2026-10-23T06:01:50Z",
     "lowest_price": 3799.5,
-    "missing_scans": 55,
+    "missing_scans": 0,
     "model_key": "kadin_265-1155131_BWHT",
     "name": "Hoka Rincon 4 Kadın Siyah Yol Koşu Ayakkabısı",
     "pk": 1203993,
@@ -52755,8 +53058,7 @@
     "retail_price": 7599.0,
     "sale_price": 7599.0,
     "sku": "265-6288785",
-    "state_key": "kadin_1203993",
-    "stock_count": 1
+    "state_key": "kadin_1203993"
   },
   "kadin_1204027": {
     "available_sizes": [
@@ -53164,6 +53466,36 @@
     "sku": "265-6421497",
     "state_key": "kadin_1211798"
   },
+  "kadin_1212137": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 3499.5,
+    "brand": "ASICS",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1212137",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/10/31/15206342/4570097a-d139-404a-9539-451902180c13.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 3499.5,
+    "last_price": 3499.5,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 3499.5,
+    "missing_scans": 0,
+    "model_key": "kadin_265-1012B592_003",
+    "name": "Asics Gel-Pulse 15 Gore-Tex Kadın Siyah Koşu Ayakkabısı",
+    "pk": 1212137,
+    "product_url": "https://www.sanalcadir.com/asics-gel-pulse-15-gore-tex-kadin-siyah-kosu-ayakkabisi-265-1012b592-4/",
+    "retail_price": 6999.0,
+    "sale_price": 6999.0,
+    "sku": "265-6470099",
+    "state_key": "kadin_1212137"
+  },
   "kadin_1212219": {
     "available_sizes": [
       "39",
@@ -53279,6 +53611,36 @@
     "sale_price": 5949.0,
     "sku": "265-6486837",
     "state_key": "kadin_1212810"
+  },
+  "kadin_1216095": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": null,
+    "basket_price": null,
+    "brand": "GANT",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 56.3,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1216095",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/06/24/19243537/4a8b3a17-4e45-489c-bd61-011d7f613c68.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 3499.0,
+    "last_price": 3499.0,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 3499.0,
+    "missing_scans": 0,
+    "model_key": "kadin_1-31541101_G00",
+    "name": "GANT Kadın Siyah Snowhill Bot",
+    "pk": 1216095,
+    "product_url": "https://www.sanalcadir.com/gant-kadin-siyah-snowhill-bot-1-31541101/",
+    "retail_price": 7999.0,
+    "sale_price": 3499.0,
+    "sku": "1-6456571",
+    "state_key": "kadin_1216095"
   },
   "kadin_1216215": {
     "available_sizes": [
@@ -57601,6 +57963,34 @@
     "sku": "5911833",
     "state_key": "kadin_1260605"
   },
+  "kadin_1261143": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": null,
+    "basket_price": null,
+    "brand": "BURBERRY",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1261143",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/03/23/19098568/1d4be2a3-bed5-48ed-bfc6-cc3162259e3c.jpg",
+    "in_stock": true,
+    "last_price": 19999.0,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 19999.0,
+    "missing_scans": 0,
+    "model_key": "kadin_8111871_-",
+    "name": "Burberry Kadın Krem Ayakkabı",
+    "pk": 1261143,
+    "product_url": "https://www.sanalcadir.com/burberry-kadin-krem-ayakkabi-8111871/",
+    "retail_price": 39995.0,
+    "sale_price": 19999.0,
+    "sku": "6405038",
+    "state_key": "kadin_1261143"
+  },
   "kadin_1261709": {
     "available_sizes": [
       "39"
@@ -58632,6 +59022,36 @@
     "sale_price": 4493.0,
     "sku": "6135019",
     "state_key": "kadin_1267330"
+  },
+  "kadin_1267399": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %60 İndirim",
+    "basket_price": 2796.0,
+    "brand": "LACOSTE",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 60.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1267399",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/10/10/15740565/54b906b4-13a7-4ec4-b61f-9de5971bc40a.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 2796.0,
+    "last_price": 2796.0,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 2796.0,
+    "missing_scans": 0,
+    "model_key": "kadin_748SFA0038T_216",
+    "name": "T-Clip Set Kadın Beyaz Sneaker",
+    "pk": 1267399,
+    "product_url": "https://www.sanalcadir.com/t-clip-set-kadin-beyaz-sneaker-748sfa0038t-2/",
+    "retail_price": 6990.0,
+    "sale_price": 6990.0,
+    "sku": "6134943",
+    "state_key": "kadin_1267399"
   },
   "kadin_1269299": {
     "available_sizes": [
@@ -67250,7 +67670,7 @@
   },
   "kadin_1330097": {
     "available_sizes": [
-      "39"
+      "40"
     ],
     "basket_offer_label": "Sepette %50 İndirim",
     "basket_price": 2999.5,
@@ -67262,11 +67682,13 @@
     "first_seen": "2026-10-22T12:14:54Z",
     "id": "1330097",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/03/23/19341535/abab0848-1f97-4380-baef-98582ec2efbc.jpg",
-    "in_stock": false,
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 2999.5,
     "last_price": 2999.5,
-    "last_updated": "2026-10-22T20:47:06Z",
+    "last_updated": "2026-10-23T06:01:50Z",
     "lowest_price": 2999.5,
-    "missing_scans": 3,
+    "missing_scans": 0,
     "model_key": "kadin_265-JR2401_-",
     "name": "adidas Lightblaze Kadın Siyah Spor Ayakkabı",
     "pk": 1330097,
@@ -71838,7 +72260,7 @@
     "last_price": 6119.4,
     "last_updated": "2026-10-22T20:53:01Z",
     "lowest_price": 6119.4,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_133-JP7147_-",
     "name": "adidas Adizero Evo Sl Kadın Siyah Koşu Ayakkabısı",
     "pk": 1346596,
@@ -77796,6 +78218,34 @@
     "sku": "5794463",
     "state_key": "kadin_1417912"
   },
+  "kadin_1418196": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": null,
+    "basket_price": null,
+    "brand": "BURBERRY",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1418196",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/08/11/19097386/465be413-1750-416f-92de-e7bd9b404c30.jpg",
+    "in_stock": true,
+    "last_price": 18499.0,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 18499.0,
+    "missing_scans": 0,
+    "model_key": "kadin_8106155_-",
+    "name": "Burberry Birdie Kadın Bej Babet",
+    "pk": 1418196,
+    "product_url": "https://www.sanalcadir.com/burberry-birdie-kadin-bej-babet-8106155-2/",
+    "retail_price": 36990.0,
+    "sale_price": 18499.0,
+    "sku": "6182833",
+    "state_key": "kadin_1418196"
+  },
   "kadin_1420134": {
     "available_sizes": [
       "39",
@@ -77940,6 +78390,34 @@
     "sale_price": 3499.0,
     "sku": "6647602",
     "state_key": "kadin_1421829"
+  },
+  "kadin_1422125": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": null,
+    "basket_price": null,
+    "brand": "BURBERRY",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1422125",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/08/24/22767605/1162f9d6-dcba-45c6-b5fb-f01c99763976.jpg",
+    "in_stock": true,
+    "last_price": 17499.0,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 17499.0,
+    "missing_scans": 0,
+    "model_key": "kadin_8121096_-",
+    "name": "Burberry Check Leather Fawn Kadın Siyah Babet",
+    "pk": 1422125,
+    "product_url": "https://www.sanalcadir.com/burberry-check-leather-fawn-kadin-siyah-babet-8121096-1/",
+    "retail_price": 34990.0,
+    "sale_price": 17499.0,
+    "sku": "6507808",
+    "state_key": "kadin_1422125"
   },
   "kadin_1422254": {
     "available_sizes": [
@@ -78970,6 +79448,36 @@
     "sku": "6525768",
     "state_key": "kadin_1423533"
   },
+  "kadin_1423581": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %55 İndirim",
+    "basket_price": 3595.5,
+    "brand": "LACOSTE",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 55.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1423581",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/02/17/17708955/33069714-8feb-4093-8b60-75c99dbfa221.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 3595.5,
+    "last_price": 3595.5,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 3595.5,
+    "missing_scans": 0,
+    "model_key": "kadin_749SFA0025T_1R5",
+    "name": "Lacoste Storm 96 2K Kadın Beyaz Spor Ayakkabı",
+    "pk": 1423581,
+    "product_url": "https://www.sanalcadir.com/lacoste-storm-96-2k-kadin-beyaz-spor-ayakkabi-749sfa0025t/",
+    "retail_price": 7990.0,
+    "sale_price": 7990.0,
+    "sku": "6135926",
+    "state_key": "kadin_1423581"
+  },
   "kadin_1423788": {
     "available_sizes": [
       "39",
@@ -79546,6 +80054,7 @@
   },
   "kadin_1432245": {
     "available_sizes": [
+      "39.5",
       "40"
     ],
     "basket_offer_label": "Sepette %70 İndirim",
@@ -79562,7 +80071,7 @@
     "last_alert_at": "2026-10-23T04:38:35Z",
     "last_alert_price": 1647.0,
     "last_price": 1647.0,
-    "last_updated": "2026-10-23T04:38:35Z",
+    "last_updated": "2026-10-23T06:01:50Z",
     "lowest_price": 1647.0,
     "missing_scans": 0,
     "model_key": "kadin_749SFA0142_21G",
@@ -80011,6 +80520,36 @@
     "sale_price": 11499.0,
     "sku": "265-6765800",
     "state_key": "kadin_1435043"
+  },
+  "kadin_1435122": {
+    "available_sizes": [
+      "40"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 2199.5,
+    "brand": "NIKE",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1435122",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/07/21/21841712/1240c50d-602a-4e6d-a449-90ee4c2568c9.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 2199.5,
+    "last_price": 2199.5,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 2199.5,
+    "missing_scans": 0,
+    "model_key": "kadin_265-II6563_101",
+    "name": "Nike Court Vision Lo Se Kadın Beyaz Spor Ayakkabı",
+    "pk": 1435122,
+    "product_url": "https://www.sanalcadir.com/nike-court-vision-lo-se-kadin-beyaz-spor-ayakkabi-265-ii6563-4/",
+    "retail_price": 4399.0,
+    "sale_price": 4399.0,
+    "sku": "265-6591933",
+    "state_key": "kadin_1435122"
   },
   "kadin_1435426": {
     "available_sizes": [
@@ -83103,6 +83642,36 @@
     "sku": "265-6599902",
     "state_key": "kadin_1442367"
   },
+  "kadin_1442377": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %35 İndirim",
+    "basket_price": 3899.35,
+    "brand": "SALOMON",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 51.3,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1442377",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/09/26/23888116/83babb5f-8124-4e61-b1d7-756c4034755a.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 3899.35,
+    "last_price": 3899.35,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 3899.35,
+    "missing_scans": 0,
+    "model_key": "kadin_265-L49225700_2338",
+    "name": "Salomon XT-EVR Kadın Beyaz Koşu Ayakkabı",
+    "pk": 1442377,
+    "product_url": "https://www.sanalcadir.com/salomon-xt-evr-kadin-beyaz-kosu-ayakkabi-265-l49225700-1/",
+    "retail_price": 7999.0,
+    "sale_price": 5999.0,
+    "sku": "265-6809896",
+    "state_key": "kadin_1442377"
+  },
   "kadin_1442403": {
     "available_sizes": [
       "39",
@@ -85671,7 +86240,7 @@
   },
   "kadin_1444633": {
     "available_sizes": [
-      "40"
+      "39.5"
     ],
     "basket_offer_label": "Sepette %40 İndirim",
     "basket_price": 6599.4,
@@ -85683,13 +86252,13 @@
     "first_seen": "2026-10-22T15:18:25Z",
     "id": "1444633",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/08/28/23025514/a89e7489-5ef0-4a7f-8e26-4c929977f1f5.jpg",
-    "in_stock": false,
+    "in_stock": true,
     "last_alert_at": "2026-10-22T15:18:25Z",
     "last_alert_price": 6599.4,
     "last_price": 6599.4,
-    "last_updated": "2026-10-22T19:16:33Z",
+    "last_updated": "2026-10-23T06:01:50Z",
     "lowest_price": 6599.4,
-    "missing_scans": 3,
+    "missing_scans": 0,
     "model_key": "kadin_265-1012B936_500",
     "name": "Asics Gel-Trabuco 14 Gore-Tex Kadın Mor Trail Koşu Ayakkabısı",
     "pk": 1444633,
@@ -86308,6 +86877,36 @@
     "sale_price": 2879.0,
     "sku": "6648593",
     "state_key": "kadin_1446031"
+  },
+  "kadin_1446534": {
+    "available_sizes": [
+      "40"
+    ],
+    "basket_offer_label": "Sepette %20 İndirim",
+    "basket_price": 3247.44,
+    "brand": "CONVERSE",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 44.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1446534",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/08/10/22405014/977bf69a-020a-48b0-bd9f-f7250e0ea305.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 3247.44,
+    "last_price": 3247.44,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 3247.44,
+    "missing_scans": 0,
+    "model_key": "kadin_A15982C_483",
+    "name": "Converse Chuck 70 Unisex Mavi Sneaker",
+    "pk": 1446534,
+    "product_url": "https://www.sanalcadir.com/converse-chuck-70-unisex-mavi-sneaker-a15982c-2/",
+    "retail_price": 5799.0,
+    "sale_price": 4059.3,
+    "sku": "6563037",
+    "state_key": "kadin_1446534"
   },
   "kadin_1446560": {
     "available_sizes": [
@@ -89953,6 +90552,36 @@
     "sku": "67-6519634",
     "state_key": "kadin_1463876"
   },
+  "kadin_1463895": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": null,
+    "basket_price": null,
+    "brand": "NIKE",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 20.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1463895",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/05/20/20883124/13971348-745d-4d83-8330-0cac8425a909.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 4399.0,
+    "last_price": 4399.0,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 4399.0,
+    "missing_scans": 0,
+    "model_key": "kadin_67-IB1857_601",
+    "name": "Nike Cortez Kadın Kırmızı Spor Ayakkabı",
+    "pk": 1463895,
+    "product_url": "https://www.sanalcadir.com/nike-cortez-kadin-kirmizi-spor-ayakkabi-67-ib1857-1/",
+    "retail_price": 5499.0,
+    "sale_price": 4399.0,
+    "sku": "67-6579011",
+    "state_key": "kadin_1463895"
+  },
   "kadin_1463909": {
     "available_sizes": [
       "39"
@@ -91634,6 +92263,36 @@
     "sale_price": 10499.0,
     "sku": "265-6767062",
     "state_key": "kadin_1468150"
+  },
+  "kadin_1468280": {
+    "available_sizes": [
+      "39.5"
+    ],
+    "basket_offer_label": "Sepette %30 İndirim",
+    "basket_price": 4409.3,
+    "brand": "ASICS",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 51.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "1468280",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/07/07/22267892/84efc45e-5fd0-4039-ac44-0933f6928b96.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 4409.3,
+    "last_price": 4409.3,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 4409.3,
+    "missing_scans": 0,
+    "model_key": "kadin_265-1012B938_001",
+    "name": "Asics Trabuco 14 Kadın Siyah Koşu Ayakkabısı",
+    "pk": 1468280,
+    "product_url": "https://www.sanalcadir.com/asics-trabuco-14-kadin-siyah-kosu-ayakkabisi-265-1012b938-1/",
+    "retail_price": 8999.0,
+    "sale_price": 6299.0,
+    "sku": "265-6598719",
+    "state_key": "kadin_1468280"
   },
   "kadin_1468490": {
     "available_sizes": [
@@ -95521,6 +96180,36 @@
     "sku": "265-5354269",
     "state_key": "kadin_487772"
   },
+  "kadin_489644": {
+    "available_sizes": [
+      "40"
+    ],
+    "basket_offer_label": "Sepette %30 İndirim",
+    "basket_price": 2890.3,
+    "brand": "adidas",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 51.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "489644",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/03/06/10301777/295b9384-440b-400c-af1d-a59a76acb920.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 2890.3,
+    "last_price": 2890.3,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 2890.3,
+    "missing_scans": 0,
+    "model_key": "kadin_265-IF2416_-",
+    "name": "adidas Ultraboost Light Kadın Siyah Koşu Ayakkabısı",
+    "pk": 489644,
+    "product_url": "https://www.sanalcadir.com/adidas-ultraboost-light-kadin-siyah-kosu-ayakkabisi-265-if2416/",
+    "retail_price": 5899.0,
+    "sale_price": 4129.0,
+    "sku": "265-5346276",
+    "state_key": "kadin_489644"
+  },
   "kadin_490250": {
     "available_sizes": [
       "39",
@@ -98444,6 +99133,36 @@
     "sku": "5230711",
     "state_key": "kadin_668034"
   },
+  "kadin_668260": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %45 İndirim",
+    "basket_price": 1462.62,
+    "brand": "CONVERSE",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 61.5,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "668260",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/08/15/11237257/8355c173-3557-467a-ac75-6f4c151a4b9c.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 1462.62,
+    "last_price": 1462.62,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 1462.62,
+    "missing_scans": 0,
+    "model_key": "kadin_A08759C_020",
+    "name": "Converse Chuck 70 Unisex Gri Sneaker",
+    "pk": 668260,
+    "product_url": "https://www.sanalcadir.com/converse-chuck-70-unisex-gri-sneaker-a08759c-7/",
+    "retail_price": 3799.0,
+    "sale_price": 2659.3,
+    "sku": "5687056",
+    "state_key": "kadin_668260"
+  },
   "kadin_668330": {
     "available_sizes": [
       "40"
@@ -100260,6 +100979,36 @@
     "sale_price": 4493.0,
     "sku": "5588495",
     "state_key": "kadin_720817"
+  },
+  "kadin_727364": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 2299.5,
+    "brand": "NEW BALANCE",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "727364",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/10/22/11833519/94b3f80d-fb5e-429c-ab23-a9118da0f96f.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 2299.5,
+    "last_price": 2299.5,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 2299.5,
+    "missing_scans": 0,
+    "model_key": "kadin_265-WL565BVG_268",
+    "name": "New Balance 565 Kadın Bej Spor Ayakkabı",
+    "pk": 727364,
+    "product_url": "https://www.sanalcadir.com/new-balance-565-kadin-bej-spor-ayakkabi-265-wl565bvg-3/",
+    "retail_price": 4599.0,
+    "sale_price": 4599.0,
+    "sku": "265-5600602",
+    "state_key": "kadin_727364"
   },
   "kadin_727426": {
     "available_sizes": [
@@ -104108,6 +104857,36 @@
     "sku": "265-5938041",
     "state_key": "kadin_867252"
   },
+  "kadin_868131": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 1649.5,
+    "brand": "adidas",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "868131",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/01/16/12322056/1fc14a43-9c3d-4cad-a9cf-43e8d62b0aea.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 1649.5,
+    "last_price": 1649.5,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 1649.5,
+    "missing_scans": 0,
+    "model_key": "kadin_265-IH5418_-",
+    "name": "adidas Breaknet Sleek Kadın Beyaz  Spor Ayakkabı",
+    "pk": 868131,
+    "product_url": "https://www.sanalcadir.com/adidas-breaknet-sleek-kadin-beyaz-spor-ayakkabi-265-ih5418-3/",
+    "retail_price": 3299.0,
+    "sale_price": 3299.0,
+    "sku": "265-5882488",
+    "state_key": "kadin_868131"
+  },
   "kadin_868598": {
     "available_sizes": [
       "39"
@@ -105038,6 +105817,36 @@
     "sale_price": 4999.0,
     "sku": "265-6218353",
     "state_key": "kadin_887795"
+  },
+  "kadin_887847": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 1849.5,
+    "brand": "VANS",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:01:50Z",
+    "id": "887847",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/27/12587333/1e197a86-c3d8-4137-9647-b14fed5ce9b4.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:01:50Z",
+    "last_alert_price": 1849.5,
+    "last_price": 1849.5,
+    "last_updated": "2026-10-23T06:01:50Z",
+    "lowest_price": 1849.5,
+    "missing_scans": 0,
+    "model_key": "kadin_265-VN000K0F1871_-",
+    "name": "Vans Atwood Kadın Siyah Günlük Sneaker",
+    "pk": 887847,
+    "product_url": "https://www.sanalcadir.com/vans-atwood-kadin-siyah-gunluk-sneaker-265-vn000k0f1871/",
+    "retail_price": 3699.0,
+    "sale_price": 3699.0,
+    "sku": "265-6218527",
+    "state_key": "kadin_887847"
   },
   "kadin_887931": {
     "available_sizes": [
