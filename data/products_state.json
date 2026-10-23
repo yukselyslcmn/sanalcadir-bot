@@ -23732,7 +23732,7 @@
     "last_price": 6999.3,
     "last_updated": "2026-10-23T04:28:16Z",
     "lowest_price": 6999.3,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "erkek_133-HQ3048_001",
     "name": "Nike Structure Plus Erkek Siyah Koşu Ayakkabısı",
     "pk": 1451650,
@@ -33027,6 +33027,36 @@
     "sale_price": 3709.3,
     "sku": "5884513",
     "state_key": "erkek_765763"
+  },
+  "erkek_765862": {
+    "available_sizes": [
+      "45"
+    ],
+    "basket_offer_label": null,
+    "basket_price": null,
+    "brand": "CONVERSE",
+    "category": "Erkek",
+    "category_badge": "🚹 Erkek (45 / 45,5 / 45-46 / 46)",
+    "category_key": "erkek",
+    "discount_rate": 60.0,
+    "first_seen": "2026-10-23T06:14:12Z",
+    "id": "765862",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/12/04/7043693/4bb369be-db58-456f-988d-066289826dfc.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:14:12Z",
+    "last_alert_price": 1999.0,
+    "last_price": 1999.0,
+    "last_updated": "2026-10-23T06:14:12Z",
+    "lowest_price": 1999.0,
+    "missing_scans": 0,
+    "model_key": "erkek_A06436C_286",
+    "name": "Converse Chuck 70 De Luxe Squared Unisex Krem Sneaker",
+    "pk": 765862,
+    "product_url": "https://www.sanalcadir.com/converse-chuck-70-de-luxe-squared-unisex-krem-sneaker-a06436c-3/",
+    "retail_price": 4999.0,
+    "sale_price": 1999.0,
+    "sku": "5491493",
+    "state_key": "erkek_765862"
   },
   "erkek_765925": {
     "available_sizes": [
@@ -44643,7 +44673,8 @@
   },
   "kadin_1143497": {
     "available_sizes": [
-      "39"
+      "39",
+      "40"
     ],
     "basket_offer_label": "Sepette %25 İndirim",
     "basket_price": 2249.25,
@@ -44657,7 +44688,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/11/20/15017687/5be87635-5aa7-40ee-b985-69d267bdfda0.jpg",
     "in_stock": true,
     "last_price": 2249.25,
-    "last_updated": "2026-10-22T21:31:09Z",
+    "last_updated": "2026-10-23T06:14:12Z",
     "lowest_price": 2249.25,
     "missing_scans": 0,
     "model_key": "kadin_750SFA0036T_AEF",
@@ -48877,6 +48908,7 @@
   },
   "kadin_1185538": {
     "available_sizes": [
+      "39.5",
       "40"
     ],
     "basket_offer_label": "Sepette %30 İndirim",
@@ -48891,7 +48923,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/04/29/15017616/8de45fe5-7023-4789-b507-d9097c568343.jpg",
     "in_stock": true,
     "last_price": 1749.3,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-23T06:14:12Z",
     "lowest_price": 1749.3,
     "missing_scans": 0,
     "model_key": "kadin_750SFA0047T_18C",
@@ -77997,7 +78029,7 @@
   },
   "kadin_1406554": {
     "available_sizes": [
-      "39.5"
+      "39"
     ],
     "basket_offer_label": "Sepette %55 İndirim",
     "basket_price": 1853.1,
@@ -78009,11 +78041,13 @@
     "first_seen": "2026-10-21T16:51:23Z",
     "id": "1406554",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/09/29/18184931/ff807c89-138b-4721-aeb2-116f5d2408b3.jpg",
-    "in_stock": false,
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:14:12Z",
+    "last_alert_price": 1853.1,
     "last_price": 1853.1,
-    "last_updated": "2026-10-22T07:55:49Z",
+    "last_updated": "2026-10-23T06:14:12Z",
     "lowest_price": 1853.1,
-    "missing_scans": 14,
+    "missing_scans": 0,
     "model_key": "kadin_750SFA0064_21G",
     "name": "Court Ace Kadın Beyaz Sneaker",
     "pk": 1406554,
@@ -78021,8 +78055,7 @@
     "retail_price": 5490.0,
     "sale_price": 4118.0,
     "sku": "6467436",
-    "state_key": "kadin_1406554",
-    "stock_count": 1
+    "state_key": "kadin_1406554"
   },
   "kadin_1406955": {
     "available_sizes": [
@@ -81420,6 +81453,36 @@
     "state_key": "kadin_1439768",
     "stock_count": 1
   },
+  "kadin_1439835": {
+    "available_sizes": [
+      "40"
+    ],
+    "basket_offer_label": "Sepette %20 İndirim",
+    "basket_price": 3527.2,
+    "brand": "CONVERSE",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 44.0,
+    "first_seen": "2026-10-23T06:14:12Z",
+    "id": "1439835",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/02/24/18500426/6e5aa7a6-2300-4b79-96a5-008c64799de9.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:14:12Z",
+    "last_alert_price": 3527.2,
+    "last_price": 3527.2,
+    "last_updated": "2026-10-23T06:14:12Z",
+    "lowest_price": 3527.2,
+    "missing_scans": 0,
+    "model_key": "kadin_A15967C_213",
+    "name": "Converse Chuck 70 Unisex Kahverengi Sneaker",
+    "pk": 1439835,
+    "product_url": "https://www.sanalcadir.com/converse-chuck-70-unisex-kahverengi-sneaker-a15967c-1/",
+    "retail_price": 6299.0,
+    "sale_price": 4409.0,
+    "sku": "6562840",
+    "state_key": "kadin_1439835"
+  },
   "kadin_1439837": {
     "available_sizes": [
       "39",
@@ -81657,6 +81720,7 @@
   },
   "kadin_1440249": {
     "available_sizes": [
+      "39",
       "40"
     ],
     "basket_offer_label": "Sepette %20 İndirim",
@@ -81671,7 +81735,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2026/02/24/18606892/a304fdcd-11cd-41bf-ae0d-21399dead617.jpg",
     "in_stock": true,
     "last_price": 3527.44,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-23T06:14:12Z",
     "lowest_price": 3527.44,
     "missing_scans": 0,
     "model_key": "kadin_A19060C_102",
@@ -99429,7 +99493,7 @@
     "last_price": 1462.62,
     "last_updated": "2026-10-23T06:01:50Z",
     "lowest_price": 1462.62,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_A08759C_020",
     "name": "Converse Chuck 70 Unisex Gri Sneaker",
     "pk": 668260,
@@ -101891,7 +101955,6 @@
   },
   "kadin_761417": {
     "available_sizes": [
-      "39",
       "40"
     ],
     "basket_offer_label": null,
@@ -101908,7 +101971,7 @@
     "last_alert_at": "2026-10-22T20:47:06Z",
     "last_alert_price": 1999.0,
     "last_price": 1999.0,
-    "last_updated": "2026-10-22T20:47:06Z",
+    "last_updated": "2026-10-23T06:14:12Z",
     "lowest_price": 1999.0,
     "missing_scans": 0,
     "model_key": "kadin_A12475C_001",
@@ -102577,7 +102640,7 @@
     "last_price": 1574.69,
     "last_updated": "2026-10-22T20:47:06Z",
     "lowest_price": 1574.69,
-    "missing_scans": 0,
+    "missing_scans": 1,
     "model_key": "kadin_A08525C_102",
     "name": "Converse Chuck 70 Unisex Beyaz Sneaker",
     "pk": 767408,
@@ -105305,7 +105368,7 @@
   },
   "kadin_870758": {
     "available_sizes": [
-      "39"
+      "40"
     ],
     "basket_offer_label": "Sepette %50 İndirim",
     "basket_price": 2199.5,
@@ -105317,13 +105380,13 @@
     "first_seen": "2026-10-22T20:47:06Z",
     "id": "870758",
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/05/05/13111848/ad19ba53-b23a-478a-beb2-0b3215db90c4.jpg",
-    "in_stock": false,
+    "in_stock": true,
     "last_alert_at": "2026-10-22T20:47:06Z",
     "last_alert_price": 2199.5,
     "last_price": 2199.5,
-    "last_updated": "2026-10-22T21:14:57Z",
+    "last_updated": "2026-10-23T06:14:12Z",
     "lowest_price": 2199.5,
-    "missing_scans": 3,
+    "missing_scans": 0,
     "model_key": "kadin_265-FQ1830_001",
     "name": "Nike MC Trainer 3 Kadın Siyah Antrenman Ayakkabısı",
     "pk": 870758,
@@ -106063,6 +106126,36 @@
     "sale_price": 7799.0,
     "sku": "133-6185099",
     "state_key": "kadin_886608"
+  },
+  "kadin_886613": {
+    "available_sizes": [
+      "39"
+    ],
+    "basket_offer_label": "Sepette %50 İndirim",
+    "basket_price": 2824.5,
+    "brand": "adidas",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 50.0,
+    "first_seen": "2026-10-23T06:14:12Z",
+    "id": "886613",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/21/12573533/b5393da7-eb16-49a6-a765-9e7980faf10b.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T06:14:12Z",
+    "last_alert_price": 2824.5,
+    "last_price": 2824.5,
+    "last_updated": "2026-10-23T06:14:12Z",
+    "lowest_price": 2824.5,
+    "missing_scans": 0,
+    "model_key": "kadin_133-JH5706_-",
+    "name": "adidas Samba Lt Kadın Krem Spor Ayakkabı",
+    "pk": 886613,
+    "product_url": "https://www.sanalcadir.com/adidas-samba-lt-kadin-krem-spor-ayakkabi-133-jh5706-5/",
+    "retail_price": 5649.0,
+    "sale_price": 5649.0,
+    "sku": "133-6185626",
+    "state_key": "kadin_886613"
   },
   "kadin_886715": {
     "available_sizes": [
