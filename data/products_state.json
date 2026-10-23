@@ -94924,7 +94924,8 @@
   },
   "kadin_413642": {
     "available_sizes": [
-      "39.5"
+      "39.5",
+      "40"
     ],
     "basket_offer_label": "Sepette %40 İndirim",
     "basket_price": 3419.4,
@@ -94938,7 +94939,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2023/04/18/293384/5e960c7a-67e5-46c1-a005-01f398e2665e.jpg",
     "in_stock": true,
     "last_price": 3419.4,
-    "last_updated": "2026-10-22T13:33:05Z",
+    "last_updated": "2026-10-23T01:14:26Z",
     "lowest_price": 3419.4,
     "missing_scans": 0,
     "model_key": "kadin_561681C_001",
@@ -95473,6 +95474,36 @@
     "sale_price": 3700.0,
     "sku": "133-4371888",
     "state_key": "kadin_497598"
+  },
+  "kadin_512923": {
+    "available_sizes": [
+      "39.5"
+    ],
+    "basket_offer_label": "Sepette %15 İndirim",
+    "basket_price": 1699.15,
+    "brand": "CONVERSE",
+    "category": "Kadın",
+    "category_badge": "🚺 Kadın (39 / 39,5 / 39-40 / 40)",
+    "category_key": "kadin",
+    "discount_rate": 69.1,
+    "first_seen": "2026-10-23T01:14:26Z",
+    "id": "512923",
+    "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2024/03/03/10001390/4f559be1-5d61-4da7-a110-d22e0a35f5dd.jpg",
+    "in_stock": true,
+    "last_alert_at": "2026-10-23T01:14:26Z",
+    "last_alert_price": 1699.15,
+    "last_price": 1699.15,
+    "last_updated": "2026-10-23T01:14:26Z",
+    "lowest_price": 1699.15,
+    "missing_scans": 0,
+    "model_key": "kadin_A04635C_698",
+    "name": "Converse Chuck Taylor All Star Mixed Material Unisex Pembe Deri Sneaker",
+    "pk": 512923,
+    "product_url": "https://www.sanalcadir.com/converse-chuck-taylor-all-star-mixed-material-unisex-pembe-deri-sneaker-a04635c/",
+    "retail_price": 5499.0,
+    "sale_price": 1999.0,
+    "sku": "5231883",
+    "state_key": "kadin_512923"
   },
   "kadin_512951": {
     "available_sizes": [
@@ -100329,6 +100360,7 @@
   },
   "kadin_745381": {
     "available_sizes": [
+      "39",
       "40"
     ],
     "basket_offer_label": "Sepette %40 İndirim",
@@ -100343,7 +100375,7 @@
     "image_url": "https://6c422a-sanalcadir.akinoncloudcdn.com/products/2025/03/07/11528421/00464930-e2b8-4a26-95f5-077f3c8dede4.jpg",
     "in_stock": true,
     "last_price": 2309.58,
-    "last_updated": "2026-10-22T11:01:37Z",
+    "last_updated": "2026-10-23T01:14:26Z",
     "lowest_price": 2309.58,
     "missing_scans": 0,
     "model_key": "kadin_A08262C_286",
